@@ -475,6 +475,11 @@ public abstract class SqlDb : IDatabase
     public abstract List<SystemMailAttachment> SelectAttachmentsForSystemMail(ulong messageId);
     public abstract bool UpdateSystemMailAttachmentReceivedStatus(ulong messageId, ulong attachmentId, bool isReceived);
     public abstract bool DeleteSystemMailAttachment(ulong messageId);
+    public abstract long InsertPersonalMailMessage(PersonalMailMessage message);
+    public abstract List<PersonalMailMessage> SelectPersonalMailMessages(uint recipientCharacterId);
+    public abstract PersonalMailMessage? SelectPersonalMailMessage(ulong messageId);
+    public abstract bool UpdatePersonalMailMessageState(ulong messageId, MailState messageState);
+    public abstract bool DeletePersonalMailMessage(ulong messageId);
     public abstract bool ReplaceCharacterPlayPointData(uint id, CDataJobPlayPoint updatedCharacterPlayPointData, DbConnection? connectionIn = null);
     public abstract bool UpdateCharacterPlayPointData(uint id, CDataJobPlayPoint updatedCharacterPlayPointData, DbConnection? connectionIn = null);
     public abstract bool InsertCharacterStampData(uint id, CharacterStampBonus stampData);
@@ -632,6 +637,50 @@ public abstract class SqlDb : IDatabase
     public abstract HashSet<uint> SelectDispelSeals(uint characterId, DbConnection? connectionIn = null);
     public abstract bool InsertDispelSeal(uint characterId, uint sealIndex, DbConnection? connectionIn = null);
     public abstract bool DeleteDispelSeal(uint characterId, uint sealIndex, DbConnection? connectionIn = null);
+
+    // Equipment Presets
+    public abstract bool InsertEquipPreset(EquipPreset preset, DbConnection? connectionIn = null);
+    public abstract bool UpdateEquipPreset(EquipPreset preset, DbConnection? connectionIn = null);
+    public abstract bool UpdateEquipPresetName(uint characterId, JobId job, byte presetNo, string presetName, DbConnection? connectionIn = null);
+    public abstract bool DeleteEquipPreset(uint characterId, JobId job, byte presetNo, DbConnection? connectionIn = null);
+    public abstract EquipPreset? SelectEquipPreset(uint characterId, JobId job, byte presetNo, DbConnection? connectionIn = null);
+    public abstract List<EquipPreset> SelectEquipPresets(uint characterId, JobId job, DbConnection? connectionIn = null);
+
+    // Mandragora
+    public abstract bool InsertMandragora(Mandragora mandragora, DbConnection? connectionIn = null);
+    public abstract bool UpdateMandragora(Mandragora mandragora, DbConnection? connectionIn = null);
+    public abstract bool DeleteMandragora(uint characterId, uint mandragoraId, DbConnection? connectionIn = null);
+    public abstract List<Mandragora> SelectMandragoras(uint characterId, DbConnection? connectionIn = null);
+    public abstract Mandragora? SelectMandragora(uint characterId, uint mandragoraId, DbConnection? connectionIn = null);
+
+    // Mandragora Species Discovery
+    public abstract bool InsertMandragoraSpeciesDiscovery(MandragoraSpeciesDiscovery discovery, DbConnection? connectionIn = null);
+    public abstract bool UpdateMandragoraSpeciesDiscovery(MandragoraSpeciesDiscovery discovery, DbConnection? connectionIn = null);
+    public abstract List<MandragoraSpeciesDiscovery> SelectMandragoraSpeciesDiscoveries(uint characterId, DbConnection? connectionIn = null);
+    public abstract List<MandragoraSpeciesDiscovery> SelectMandragoraSpeciesDiscoveriesByCategory(uint characterId, MandragoraSpeciesCategory category, DbConnection? connectionIn = null);
+
+    // Mandragora First Discovery (Server-Wide)
+    public abstract bool InsertOrIgnoreMandragoraFirstDiscovery(uint speciesIndex, uint characterId, string characterName, long discoveredDate, DbConnection? connectionIn = null);
+    public abstract string? SelectMandragoraFirstDiscoverer(uint speciesIndex, DbConnection? connectionIn = null);
+
+    // GP Purchase History
+    public abstract long InsertGpPurchaseHistory(GpPurchaseHistory purchase, DbConnection? connectionIn = null);
+    public abstract List<GpPurchaseHistory> SelectGpPurchaseHistory(uint characterId, DbConnection? connectionIn = null);
+    public abstract List<GpPurchaseHistory> SelectGpPurchaseHistoryByShopType(uint characterId, uint shopType, DbConnection? connectionIn = null);
+
+    // Gacha Pull History
+    public abstract long InsertGachaPullHistory(GachaPullHistory pull, DbConnection? connectionIn = null);
+    public abstract long InsertGachaPullResult(GachaPullResult result, DbConnection? connectionIn = null);
+    public abstract List<GachaPullHistory> SelectGachaPullHistory(uint characterId, DbConnection? connectionIn = null);
+    public abstract List<GachaPullHistory> SelectGachaPullHistoryByGachaId(uint characterId, uint gachaId, DbConnection? connectionIn = null);
+    public abstract List<GachaPullResult> SelectGachaPullResults(ulong pullId, DbConnection? connectionIn = null);
+
+    // Box Gacha State
+    public abstract bool InsertBoxGachaState(BoxGachaState state, DbConnection? connectionIn = null);
+    public abstract bool DeleteBoxGachaState(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
+    public abstract List<BoxGachaState> SelectBoxGachaState(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
+    public abstract HashSet<uint> SelectBoxGachaDrawnLineups(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
+    public abstract bool HasBoxGachaDrawnLineup(uint characterId, uint boxGachaId, uint lineupId, DbConnection? connectionIn = null);
 
 
     protected virtual DbCommand Command(string query, DbConnection connection)

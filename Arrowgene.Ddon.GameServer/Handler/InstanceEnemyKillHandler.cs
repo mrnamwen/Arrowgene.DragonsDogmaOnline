@@ -152,29 +152,101 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
                 if (!packet.IsNoBattleReward && !client.QuestState.IsQuestActive(QuestId.ResolutionsAndOmens))
                 {
+                    bool autolootEnabled = Server.GameSettings.GameServerSettings.EnableAutoloot;
+                    bool materialsToStorage = Server.GameSettings.GameServerSettings.AutolootMaterialsToStorage;
+
                     foreach (var partyMemberClient in client.Party.Clients)
                     {
                         var instancedGatheringItems = partyMemberClient.InstanceDropItemManager.Generate(enemyKilled);
+                        var allDropItems = instancedGatheringItems.Values.SelectMany(x => x).ToList();
 
-                        uint offsetSetId = partyMemberClient.InstanceDropItemManager.Assign(layoutId, packet.SetId, instancedGatheringItems.Values.SelectMany(x => x).ToList());
-                        var dropItemNtc = new S2CInstancePopDropItemNtc()
-                        {
-                            LayoutId = packet.LayoutId,
-                            SetId = offsetSetId,
-                            MdlType = enemyKilled.DropsTable?.MdlType ?? 0,
-                            PosX = packet.DropPosX,
-                            PosY = packet.DropPosY,
-                            PosZ = packet.DropPosZ
-                        };
+                        // Handle autoloot for consumables and materials
+                        List<InstancedGatheringItem> remainingDropItems = new List<InstancedGatheringItem>();
+                        List<(string Name, uint Count)> storageItems = new List<(string, uint)>();
 
-                        if (instancedGatheringItems[typeof(EnemyEpitaphRoadDropGenerator)].Any())
+                        if (autolootEnabled && allDropItems.Any())
                         {
-                            dropItemNtc.MdlType = 1; // Make the bag appear as golden
+                            S2CItemUpdateCharacterItemNtc autolootNtc = new S2CItemUpdateCharacterItemNtc()
+                            {
+                                UpdateType = ItemNoticeType.Drop
+                            };
+
+                            foreach (var dropItem in allDropItems)
+                            {
+                                var clientItemInfo = Server.AssetRepository.ClientItemInfos.ContainsKey(dropItem.ItemId)
+                                    ? Server.AssetRepository.ClientItemInfos[dropItem.ItemId]
+                                    : null;
+
+                                // Category 1 = consumable, Category 2 = material
+                                bool isAutolootable = clientItemInfo != null && (clientItemInfo.Category == 1 || clientItemInfo.Category == 2);
+
+                                if (isAutolootable)
+                                {
+                                    // Determine destination: materials go to storage if setting enabled, otherwise item bag
+                                    bool toItemBag = !(materialsToStorage && clientItemInfo.Category == 2);
+                                    var destinationStorageType = toItemBag ? clientItemInfo.StorageType : StorageType.StorageBoxNormal;
+
+                                    if (Server.ItemManager.CanAddItem(partyMemberClient.Character, destinationStorageType, (uint)dropItem.ItemId, dropItem.ItemNum))
+                                    {
+                                        // Auto-loot the item to inventory or storage
+                                        queuedPackets.AddRange(Server.ItemManager.GatherItem(partyMemberClient, autolootNtc, dropItem, dropItem.ItemNum, toItemBag, connectionIn));
+
+                                        // Track items sent to storage for notification
+                                        if (!toItemBag)
+                                        {
+                                            storageItems.Add((clientItemInfo.Name, dropItem.ItemNum));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // Destination is full, keep it as a drop
+                                        remainingDropItems.Add(dropItem);
+                                    }
+                                }
+                                else
+                                {
+                                    // Item is not autolootable, keep it as a drop
+                                    remainingDropItems.Add(dropItem);
+                                }
+                            }
+
+                            if (autolootNtc.UpdateItemList.Count > 0 || autolootNtc.UpdateWalletList.Count > 0)
+                            {
+                                partyMemberClient.Enqueue(autolootNtc, queuedPackets);
+                            }
+
+                            // Send chat notification for items sent to storage
+                            if (storageItems.Any())
+                            {
+                                var storageMessage = string.Join(", ", storageItems.Select(x => $"{x.Name} x{x.Count}"));
+                                var chatType = (LobbyChatMsgType)Server.GameSettings.GameServerSettings.AutolootNotificationChatType;
+                                Server.ChatManager.SendMessage($"[Storage] {storageMessage}", string.Empty, string.Empty, chatType, new List<GameClient> { partyMemberClient });
+                            }
+                        }
+                        else
+                        {
+                            remainingDropItems = allDropItems;
                         }
 
-                        // If the roll was unlucky, there is a chance that no bag will show.
-                        if (instancedGatheringItems.Any(x => x.Value.Any()))
+                        // Only assign and show drops for items that weren't auto-looted
+                        if (remainingDropItems.Any())
                         {
+                            uint offsetSetId = partyMemberClient.InstanceDropItemManager.Assign(layoutId, packet.SetId, remainingDropItems);
+                            var dropItemNtc = new S2CInstancePopDropItemNtc()
+                            {
+                                LayoutId = packet.LayoutId,
+                                SetId = offsetSetId,
+                                MdlType = enemyKilled.DropsTable?.MdlType ?? 0,
+                                PosX = packet.DropPosX,
+                                PosY = packet.DropPosY,
+                                PosZ = packet.DropPosZ
+                            };
+
+                            if (instancedGatheringItems[typeof(EnemyEpitaphRoadDropGenerator)].Any())
+                            {
+                                dropItemNtc.MdlType = 1; // Make the bag appear as golden
+                            }
+
                             partyMemberClient.Enqueue(dropItemNtc, queuedPackets);
                         }
                     }

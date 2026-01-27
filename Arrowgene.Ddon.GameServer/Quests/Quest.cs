@@ -1202,6 +1202,26 @@ namespace Arrowgene.Ddon.GameServer.Quests
             return result;
         }
 
+        /// <summary>
+        /// Gets all content releases from all blocks in the quest.
+        /// Used for completed quests to ensure block-level releases (from AddResultCmdReleaseAnnounce)
+        /// are properly collected even if they weren't added to the quest-level ContentsRelease.
+        /// </summary>
+        public HashSet<ContentsRelease> GetAllContentsReleaseList()
+        {
+            var result = new HashSet<ContentsRelease>();
+
+            foreach (var process in Processes)
+            {
+                foreach (var block in process.Blocks)
+                {
+                    result.UnionWith(block.Value.ContentsReleased.Select(x => x.ReleaseId).ToHashSet());
+                }
+            }
+
+            return result;
+        }
+
         public void AddWorldManageUnlock(QuestFlagInfo questFlagInfo)
         {
             if (!WorldManageUnlocks.ContainsKey(questFlagInfo.QuestId))

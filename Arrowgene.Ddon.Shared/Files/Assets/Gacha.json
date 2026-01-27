@@ -1,0 +1,3211 @@
+{
+    "comment": "This file describes loot box (treasure lot / gacha) contents based on DDON retail data",
+    "boxes": [
+        {
+            "gacha_id": 1225,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Shining Snow Christmas Box",
+            "description": "Lottery for Christmas event items from the <COL ff8c00>Shining snow Christmas box</COL>",
+            "detail": "Contains exclusive Christmas-themed cosmetics and items.\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nSanta's Robe Coat (2 colors)\r\nReindeer's Ears (2 colors)\r\nReindeer's Costume (2 colors)\r\nReindeer's Mouton Boots (2 colors)\r\nChristmas Tree Onepiece\r\nSparkling Snow Large Crystal\r\nRainbow Dye",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 8.2%\r\nClass A 9.1%\r\nClass B 82.7%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot23.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot14.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 1225001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 1225011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 1225002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 1225012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 1225003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 60,
+                            "base_price": 60,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 1225013,
+                            "wallet_type": "SilverTickets",
+                            "price": 600,
+                            "base_price": 600,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Christmas Tree Onepiece (S-rank)",
+                    "item_id": 23461,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Santa's Robe Coat (Red) (S-rank)",
+                    "item_id": 23452,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Santa's Robe Coat (White) (S-rank)",
+                    "item_id": 23453,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Reindeer's Ears (Brown) (S-rank)",
+                    "item_id": 23454,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Reindeer's Ears (White) (S-rank)",
+                    "item_id": 23455,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Reindeer's Costume (Brown) (S-rank)",
+                    "item_id": 23456,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Reindeer's Costume (White) (S-rank)",
+                    "item_id": 23457,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Reindeer's Mouton Boots (Brown) (S-rank)",
+                    "item_id": 23458,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Reindeer's Mouton Boots (White) (S-rank)",
+                    "item_id": 23459,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.82
+                },
+                {
+                    "comment": "Rainbow Dye (A-rank)",
+                    "item_id": 8141,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 9.1
+                },
+                {
+                    "comment": "Sparkling Snow Large Crystal x50 (B-rank)",
+                    "item_id": 23548,
+                    "amount": 50,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 82.7
+                }
+            ]
+        },
+        {
+            "gacha_id": 100,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Crest Rush",
+            "description": "Challenge the <COL ff8c00>Crest Rush</COL> for a chance to obtain powerful weapon crests!",
+            "detail": "Draw powerful crests to enchant your weapons!\r\n\r\n<COL ff8c00>[Rarity Distribution]</COL>\r\n\r\nClass S: High-tier crests (Dragonsbane, Expulsion, etc.)\r\nClass A: Mid-tier crests (Demon Slaying, Giant Killing, etc.)\r\nClass B: Basic crests (Power, Magick, Flesh Cutting, etc.)\r\n\r\n*11-pull guarantees at least one S-rank crest",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 4.98%\r\nClass A 34.93%\r\nClass B 60.09%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot1.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot13.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 100001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 1,
+                            "base_price": 1,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 100011,
+                            "wallet_type": "SilverTickets",
+                            "price": 10,
+                            "base_price": 10,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 100002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 9,
+                            "base_price": 9,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 100012,
+                            "wallet_type": "SilverTickets",
+                            "price": 90,
+                            "base_price": 90,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 100003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 20,
+                            "base_price": 20,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 100013,
+                            "wallet_type": "SilverTickets",
+                            "price": 200,
+                            "base_price": 200,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Crest of Dragonsbane II (S-rank)",
+                    "item_id": 9236,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Crest of Expulsion II (S-rank)",
+                    "item_id": 9238,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Crest of Unburdening (S-rank)",
+                    "item_id": 9194,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Crest of Herculean Power (S-rank)",
+                    "item_id": 9198,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Crest of Superior Magick (S-rank)",
+                    "item_id": 9202,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Crest of Amplified Attack (S-rank)",
+                    "item_id": 9204,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Crest of Demon Slaying (A-rank)",
+                    "item_id": 9213,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Giant Killing (A-rank)",
+                    "item_id": 9221,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Exorcism (A-rank)",
+                    "item_id": 9227,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Dragonsbane (A-rank)",
+                    "item_id": 9235,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Expulsion (A-rank)",
+                    "item_id": 9237,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Greater Power (A-rank)",
+                    "item_id": 9196,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Greater Magick (A-rank)",
+                    "item_id": 9200,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 4.99
+                },
+                {
+                    "comment": "Crest of Power (B-rank)",
+                    "item_id": 9195,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Magick (B-rank)",
+                    "item_id": 9199,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Flesh Cutting (B-rank)",
+                    "item_id": 9209,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Beast Hunting (B-rank)",
+                    "item_id": 9211,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Massacre (B-rank)",
+                    "item_id": 9215,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Fracturing (B-rank)",
+                    "item_id": 9217,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Mutilation (B-rank)",
+                    "item_id": 9219,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.51
+                },
+                {
+                    "comment": "Crest of Splicing (B-rank)",
+                    "item_id": 9223,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 7.52
+                }
+            ]
+        },
+        {
+            "gacha_id": 200,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Standard Treasure Lot",
+            "description": "The <COL ff8c00>Standard Treasure Lot</COL> contains a variety of useful consumables and materials!",
+            "detail": "Draw for consumables, crafting materials, and currency items!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nClass S: Rare consumables and currency\r\nClass A: Quality consumables and materials\r\nClass B: Standard consumables",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 5.0%\r\nClass A 35.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot1.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/treasurelot.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 200001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 200011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 200002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 200012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 200003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 60,
+                            "base_price": 60,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 200013,
+                            "wallet_type": "SilverTickets",
+                            "price": 600,
+                            "base_price": 600,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Rift Crystal (100 RP) (S-rank)",
+                    "item_id": 7794,
+                    "amount": 10,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Blood Orb (100 BO) (S-rank)",
+                    "item_id": 7797,
+                    "amount": 10,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Coin Pouch (100 G) (S-rank)",
+                    "item_id": 7791,
+                    "amount": 10,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Cure-All (S-rank)",
+                    "item_id": 13807,
+                    "amount": 3,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Twin Gods Talisman (S-rank)",
+                    "item_id": 13804,
+                    "amount": 3,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (A-rank)",
+                    "item_id": 13800,
+                    "amount": 5,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.0
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (A-rank)",
+                    "item_id": 13801,
+                    "amount": 5,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.0
+                },
+                {
+                    "comment": "Large Pill of Savages (A-rank)",
+                    "item_id": 13802,
+                    "amount": 5,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.0
+                },
+                {
+                    "comment": "Angel's Charm (A-rank)",
+                    "item_id": 13808,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.0
+                },
+                {
+                    "comment": "Sprite's Charm (A-rank)",
+                    "item_id": 13809,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.0
+                },
+                {
+                    "comment": "White Dragon Miracle Cure (B-rank)",
+                    "item_id": 54,
+                    "amount": 10,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "White Dragon Gala Extract (B-rank)",
+                    "item_id": 56,
+                    "amount": 10,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Conqueror's Talisman (B-rank)",
+                    "item_id": 9387,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Angel's Talisman (B-rank)",
+                    "item_id": 9388,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Demon's Talisman (B-rank)",
+                    "item_id": 9389,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Sprite's Talisman (B-rank)",
+                    "item_id": 9390,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 300,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Halloween Treasure Lot",
+            "description": "Exclusive <COL ff8c00>Halloween</COL> items for a limited time!",
+            "detail": "Collect spooky Halloween decorations and treats!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nHalloween furniture and decorations\r\nGhost Marshmallow\r\nSkull Gummy\r\nHalloween Petit Muffin",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 10.0%\r\nClass A 30.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/halloweenthumb.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/halloweenthumb.png",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 300001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 300011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 300002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 300012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 300003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 60,
+                            "base_price": 60,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 300013,
+                            "wallet_type": "SilverTickets",
+                            "price": 600,
+                            "base_price": 600,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Halloween Carnival (S-rank furniture)",
+                    "item_id": 14248,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.0
+                },
+                {
+                    "comment": "Halloween Study Desk (S-rank furniture)",
+                    "item_id": 23489,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.0
+                },
+                {
+                    "comment": "Halloween Pumpkin Tree (S-rank furniture)",
+                    "item_id": 23490,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.0
+                },
+                {
+                    "comment": "Halloween Table (S-rank furniture)",
+                    "item_id": 23493,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.0
+                },
+                {
+                    "comment": "Halloween Clock (S-rank furniture)",
+                    "item_id": 23494,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.0
+                },
+                {
+                    "comment": "Ghost Marshmallow (A-rank)",
+                    "item_id": 21182,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Skull Gummy (A-rank)",
+                    "item_id": 21183,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Halloween Petit Muffin (B-rank)",
+                    "item_id": 23545,
+                    "amount": 30,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 60.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 400,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Valentine Treasure Lot",
+            "description": "Celebrate love with the <COL ff8c00>Valentine Treasure Lot</COL>!",
+            "detail": "Romantic Valentine's Day furniture and decorations!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nValentine furniture set\r\nValentine decorations\r\nSweets and chocolate items",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 10.0%\r\nClass A 30.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot15.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot15.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 400001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 400011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 400002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 400012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 400003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 60,
+                            "base_price": 60,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 400013,
+                            "wallet_type": "SilverTickets",
+                            "price": 600,
+                            "base_price": 600,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Valentine Bed (S-rank furniture)",
+                    "item_id": 23477,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.43
+                },
+                {
+                    "comment": "Valentine Clock (S-rank furniture)",
+                    "item_id": 23478,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.43
+                },
+                {
+                    "comment": "Valentine Table (S-rank furniture)",
+                    "item_id": 23479,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.43
+                },
+                {
+                    "comment": "Valentine Carpet (S-rank furniture)",
+                    "item_id": 23480,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.43
+                },
+                {
+                    "comment": "Valentine Cookware (S-rank furniture)",
+                    "item_id": 23481,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.43
+                },
+                {
+                    "comment": "Valentine Living Room Carpet (S-rank furniture)",
+                    "item_id": 23482,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.42
+                },
+                {
+                    "comment": "Bath - Valentine Hot Tub (S-rank furniture)",
+                    "item_id": 21548,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.43
+                },
+                {
+                    "comment": "Valentine Carpet (A-rank)",
+                    "item_id": 16745,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Valentine Angel (A-rank)",
+                    "item_id": 16747,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Valentine Cushion (A-rank)",
+                    "item_id": 16751,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Moody Lamp - Valentine (A-rank)",
+                    "item_id": 16753,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Heart's Living Room Carpet - Valentine (A-rank)",
+                    "item_id": 19642,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Valentine Puppet (A-rank)",
+                    "item_id": 21546,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Finest Chocolate Cake (B-rank)",
+                    "item_id": 21328,
+                    "amount": 10,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 30.0
+                },
+                {
+                    "comment": "Sweet Honey Cake (B-rank)",
+                    "item_id": 21329,
+                    "amount": 10,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 30.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 500,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Growth Support Pack",
+            "description": "Support your journey with the <COL ff8c00>Growth Support Pack</COL>!",
+            "detail": "Level up faster with EXP orbs and skill unlocks!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nClass S: LV.90 Orbs (instant level 90 for a job)\r\nClass A: Job Training Unlocks\r\nClass B: Secret Ability items",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 2.0%\r\nClass A 18.0%\r\nClass B 80.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot35.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot35_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 500001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 5,
+                            "base_price": 5,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 500011,
+                            "wallet_type": "SilverTickets",
+                            "price": 50,
+                            "base_price": 50,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 500002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 45,
+                            "base_price": 45,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 500012,
+                            "wallet_type": "SilverTickets",
+                            "price": 450,
+                            "base_price": 450,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 500003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 100,
+                            "base_price": 100,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 500013,
+                            "wallet_type": "SilverTickets",
+                            "price": 1000,
+                            "base_price": 1000,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Become LV.90 Orb (Fighter) (S-rank)",
+                    "item_id": 21631,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Shield Sage) (S-rank)",
+                    "item_id": 21632,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Hunter) (S-rank)",
+                    "item_id": 21633,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Priest) (S-rank)",
+                    "item_id": 21634,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Sorcerer) (S-rank)",
+                    "item_id": 21635,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Seeker) (S-rank)",
+                    "item_id": 21636,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Element Archer) (S-rank)",
+                    "item_id": 21637,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Warrior) (S-rank)",
+                    "item_id": 21638,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Alchemist) (S-rank)",
+                    "item_id": 21639,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Become LV.90 Orb (Spirit Lancer) (S-rank)",
+                    "item_id": 21640,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.2
+                },
+                {
+                    "comment": "Job Training Full Unlock (Fighter) (A-rank)",
+                    "item_id": 21641,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Shield Sage) (A-rank)",
+                    "item_id": 21642,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Hunter) (A-rank)",
+                    "item_id": 21643,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Priest) (A-rank)",
+                    "item_id": 21644,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Sorcerer) (A-rank)",
+                    "item_id": 21645,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Seeker) (A-rank)",
+                    "item_id": 21646,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Element Archer) (A-rank)",
+                    "item_id": 21647,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Warrior) (A-rank)",
+                    "item_id": 21648,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Alchemist) (A-rank)",
+                    "item_id": 21649,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Job Training Full Unlock (Spirit Lancer) (A-rank)",
+                    "item_id": 21650,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 1.8
+                },
+                {
+                    "comment": "Secret Ability: Companion Health (B-rank)",
+                    "item_id": 13786,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 13.33
+                },
+                {
+                    "comment": "Secret Ability: Companion Stamina (B-rank)",
+                    "item_id": 13787,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 13.33
+                },
+                {
+                    "comment": "Secret Ability: Companion Attack (B-rank)",
+                    "item_id": 13788,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 13.33
+                },
+                {
+                    "comment": "Secret Ability: Companion Magick (B-rank)",
+                    "item_id": 13789,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 13.33
+                },
+                {
+                    "comment": "Secret Ability: Companion Defense (B-rank)",
+                    "item_id": 13790,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 13.34
+                },
+                {
+                    "comment": "Secret Ability: Companion Magick Defense (B-rank)",
+                    "item_id": 13791,
+                    "amount": 1,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 13.34
+                }
+            ]
+        },
+        {
+            "gacha_id": 600,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Premium Material Lot",
+            "description": "Obtain rare crafting materials from the <COL ff8c00>Premium Material Lot</COL>!",
+            "detail": "High-grade materials for crafting the finest equipment!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nClass S: Legendary dragon materials\r\nClass A: Rare boss materials\r\nClass B: Quality crafting components",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 5.0%\r\nClass A 35.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/topraremats.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot27_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 600001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 600011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 600002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 600012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 25,
+                    "payments": [
+                        {
+                            "group_id": 600003,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 60,
+                            "base_price": 60,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 600013,
+                            "wallet_type": "SilverTickets",
+                            "price": 600,
+                            "base_price": 600,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Dragon Horn (S-rank)",
+                    "item_id": 7754,
+                    "amount": 5,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Dragon Fang (S-rank)",
+                    "item_id": 7763,
+                    "amount": 5,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Spectral Dragon Claw (S-rank)",
+                    "item_id": 7802,
+                    "amount": 5,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Huge Dragon Bone Lump (S-rank)",
+                    "item_id": 7806,
+                    "amount": 5,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Demonic Fowl Feather (S-rank)",
+                    "item_id": 7819,
+                    "amount": 5,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.0
+                },
+                {
+                    "comment": "Rainbow Eye Gem (A-rank)",
+                    "item_id": 7731,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Witch's Grimoire (A-rank)",
+                    "item_id": 7808,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Gold Thread (A-rank)",
+                    "item_id": 7743,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Sinister Horn (A-rank)",
+                    "item_id": 7748,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Cursed Skull (A-rank)",
+                    "item_id": 7772,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Shadowy Claw (A-rank)",
+                    "item_id": 7800,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Glossy Black Feather (A-rank)",
+                    "item_id": 7818,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Beast Fur (B-rank)",
+                    "item_id": 7778,
+                    "amount": 20,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Thick Bone (B-rank)",
+                    "item_id": 7770,
+                    "amount": 20,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "White Lion Pelt (B-rank)",
+                    "item_id": 7739,
+                    "amount": 20,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Behemoth Fang (B-rank)",
+                    "item_id": 7799,
+                    "amount": 20,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Cockatrice Raven Pinion (B-rank)",
+                    "item_id": 7816,
+                    "amount": 20,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Magickal Potion (B-rank)",
+                    "item_id": 7832,
+                    "amount": 20,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 700,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Holy Night Fever",
+            "description": "Celebrate Christmas with the <COL ff8c00>Holy Night Fever</COL> lot!",
+            "detail": "Get festive Christmas costumes and items!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nChristmas Cap (Red/White)\r\nChristmas Wear (Red/White)\r\nChristmas Legs (Red/White)\r\nChristmas Mantle\r\nPresent Sack\r\nReindeer's Coif\r\nDye items",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 15.0%\r\nClass A 25.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot23.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot23_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 700001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 700011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 700002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 700012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Christmas Cap (S-rank)",
+                    "item_id": 16788,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Christmas Cap White (S-rank)",
+                    "item_id": 16795,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Reindeer's Coif (S-rank)",
+                    "item_id": 16789,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Christmas Tree (S-rank furniture)",
+                    "item_id": 16113,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Christmas Puppet - Large Ent (S-rank furniture)",
+                    "item_id": 19639,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Rainbow Dye (A-rank)",
+                    "item_id": 8141,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Green Dye (A-rank)",
+                    "item_id": 8136,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Blue Dye (A-rank)",
+                    "item_id": 8137,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Yellow Dye (A-rank)",
+                    "item_id": 8138,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Black Dye (A-rank)",
+                    "item_id": 8140,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Red Dye (B-rank)",
+                    "item_id": 8135,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 20.0
+                },
+                {
+                    "comment": "Pink Dye (B-rank)",
+                    "item_id": 8139,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 20.0
+                },
+                {
+                    "comment": "Color Restorer (B-rank)",
+                    "item_id": 8142,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 20.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 701,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Chocolate Fondue Lot",
+            "description": "Valentine's special <COL ff8c00>Chocolate Fondue Lot</COL> with Melty weapons!",
+            "detail": "Draw for the exclusive Melty weapon series!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nMelty Sword, Shield, Blade, Wall\r\nMelty Rod, Daggers, Bow\r\nMelty Seiðr, Shooter\r\nMelty Staff, Wand, Spear\r\nConsumables",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 10.0%\r\nClass A 30.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot24.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot24_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 701001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 701011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 701002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 701012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Melty Sword (S-rank)",
+                    "item_id": 16764,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Shield (S-rank)",
+                    "item_id": 16766,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Blade (S-rank)",
+                    "item_id": 16768,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Wall (S-rank)",
+                    "item_id": 16770,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Rod (S-rank)",
+                    "item_id": 16772,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Daggers (S-rank)",
+                    "item_id": 16774,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Bow (S-rank)",
+                    "item_id": 16776,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Seiðr (S-rank)",
+                    "item_id": 16778,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Shooter (S-rank)",
+                    "item_id": 16780,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Staff (S-rank)",
+                    "item_id": 16782,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Wand (S-rank)",
+                    "item_id": 16784,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Melty Spear (S-rank)",
+                    "item_id": 16786,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.84
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (A-rank)",
+                    "item_id": 13800,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (A-rank)",
+                    "item_id": 13801,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Cure-All (A-rank)",
+                    "item_id": 13807,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Twin Gods Talisman (A-rank)",
+                    "item_id": 13804,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Angel's Charm (A-rank)",
+                    "item_id": 13808,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Sprite's Charm (A-rank)",
+                    "item_id": 13809,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Finest Chocolate Cake (B-rank)",
+                    "item_id": 21328,
+                    "amount": 10,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 30.0
+                },
+                {
+                    "comment": "Sweet Honey Cake (B-rank)",
+                    "item_id": 21329,
+                    "amount": 10,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 30.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 702,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "White Day Lot",
+            "description": "Celebrate White Day with the <COL ff8c00>Sincere</COL> weapon series!",
+            "detail": "Draw for the exclusive Sincere weapon series!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nSincere Sword, Shield, Blade, Wall\r\nSincere Rod, Daggers, Bow\r\nSincere Seiðr, Shooter\r\nSincere Staff, Wand, Spear\r\nConsumables",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 10.0%\r\nClass A 30.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot35.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot35_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 702001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 702011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 702002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 702012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Sincere Sword (S-rank)",
+                    "item_id": 16765,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Shield (S-rank)",
+                    "item_id": 16767,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Blade (S-rank)",
+                    "item_id": 16769,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Wall (S-rank)",
+                    "item_id": 16771,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Rod (S-rank)",
+                    "item_id": 16773,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Daggers (S-rank)",
+                    "item_id": 16775,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Bow (S-rank)",
+                    "item_id": 16777,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Seiðr (S-rank)",
+                    "item_id": 16779,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Shooter (S-rank)",
+                    "item_id": 16781,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Staff (S-rank)",
+                    "item_id": 16783,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Wand (S-rank)",
+                    "item_id": 16785,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.83
+                },
+                {
+                    "comment": "Sincere Spear (S-rank)",
+                    "item_id": 16787,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.84
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (A-rank)",
+                    "item_id": 13800,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (A-rank)",
+                    "item_id": 13801,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Cure-All (A-rank)",
+                    "item_id": 13807,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Twin Gods Talisman (A-rank)",
+                    "item_id": 13804,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Angel's Charm (A-rank)",
+                    "item_id": 13808,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Sprite's Charm (A-rank)",
+                    "item_id": 13809,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "White Dragon Miracle Cure (B-rank)",
+                    "item_id": 54,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 30.0
+                },
+                {
+                    "comment": "White Dragon Gala Extract (B-rank)",
+                    "item_id": 56,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 30.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 703,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Attack on Titan Collaboration",
+            "description": "Exclusive <COL ff8c00>Attack on Titan</COL> collaboration items!",
+            "detail": "Get Survey Corps equipment and weapons!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nSnap Blade (Dagger)\r\nOne-handed Snap Blade (Sword)\r\nSurvey Corps Shield\r\nSurvey Corps Clothes (Male/Female)\r\nConsumables",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 15.0%\r\nClass A 25.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot36.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot36_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 703001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 703011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 703002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 703012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Snap Blade (S-rank dagger)",
+                    "item_id": 19104,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "One-handed Snap Blade (S-rank sword)",
+                    "item_id": 19114,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Survey Corps Shield (S-rank)",
+                    "item_id": 19109,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Survey Corps Male Soldier's Clothes Outside Wall Use (S-rank)",
+                    "item_id": 19128,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Survey Corps Token (S-rank)",
+                    "item_id": 18835,
+                    "amount": 10,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.0
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (A-rank)",
+                    "item_id": 13800,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (A-rank)",
+                    "item_id": 13801,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Cure-All (A-rank)",
+                    "item_id": 13807,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Twin Gods Talisman (A-rank)",
+                    "item_id": 13804,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Angel's Charm (A-rank)",
+                    "item_id": 13808,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "White Dragon Miracle Cure (B-rank)",
+                    "item_id": 54,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "White Dragon Gala Extract (B-rank)",
+                    "item_id": 56,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Pill of Savages (B-rank)",
+                    "item_id": 9379,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Gala Pickling Liquor (B-rank)",
+                    "item_id": 9380,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 704,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Ghosts 'n Goblins Collaboration",
+            "description": "Exclusive <COL ff8c00>Ghosts 'n Goblins</COL> collaboration items!",
+            "detail": "Get Arthur's iconic equipment!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nArthur's Lance (Spirit Spear)\r\nGhosts 'n Goblins Underwear\r\nGhosts 'n Goblins Coins\r\nConsumables",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 10.0%\r\nClass A 30.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot37.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot37_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 704001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 704011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 704002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 704012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Ghosts 'n Goblins Arthur's Lance (S-rank)",
+                    "item_id": 19512,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.33
+                },
+                {
+                    "comment": "Ghosts 'n Goblins Underwear Male (S-rank)",
+                    "item_id": 19599,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.33
+                },
+                {
+                    "comment": "Ghosts 'n Goblins Underwear Female (S-rank)",
+                    "item_id": 19600,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 3.34
+                },
+                {
+                    "comment": "Ghosts 'n Goblins Coin (A-rank)",
+                    "item_id": 13827,
+                    "amount": 10,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (A-rank)",
+                    "item_id": 13800,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (A-rank)",
+                    "item_id": 13801,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Twin Gods Talisman (A-rank)",
+                    "item_id": 13804,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Angel's Charm (A-rank)",
+                    "item_id": 13808,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "White Dragon Miracle Cure (B-rank)",
+                    "item_id": 54,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "White Dragon Gala Extract (B-rank)",
+                    "item_id": 56,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Pill of Savages (B-rank)",
+                    "item_id": 9379,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Gala Pickling Liquor (B-rank)",
+                    "item_id": 9380,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 705,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Overlord Collaboration",
+            "description": "Exclusive <COL ff8c00>Overlord</COL> collaboration items!",
+            "detail": "Get items from the Great Tomb of Nazarick!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nAinz Ooal Gown (Wand)\r\nOverlord Tapestries\r\nConsumables",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 10.0%\r\nClass A 30.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot41.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot41_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 705001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 705011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 705002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 705012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Ainz Ooal Gown (S-rank wand)",
+                    "item_id": 21187,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Ainz Ooal Gown+ (S-rank wand)",
+                    "item_id": 23544,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Tapestry - Overlord (S-rank furniture)",
+                    "item_id": 21193,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Tapestry - Overlord III (A) (S-rank furniture)",
+                    "item_id": 23379,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (A-rank)",
+                    "item_id": 13800,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.5
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (A-rank)",
+                    "item_id": 13801,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.5
+                },
+                {
+                    "comment": "Cure-All (A-rank)",
+                    "item_id": 13807,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.5
+                },
+                {
+                    "comment": "Twin Gods Talisman (A-rank)",
+                    "item_id": 13804,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 7.5
+                },
+                {
+                    "comment": "White Dragon Miracle Cure (B-rank)",
+                    "item_id": 54,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "White Dragon Gala Extract (B-rank)",
+                    "item_id": 56,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Pill of Savages (B-rank)",
+                    "item_id": 9379,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                },
+                {
+                    "comment": "Gala Pickling Liquor (B-rank)",
+                    "item_id": 9380,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 15.0
+                }
+            ]
+        },
+        {
+            "gacha_id": 706,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Azure Storm Vanguard",
+            "description": "Draw from the <COL ff8c00>Azure Storm Vanguard</COL> lot for powerful weapons!",
+            "detail": "Get the Vanguard and Holy War weapon series!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nEdge/Arrow/Wall/Staff of Vanguard\r\nDaggers/Wand/Spell of Vanguard\r\nBlade/Hand/Lance of Vanguard\r\nShield/Rod of Vanguard\r\nHoly War Sphidante weapons",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 3.0%\r\nClass A 10.0%\r\nClass B 87.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot44.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot44_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 706001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 3,
+                            "base_price": 3,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 706011,
+                            "wallet_type": "SilverTickets",
+                            "price": 30,
+                            "base_price": 30,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 706002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 27,
+                            "base_price": 27,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 706012,
+                            "wallet_type": "SilverTickets",
+                            "price": 270,
+                            "base_price": 270,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Edge of Vanguard (S-rank sword)",
+                    "item_id": 19400,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Arrow of Vanguard (S-rank bow)",
+                    "item_id": 19401,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Wall of Vanguard (S-rank great shield)",
+                    "item_id": 19402,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Staff of Vanguard (S-rank staff)",
+                    "item_id": 19403,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Daggers of Vanguard (S-rank daggers)",
+                    "item_id": 19404,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Wand of Vanguard (S-rank wand)",
+                    "item_id": 19405,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Spell of Vanguard (S-rank magick bow)",
+                    "item_id": 19406,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Blade of Vanguard (S-rank great sword)",
+                    "item_id": 19407,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Hand of Vanguard (S-rank gauntlets)",
+                    "item_id": 19408,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Lance of Vanguard (S-rank spear)",
+                    "item_id": 19409,
+                    "amount": 1,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 0.3
+                },
+                {
+                    "comment": "Shield of Vanguard (A-rank shield)",
+                    "item_id": 19623,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Rod of Vanguard (A-rank rod)",
+                    "item_id": 19625,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Holy War Sphidante Sword (A-rank)",
+                    "item_id": 20123,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Holy War Sphidante Blade (A-rank)",
+                    "item_id": 20169,
+                    "amount": 1,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 2.5
+                },
+                {
+                    "comment": "Superior White Dragon Miracle Cure (B-rank)",
+                    "item_id": 13800,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.43
+                },
+                {
+                    "comment": "Superior White Dragon Gala Extract (B-rank)",
+                    "item_id": 13801,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.43
+                },
+                {
+                    "comment": "White Dragon Miracle Cure (B-rank)",
+                    "item_id": 54,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.43
+                },
+                {
+                    "comment": "White Dragon Gala Extract (B-rank)",
+                    "item_id": 56,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.43
+                },
+                {
+                    "comment": "Large Pill of Savages (B-rank)",
+                    "item_id": 13802,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.43
+                },
+                {
+                    "comment": "Strong Gala Pickling Liquor (B-rank)",
+                    "item_id": 13803,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.43
+                },
+                {
+                    "comment": "Red Dye (B-rank)",
+                    "item_id": 8135,
+                    "amount": 5,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 12.42
+                }
+            ]
+        },
+        {
+            "gacha_id": 707,
+            "start_time": 0,
+            "end_time": 4131210198,
+            "name": "Iron Defense Crest Lot",
+            "description": "Get powerful defensive crests from the <COL ff8c00>Iron Defense Crest Lot</COL>!",
+            "detail": "Draw for armor crests to boost your defense!\r\n\r\n<COL ff8c00>[Included lineup]</COL>\r\n\r\nProtection/Intelligence crests\r\nHoly Warding crest\r\nElemental resistance crests\r\nHP and recovery crests",
+            "weight_display_type": 2,
+            "weight_display_title": "Percentage Provided",
+            "weight_display_text": "Class S 5.0%\r\nClass A 35.0%\r\nClass B 60.0%\r\n*Probability of provision is rounded to one decimal place.",
+            "list_address": "http://172.16.0.50:52099/shop/img/payment/icon_lot25.png",
+            "image_address": "http://172.16.0.50:52099/shop/img/payment/image_lot25_01.jpg",
+            "draw_options": [
+                {
+                    "num_draws": 1,
+                    "payments": [
+                        {
+                            "group_id": 707001,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 1,
+                            "base_price": 1,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 707011,
+                            "wallet_type": "SilverTickets",
+                            "price": 10,
+                            "base_price": 10,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                },
+                {
+                    "num_draws": 10,
+                    "payments": [
+                        {
+                            "group_id": 707002,
+                            "wallet_type": "GoldenGemstones",
+                            "price": 9,
+                            "base_price": 9,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        },
+                        {
+                            "group_id": 707012,
+                            "wallet_type": "SilverTickets",
+                            "price": 90,
+                            "base_price": 90,
+                            "purchase_num": 0,
+                            "purchase_max_num": 0,
+                            "special_price_num": 0,
+                            "special_price_max_num": 0,
+                            "unk1": 0
+                        }
+                    ]
+                }
+            ],
+            "draw_list": [
+                {
+                    "comment": "Crest of Firm Protection (S-rank)",
+                    "item_id": 9290,
+                    "amount": 3,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.25
+                },
+                {
+                    "comment": "Crest of Superior Intelligence (S-rank)",
+                    "item_id": 9294,
+                    "amount": 3,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.25
+                },
+                {
+                    "comment": "Crest of Holy Warding (S-rank)",
+                    "item_id": 9309,
+                    "amount": 3,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.25
+                },
+                {
+                    "comment": "Crest of Holy Warding+ (S-rank)",
+                    "item_id": 13682,
+                    "amount": 3,
+                    "rank": 1,
+                    "effect": 0,
+                    "chance": 1.25
+                },
+                {
+                    "comment": "Crest of Sheer Protection (A-rank)",
+                    "item_id": 9289,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Sheer Intelligence (A-rank)",
+                    "item_id": 9293,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Greater Protection (A-rank)",
+                    "item_id": 9288,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Greater Intelligence (A-rank)",
+                    "item_id": 9292,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Unburdening (A-rank armor)",
+                    "item_id": 9286,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Lightness (A-rank armor)",
+                    "item_id": 9285,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Lightness (A-rank armor)",
+                    "item_id": 9193,
+                    "amount": 3,
+                    "rank": 2,
+                    "effect": 0,
+                    "chance": 5.0
+                },
+                {
+                    "comment": "Crest of Protection (B-rank)",
+                    "item_id": 9287,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Crest of Intelligence (B-rank)",
+                    "item_id": 9291,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Crest of Diminished Fire Resist (B-rank)",
+                    "item_id": 9268,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Crest of Diminished Ice Resist (B-rank)",
+                    "item_id": 9270,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Crest of Diminished Lightning Resist (B-rank)",
+                    "item_id": 9272,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                },
+                {
+                    "comment": "Crest of Diminished Holy Resist (B-rank)",
+                    "item_id": 9274,
+                    "amount": 3,
+                    "rank": 3,
+                    "effect": 0,
+                    "chance": 10.0
+                }
+            ]
+        }
+    ]
+}

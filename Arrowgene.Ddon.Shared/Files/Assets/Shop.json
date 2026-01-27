@@ -55,6 +55,127 @@
                     "Unk5": 0,
                     "Unk6": 0,
                     "Unk7": []
+                },
+                {
+                    "Index": 5,
+                    "ItemId": 18742,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "High Orb (1 HO)"
+                },
+                {
+                    "Index": 6,
+                    "ItemId": 18743,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "High Orb (10 HO)"
+                },
+                {
+                    "Index": 7,
+                    "ItemId": 18744,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "High Orb (100 HO)"
+                },
+                {
+                    "Index": 8,
+                    "ItemId": 19510,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Rift Crystal (1,000 RP)"
+                },
+                {
+                    "Index": 9,
+                    "ItemId": 19511,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Blood Orb (1,000 BO)"
+                },
+                {
+                    "Index": 10,
+                    "ItemId": 19509,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Coin Pouch (10,000 G)"
+                },
+                {
+                    "Index": 11,
+                    "ItemId": 18827,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Adventure Pass Point (1 BP)"
+                },
+                {
+                    "Index": 12,
+                    "ItemId": 10682,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Silver Ticket"
+                },
+                {
+                    "Index": 13,
+                    "ItemId": 19367,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Custom Made Service Ticket"
+                },
+                {
+                    "Index": 14,
+                    "ItemId": 23122,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Bitterblack Maze Reset Ticket"
+                },
+                {
+                    "Index": 15,
+                    "ItemId": 10664,
+                    "Price": 0,
+                    "Stock": 255,
+                    "Unk4": false,
+                    "Unk5": 0,
+                    "Unk6": 0,
+                    "Unk7": [],
+                    "Comment": "Golden Gemstone (1 GP)"
                 }
             ]
         }

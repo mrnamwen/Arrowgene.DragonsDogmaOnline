@@ -1,0 +1,194 @@
+[
+  {
+    "AreaId": "HidellPlains",
+    "CommonRewards": [
+      { "ItemId": 7917, "MinNum": 2, "MaxNum": 5 },
+      { "ItemId": 7934, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 7961, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7790, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7793, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7936, "MinNum": 1, "MaxNum": 2 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11407, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "BreyaCoast",
+    "CommonRewards": [
+      { "ItemId": 7824, "MinNum": 2, "MaxNum": 4 },
+      { "ItemId": 7736, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 7768, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7790, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7793, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7737, "MinNum": 1, "MaxNum": 2 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11408, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "MysreeForest",
+    "CommonRewards": [
+      { "ItemId": 7951, "MinNum": 2, "MaxNum": 5 },
+      { "ItemId": 7960, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 7976, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7790, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7793, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7743, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11407, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "VoldenMines",
+    "CommonRewards": [
+      { "ItemId": 7974, "MinNum": 2, "MaxNum": 5 },
+      { "ItemId": 7811, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 8016, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7790, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 1 },
+      { "ItemId": 7730, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11409, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "DoweValley",
+    "CommonRewards": [
+      { "ItemId": 7917, "MinNum": 2, "MaxNum": 4 },
+      { "ItemId": 7735, "MinNum": 2, "MaxNum": 4 },
+      { "ItemId": 7752, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 7790, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7793, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7749, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11408, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "BetlandPlains",
+    "CommonRewards": [
+      { "ItemId": 7934, "MinNum": 2, "MaxNum": 5 },
+      { "ItemId": 7732, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 7750, "MinNum": 2, "MaxNum": 4 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 1 },
+      { "ItemId": 7733, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11409, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "ZandoraWastelands",
+    "CommonRewards": [
+      { "ItemId": 7976, "MinNum": 2, "MaxNum": 5 },
+      { "ItemId": 7728, "MinNum": 1, "MaxNum": 3 },
+      { "ItemId": 7741, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 1 },
+      { "ItemId": 7745, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11410, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "MergodaRuins",
+    "CommonRewards": [
+      { "ItemId": 7951, "MinNum": 2, "MaxNum": 5 },
+      { "ItemId": 7729, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7744, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 1 },
+      { "ItemId": 7746, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 11410, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "BloodbaneIsle",
+    "CommonRewards": [
+      { "ItemId": 7974, "MinNum": 3, "MaxNum": 6 },
+      { "ItemId": 7740, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7742, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7748, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 17923, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "ElanWaterGrove",
+    "CommonRewards": [
+      { "ItemId": 7960, "MinNum": 3, "MaxNum": 6 },
+      { "ItemId": 7726, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7738, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7739, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 17924, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "FeryanaWilderness",
+    "CommonRewards": [
+      { "ItemId": 8016, "MinNum": 3, "MaxNum": 6 },
+      { "ItemId": 7727, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7734, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7747, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 17925, "MinNum": 1, "MaxNum": 1 }
+    ]
+  },
+  {
+    "AreaId": "MorrowForest",
+    "CommonRewards": [
+      { "ItemId": 7811, "MinNum": 3, "MaxNum": 6 },
+      { "ItemId": 7736, "MinNum": 2, "MaxNum": 3 },
+      { "ItemId": 7743, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7791, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "RareRewards": [
+      { "ItemId": 7794, "MinNum": 1, "MaxNum": 2 },
+      { "ItemId": 7751, "MinNum": 1, "MaxNum": 1 }
+    ],
+    "HotSpotRewards": [
+      { "ItemId": 17926, "MinNum": 1, "MaxNum": 1 }
+    ]
+  }
+]

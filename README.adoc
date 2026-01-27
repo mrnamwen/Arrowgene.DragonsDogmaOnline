@@ -4,7 +4,7 @@
 
 = Dragons Dogma Online - Server
 
-image::https://github.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/actions/workflows/build.yaml/badge.svg[]
+image::https://github.com/mrnamwen/Arrowgene.DragonsDogmaOnline/actions/workflows/build.yaml/badge.svg[]
 
 Server Emulator for the Game Dragons Dogma Online.
 
@@ -17,11 +17,114 @@ toc::[]
 == Disclaimer
 The project is intended for educational purpose only.
 
+== Fork Improvements
+
+This fork includes significant enhancements and new features over the upstream repository:
+
+=== New Game Systems
+
+==== Gacha System
+* Full Box Gacha implementation with buy, draw, list, and reset functionality
+* Standard Gacha support with configurable prize pools
+* Persistent gacha state and pull history tracking
+
+==== GP (Game Points) Shop
+* Complete GP Shop with purchase and browsing capabilities
+* GP Course management (activation, validation, available courses)
+* CAP to GP conversion system
+* Purchase history tracking
+
+==== Pawn Expedition System
+* Full expedition (sally) system implementation
+* Expedition rewards and drop collection
+* Golden sally support for premium expeditions
+* Sally count charging and cancellation
+
+==== Mandragora Crafting
+* Mandragora crafting system with finish/check mechanics
+* Golden craft support for premium crafting
+* Item retrieval from completed crafts
+
+==== Quick Party System
+* Party matching and registration
+* Quest-based party registration
+* Party ready notifications
+
+==== Equipment Presets
+* Save and load equipment preset configurations
+* Preset naming and management
+
+==== Mail System
+* Personal mail send, receive, and delete functionality
+* Mail text retrieval
+* Send notifications
+
+==== Daily Missions
+* Daily mission listing and tracking
+* Mission rewards system
+
+==== Additional Features
+* Event code redemption system
+* NPC Bazaar sell functionality
+* Official/Legend pawn support
+* Free rental pawn listings
+* Item storage info queries
+* Blacklist management
+* Friend recent character list
+* Group chat member list
+
+=== Database Migrations
+New migrations for enhanced persistence:
+
+* Death Penalty Persistence (Migration 53)
+* Revive Timer (Migration 54)
+* Personal Mail (Migration 55)
+* Mandragora (Migration 56)
+* Equip Presets (Migration 57)
+* Clan Scout (Migration 58)
+* Shop History (Migration 59)
+
+=== New Managers
+* `GachaManager` - Gacha system logic
+* `GpShopManager` - GP shop transactions
+* `MandragoraManager` - Mandragora crafting
+* `NpcBazaarManager` - NPC bazaar operations
+* `OfficialPawnManager` - Official pawn handling
+* `PawnExpeditionManager` - Expedition system
+* `QuickPartyManager` - Quick party matching
+* `SpecialBonusManager` - Special bonus handling
+
+=== New Asset Files
+Configurable JSON assets for game content:
+
+* `DailyMissions.json` - Daily mission definitions
+* `EventCodes.json` - Redeemable event codes
+* `Gacha.json` - Gacha prize pools and rates
+* `GpShop.json` - GP shop item listings
+* `Mandragora.json` - Mandragora recipes
+* `NpcBazaar.json` - NPC bazaar inventory
+* `OfficialPawns.json` - Official pawn definitions
+* `PawnExpeditionRewards.json` - Expedition reward tables
+* `QuestBonuses.json` - Quest bonus configurations
+* `SeasonWeapons.json` - Season weapon definitions
+* `TreasurePoints.json` - Treasure point locations
+* `UltimateSynthesis.json` - Ultimate synthesis recipes
+
+=== Script Settings
+New C# script configurations:
+
+* `GameServerSettings.csx` - Server configuration overrides
+* `PointModifierSettings.csx` - XP/point rate modifiers
+* `SeasonalEventSettings.csx` - Seasonal event toggles
+
+=== Web Assets
+* Added shop payment icons and images for the web interface
+
 == Developer Setup
 
 . Clone the repository
-.. `git clone https://github.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline.git`
-. Install .NET 9.0 SDK or later https://dotnet.microsoft.com/download
+.. `git clone https://github.com/mrnamwen/Arrowgene.DragonsDogmaOnline.git`
+. Install .NET 10.0 SDK or later https://dotnet.microsoft.com/download
 . Use your IDE of choice
 .. *Visual Studio*
 ... Open the `DragonsDogmaOnline.sln`-file
@@ -39,18 +142,18 @@ The project is intended for educational purpose only.
 
 == User Setup
 . Clone the repository
-.. `git clone https://github.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline.git`
-. Install .NET 9.0 SDK or later https://dotnet.microsoft.com/download
+.. `git clone https://github.com/mrnamwen/Arrowgene.DragonsDogmaOnline.git`
+. Install .NET 10.0 SDK or later https://dotnet.microsoft.com/download
 . Run `publish.cmd` or `publish.sh` to build the server files.
 . If updating from a previous build of the server...
 .. Make sure that your database file `db.sqlite` is in the proper location, usually `Arrowgene.DragonsDogmaOnline\publish\win-x64-#.#.#.#\Server\Files\Database`.
 .. You may have to migrate your database schema by running `MigrateDatabase.cmd`, which can be found in `Arrowgene.DragonsDogmaOnline\publish\win-x64-#.#.#.#`.
 . Launch the server with `StartServer.cmd`, which can be found in `Arrowgene.DragonsDogmaOnline\publish\win-x64-#.#.#.#`.
-. For frequently asked questions, see https://github.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/blob/develop/docs/faq.md
+. For frequently asked questions, see https://github.com/mrnamwen/Arrowgene.DragonsDogmaOnline/blob/develop/docs/faq.md
 
 == Deployment
 
-The application (server) requires the (ASP).NET runtime 9 to function. Alternatively the SDK also works and is required when building from source.
+The application (server) requires the (ASP).NET runtime 10 to function. Alternatively the SDK also works and is required when building from source.
 
 On a high level, a total of four components are required to successfully connect a client:
 
@@ -107,7 +210,7 @@ Launch the client with the following args:
 `"DDO.exe" "addr=localhost port=52100 token=00000000000000000000 DL=http://127.0.0.1:52099/win/ LVer=03.04.003.20181115.0 RVer=3040008"`
 
 == Progress
-See the https://github.com/sebastian-heinz/Arrowgene.DragonsDogmaOnline/wiki/What-Works%3F[wiki].
+See the https://github.com/mrnamwen/Arrowgene.DragonsDogmaOnline/wiki/What-Works%3F[wiki].
 
 == Guidelines
 === Git 

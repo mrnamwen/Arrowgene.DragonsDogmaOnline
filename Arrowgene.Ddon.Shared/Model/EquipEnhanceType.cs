@@ -5,5 +5,6 @@ namespace Arrowgene.Ddon.Shared.Model
         LimitBreak = 1,
         UltimateSynthesis = 2,
         AdditionalCraftMaterial = 3,
+        UltimateSynthesisSpecialBonus = 4,
     }
 }

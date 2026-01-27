@@ -561,6 +561,55 @@ namespace Arrowgene.Ddon.Test.Database
         public string GetString(DbDataReader reader, string column) { return ""; }
         public bool GetBoolean(DbDataReader reader, string column) { return false; }
         public byte[] GetBytes(DbDataReader reader, string column, int size) { return null; }
+
+        // Personal mail stubs
+        public long InsertPersonalMailMessage(PersonalMailMessage message) { return 0; }
+        public List<PersonalMailMessage> SelectPersonalMailMessages(uint recipientCharacterId) { return new List<PersonalMailMessage>(); }
+        public PersonalMailMessage? SelectPersonalMailMessage(ulong messageId) { return null; }
+        public bool UpdatePersonalMailMessageState(ulong messageId, MailState messageState) { return true; }
+        public bool DeletePersonalMailMessage(ulong messageId) { return true; }
+
+        // Equip preset stubs
+        public bool InsertEquipPreset(EquipPreset preset, DbConnection? connectionIn = null) { return true; }
+        public bool UpdateEquipPreset(EquipPreset preset, DbConnection? connectionIn = null) { return true; }
+        public bool UpdateEquipPresetName(uint characterId, JobId job, byte presetNo, string name, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteEquipPreset(uint characterId, JobId job, byte presetNo, DbConnection? connectionIn = null) { return true; }
+        public EquipPreset? SelectEquipPreset(uint characterId, JobId job, byte presetNo, DbConnection? connectionIn = null) { return null; }
+        public List<EquipPreset> SelectEquipPresets(uint characterId, JobId job, DbConnection? connectionIn = null) { return new List<EquipPreset>(); }
+
+        // Mandragora stubs
+        public bool InsertMandragora(Mandragora mandragora, DbConnection? connectionIn = null) { return true; }
+        public bool UpdateMandragora(Mandragora mandragora, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteMandragora(uint characterId, uint slotNo, DbConnection? connectionIn = null) { return true; }
+        public Mandragora? SelectMandragora(uint characterId, uint slotNo, DbConnection? connectionIn = null) { return null; }
+        public List<Mandragora> SelectMandragoras(uint characterId, DbConnection? connectionIn = null) { return new List<Mandragora>(); }
+
+        // Mandragora species discovery stubs
+        public bool InsertMandragoraSpeciesDiscovery(MandragoraSpeciesDiscovery discovery, DbConnection? connectionIn = null) { return true; }
+        public bool UpdateMandragoraSpeciesDiscovery(MandragoraSpeciesDiscovery discovery, DbConnection? connectionIn = null) { return true; }
+        public List<MandragoraSpeciesDiscovery> SelectMandragoraSpeciesDiscoveries(uint characterId, DbConnection? connectionIn = null) { return new List<MandragoraSpeciesDiscovery>(); }
+        public List<MandragoraSpeciesDiscovery> SelectMandragoraSpeciesDiscoveriesByCategory(uint characterId, MandragoraSpeciesCategory category, DbConnection? connectionIn = null) { return new List<MandragoraSpeciesDiscovery>(); }
+        public bool InsertOrIgnoreMandragoraFirstDiscovery(uint speciesIndex, uint characterId, string characterName, long timestamp, DbConnection? connectionIn = null) { return true; }
+        public string SelectMandragoraFirstDiscoverer(uint speciesIndex, DbConnection? connectionIn = null) { return ""; }
+
+        // GP purchase history stubs
+        public long InsertGpPurchaseHistory(GpPurchaseHistory history, DbConnection? connectionIn = null) { return 0; }
+        public List<GpPurchaseHistory> SelectGpPurchaseHistory(uint characterId, DbConnection? connectionIn = null) { return new List<GpPurchaseHistory>(); }
+        public List<GpPurchaseHistory> SelectGpPurchaseHistoryByShopType(uint characterId, uint shopType, DbConnection? connectionIn = null) { return new List<GpPurchaseHistory>(); }
+
+        // Gacha stubs
+        public long InsertGachaPullHistory(GachaPullHistory history, DbConnection? connectionIn = null) { return 0; }
+        public long InsertGachaPullResult(GachaPullResult result, DbConnection? connectionIn = null) { return 0; }
+        public List<GachaPullHistory> SelectGachaPullHistory(uint characterId, DbConnection? connectionIn = null) { return new List<GachaPullHistory>(); }
+        public List<GachaPullHistory> SelectGachaPullHistoryByGachaId(uint characterId, uint gachaId, DbConnection? connectionIn = null) { return new List<GachaPullHistory>(); }
+        public List<GachaPullResult> SelectGachaPullResults(ulong pullHistoryId, DbConnection? connectionIn = null) { return new List<GachaPullResult>(); }
+
+        // Box gacha stubs
+        public bool InsertBoxGachaState(BoxGachaState state, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteBoxGachaState(uint characterId, uint gachaId, DbConnection? connectionIn = null) { return true; }
+        public List<BoxGachaState> SelectBoxGachaState(uint characterId, uint gachaId, DbConnection? connectionIn = null) { return new List<BoxGachaState>(); }
+        public HashSet<uint> SelectBoxGachaDrawnLineups(uint characterId, uint gachaId, DbConnection? connectionIn = null) { return new HashSet<uint>(); }
+        public bool HasBoxGachaDrawnLineup(uint characterId, uint gachaId, uint lineupNo, DbConnection? connectionIn = null) { return false; }
     }
 
     class MockMigrationStrategy : IMigrationStrategy

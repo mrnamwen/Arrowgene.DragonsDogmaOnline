@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using Arrowgene.Ddon.GameServer.Characters;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Ddon.Shared.Model;
@@ -15,9 +16,11 @@ namespace Arrowgene.Ddon.GameServer
         public BazaarManager(DdonGameServer server)
         {
             Server = server;
+            NpcBazaar = new NpcBazaarManager(server);
         }
 
         private DdonGameServer Server;
+        public NpcBazaarManager NpcBazaar { get; }
 
         public ulong Exhibit(GameClient client, StorageType storageType, string itemUID, ushort num, uint price, byte _flag)
         {

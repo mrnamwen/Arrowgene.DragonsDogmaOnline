@@ -1,0 +1,39 @@
+{
+    "comment": [
+        "Quest bonus configuration for area, level, party, and quest party bonuses.",
+        "Ratio values are percentages: 100 = base (no bonus), 150 = 1.5x, 200 = 2x, etc.",
+        "gold_ratio: Gold reward multiplier",
+        "exp_ratio: Experience reward multiplier",
+        "rim_ratio: Rift crystal reward multiplier",
+        "area_point_ratio: Area point reward multiplier"
+    ],
+    "area_bonuses": [
+        {
+            "area_id": 1,
+            "area_name": "Hidell Plains",
+            "gold_ratio": 100,
+            "exp_ratio": 100,
+            "rim_ratio": 100,
+            "area_point_ratio": 100,
+            "unk4": 0
+        }
+    ],
+    "level_bonuses": [
+        {
+            "category": 0,
+            "comment": "Default level bonus category",
+            "elements": [
+                {
+                    "min_level": 1,
+                    "max_level": 100,
+                    "gold_ratio": 100,
+                    "exp_ratio": 100,
+                    "rim_ratio": 100,
+                    "area_point_ratio": 100
+                }
+            ]
+        }
+    ],
+    "party_bonuses": [],
+    "quest_party_bonuses": []
+}

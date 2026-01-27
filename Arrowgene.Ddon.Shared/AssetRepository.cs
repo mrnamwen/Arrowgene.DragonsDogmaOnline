@@ -40,6 +40,8 @@ namespace Arrowgene.Ddon.Shared
         public const string CraftingRecipesGradeUpKey = "CraftingRecipesGradeUp.json";
         public const string LearnedNormalSkillsKey = "LearnedNormalSkills.json";
         public const string GPCourseInfoKey = "GpCourseInfo.json";
+        public const string GachaKey = "Gacha.json";
+        public const string GpShopKey = "GpShop.json";
         public const string SecretAbilityKey = "DefaultSecretAbilities.json";
         public const string CostExpScalingInfoKey = "CostExpScalingInfo.json";
         public const string JobValueShopKey = "JobValueShop.csv";
@@ -70,6 +72,13 @@ namespace Arrowgene.Ddon.Shared
         public const string CraftAddStatusKey = "CraftAddStatus.json";
         public const string SkillDataKey = "SkillData.json";
         public const string TrainingRoomKey = "TrainingRoom.json";
+        public const string NpcBazaarKey = "NpcBazaar.json";
+        public const string MandragoraKey = "Mandragora.json";
+        public const string PawnExpeditionRewardsKey = "PawnExpeditionRewards.json";
+        public const string OfficialPawnsKey = "OfficialPawns.json";
+        public const string UltimateSynthesisKey = "UltimateSynthesis.json";
+        public const string SeasonWeaponsKey = "SeasonWeapons.json";
+        public const string EventCodesKey = "EventCodes.json";
 
         public const string QuestAssestKey = "quests";
         public const string EpitaphAssestKey = "epitaph";
@@ -141,6 +150,10 @@ namespace Arrowgene.Ddon.Shared
             CraftAddStatusAsset = new();
             SkillData = new([], [], []);
             TrainingRoomAsset = [];
+            OfficialPawnsAsset = new();
+            UltimateSynthesisAsset = new();
+            SeasonWeaponAsset = new();
+            EventCodeAsset = new();
         }
 
         public Dictionary<ErrorCode, ClientErrorCode> ClientErrorCodes { get; private set; }
@@ -193,6 +206,15 @@ namespace Arrowgene.Ddon.Shared
         public Dictionary<QuestId, uint> QuestScheduleIdAsset { get; private set; }
         public CraftAddStatusAsset CraftAddStatusAsset { get; private set; }
         public List<TrainingRoomEntry> TrainingRoomAsset { get; private set; }
+        public GachaAsset GachaAsset { get; private set; }
+        public GpShopAsset GpShopAsset { get; private set; }
+        public NpcBazaarAsset NpcBazaarAsset { get; private set; }
+        public MandragoraAsset MandragoraAsset { get; private set; }
+        public PawnExpeditionRewardsAsset PawnExpeditionRewardsAsset { get; private set; }
+        public List<OfficialPawn> OfficialPawnsAsset { get; private set; }
+        public UltimateSynthesisAsset UltimateSynthesisAsset { get; private set; }
+        public SeasonWeaponAsset SeasonWeaponAsset { get; private set; }
+        public EventCodeAsset EventCodeAsset { get; private set; }
 
         public void Initialize()
         {
@@ -234,6 +256,8 @@ namespace Arrowgene.Ddon.Shared
             RegisterAsset(value => AreaRankSupplyAsset = value, AreaRankSupplyKey, new AreaRankSupplyDeserializer());
             RegisterAsset(value => AreaRankRequirementAsset = value, AreaRankRequirementKey, new AreaRankRequirementDeserializer());
             RegisterAsset(value => LimitBreakAsset = value, LimitBreakKey, new LimitBreakAssetReader());
+            RegisterAsset(value => UltimateSynthesisAsset = value, UltimateSynthesisKey, new UltimateSynthesisAssetReader());
+            RegisterAsset(value => SeasonWeaponAsset = value, SeasonWeaponsKey, new SeasonWeaponAssetReader());
             RegisterAsset(value => AchievementAsset = value, AchievementAssetKey, new AchievementAssetDeserializer());
             RegisterAsset(value => AchievementBackgroundAsset = value, AchievementAssetKey, new AchievementBackgroundAssetDeserializer());
             RegisterAsset(value => GatheringSpotInfoAsset = value, GatheringSpotInfoKey, new GatheringSpotInfoAssetDeserializer());
@@ -244,6 +268,13 @@ namespace Arrowgene.Ddon.Shared
             RegisterAsset(value => SkillData = value, SkillDataKey, new SkillDataAssetDeserializer());
             RegisterAsset(value => CraftAddStatusAsset = value, CraftAddStatusKey, new CraftAddStatusAssetReader());
             RegisterAsset(value => TrainingRoomAsset = value, TrainingRoomKey, new JsonReaderWriter<List<TrainingRoomEntry>>());
+            RegisterAsset(value => GachaAsset = value, GachaKey, new GachaAssetDeserializer());
+            RegisterAsset(value => GpShopAsset = value, GpShopKey, new GpShopAssetDeserializer());
+            RegisterAsset(value => NpcBazaarAsset = value, NpcBazaarKey, new NpcBazaarAssetDeserializer());
+            RegisterAsset(value => MandragoraAsset = value, MandragoraKey, new MandragoraAssetDeserializer());
+            RegisterAsset(value => PawnExpeditionRewardsAsset = value, PawnExpeditionRewardsKey, new PawnExpeditionRewardsAssetDeserializer());
+            RegisterAsset(value => OfficialPawnsAsset = value, OfficialPawnsKey, new OfficialPawnDeserializer());
+            RegisterAsset(value => EventCodeAsset = value, EventCodesKey, new EventCodeAssetDeserializer());
 
             // This must be set before calling QuestAssetDeserializer and EpitaphTrialAssetDeserializer
             var commonEnemyDeserializer = new AssetCommonDeserializer(this.NamedParamAsset);

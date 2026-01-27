@@ -1,25 +1,22 @@
-﻿using Arrowgene.Ddon.GameServer.Dump;
 using Arrowgene.Ddon.Server;
-using Arrowgene.Ddon.Server.Network;
-using Arrowgene.Ddon.Shared.Network;
+using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Logging;
 
 namespace Arrowgene.Ddon.GameServer.Handler
 {
-    public class DailyMissionListGetHandler : PacketHandler<GameClient>
+    public class DailyMissionListGetHandler : GameRequestPacketHandler<C2SDailyMissionListGetReq, S2CDailyMissionListGetRes>
     {
         private static readonly ServerLogger Logger = LogProvider.Logger<ServerLogger>(typeof(DailyMissionListGetHandler));
-
 
         public DailyMissionListGetHandler(DdonGameServer server) : base(server)
         {
         }
 
-        public override PacketId Id => PacketId.C2S_DAILY_MISSION_LIST_GET_REQ;
-
-        public override void Handle(GameClient client, IPacket packet)
+        public override S2CDailyMissionListGetRes Handle(GameClient client, C2SDailyMissionListGetReq request)
         {
-            client.Send(GameFull.Dump_119);
+            // TODO: Implement daily missions from asset
+            // For now, return empty list to prevent client crash
+            return new S2CDailyMissionListGetRes();
         }
     }
 }

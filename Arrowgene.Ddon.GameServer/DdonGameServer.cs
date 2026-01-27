@@ -96,6 +96,11 @@ namespace Arrowgene.Ddon.GameServer
             RentalPawnManager = new RentalPawnManager(this);
             OrbUnlockManager = new OrbUnlockManager(this);
             BitterblackMazeManager = new BitterblackMazeManager(this);
+            QuickPartyManager = new QuickPartyManager(this);
+            PawnExpeditionManager = new PawnExpeditionManager(this);
+            MandragoraManager = new MandragoraManager(this);
+            GpShopManager = new GpShopManager(this);
+            OfficialPawnManager = new OfficialPawnManager(this);
 
             S2CStageGetStageListRes stageListPacket =
                 EntitySerializer.Get<S2CStageGetStageListRes>().Read(GameDump.data_Dump_19);
@@ -143,6 +148,11 @@ namespace Arrowgene.Ddon.GameServer
         public BitterblackMazeManager BitterblackMazeManager { get; }
         public ChatLogHandler ChatLogHandler { get; }
         public LightQuestManager LightQuestManager { get; }
+        public QuickPartyManager QuickPartyManager { get; }
+        public PawnExpeditionManager PawnExpeditionManager { get; }
+        public MandragoraManager MandragoraManager { get; }
+        public GpShopManager GpShopManager { get; }
+        public OfficialPawnManager OfficialPawnManager { get; }
 
         public List<CDataStageInfo> StageList { get; }
 
@@ -157,6 +167,7 @@ namespace Arrowgene.Ddon.GameServer
 
             QuestManager.LoadQuests(this);
             GpCourseManager.EvaluateCourses();
+            OfficialPawnManager.Initialize();
 
             if (ServerUtils.IsHeadServer(this))
             {
@@ -403,6 +414,28 @@ namespace Arrowgene.Ddon.GameServer
             AddHandler(new GpGpEditGetVoiceListHandler(this));
             AddHandler(new GpGetGpHandler(this));
             AddHandler(new GpGpCourseGetAvailableListHandler(this));
+            AddHandler(new GpShopDisplayTypeHandler(this));
+            AddHandler(new GpCogGetIdHandler(this));
+            AddHandler(new GpGetCapToGpChangeListHandler(this));
+            AddHandler(new GpChangeCapToGpHandler(this));
+            AddHandler(new GpCourseGetValidListHandler(this));
+            AddHandler(new GpShopGetBuyHistoryHandler(this));
+            AddHandler(new GpCourseUseFromAvailableHandler(this));
+            AddHandler(new GpGetCapHandler(this));
+            AddHandler(new GpGpShopDisplayGetLineupHandler(this));
+            AddHandler(new GpGpShopDisplayBuyHandler(this));
+            AddHandler(new GpGpShopCanBuyHandler(this));
+
+            AddHandler(new GachaListHandler(this));
+            AddHandler(new GachaBuyHandler(this));
+            AddHandler(new BoxGachaListHandler(this));
+            AddHandler(new BoxGachaBuyHandler(this));
+            AddHandler(new BoxGachaDrawInfoHandler(this));
+            AddHandler(new BoxGachaResetHandler(this));
+
+            AddHandler(new EventCodeInputHandler(this));
+
+            AddHandler(new GetFreeRentalPawnListHandler(this));
 
             AddHandler(new GroupChatGroupChatGetMemberListHandler(this));
 
@@ -451,6 +484,7 @@ namespace Arrowgene.Ddon.GameServer
             AddHandler(new ItemChangeAttrDiscardHandler(this));
             AddHandler(new ItemGetEquipRareTypeItemsHandler(this));
             AddHandler(new ItemRecoveryValuableItemHandler(this));
+            AddHandler(new ItemGetItemStorageInfoHandler(this));
 
             AddHandler(new JobChangeJobHandler(this));
             AddHandler(new JobChangePawnJobHandler(this));
@@ -568,6 +602,7 @@ namespace Arrowgene.Ddon.GameServer
             AddHandler(new PawnDeleteMyPawnHandler(this));
             AddHandler(new PawnGetRegisteredPawnListHandler(this));
             AddHandler(new PawnGetOfficialPawnListHandler(this));
+            AddHandler(new PawnGetLegendPawnListHandler(this));
             AddHandler(new PawnRentRegisteredPawnHandler(this));
             AddHandler(new PawnJoinPartyRentedPawnHandler(this));
             AddHandler(new PawnReturnRentedPawnHandler(this));

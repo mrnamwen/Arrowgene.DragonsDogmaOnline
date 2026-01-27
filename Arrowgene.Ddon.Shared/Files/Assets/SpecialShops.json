@@ -30937,6 +30937,221 @@
                     ]
                 }
             ]
+        },
+        {
+            "shop_type": "RewardMedalExchange",
+            "comment": "Adventure Support NPC (Lisa, NpcId 1048) - Event items from retail DDON promotional campaigns",
+            "categories": [
+                {
+                    "label": "Event Weapons",
+                    "comment": "Promotional weapons from retail DDON events",
+                    "appraisals": [
+                        {
+                            "label": "Olfring Dagger (Nirvana)",
+                            "comment": "Famitsu Reader Promotion weapon",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 19522,
+                                    "name": "Olfring Dagger (Nirvana)",
+                                    "amount": 1
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Olfring Cane (Sea)",
+                            "comment": "TGS 2017 Livestream - Priest weapon",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 19517,
+                                    "name": "Olfring Cane (Sea)",
+                                    "amount": 1
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Olfring Bow (Radiance)",
+                            "comment": "Season 3.1 Game Maniacs promotion",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 19544,
+                                    "name": "Olfring Bow (Radiance)",
+                                    "amount": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Event Consumables",
+                    "comment": "Consumable items from retail DDON event promotions",
+                    "appraisals": [
+                        {
+                            "label": "Superior Healing Potion x10",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 63,
+                                    "name": "Superior Healing Potion",
+                                    "amount": 10
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Superior Gala Extract x10",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 69,
+                                    "name": "Superior Gala Extract",
+                                    "amount": 10
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Panacea x5",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 8865,
+                                    "name": "Panacea",
+                                    "amount": 5
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Lantern Tinder x10",
+                            "comment": "Christmas stream event item",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 7714,
+                                    "name": "Lantern Tinder",
+                                    "amount": 10
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Starter Supplies",
+                    "comment": "Basic supplies for new players",
+                    "appraisals": [
+                        {
+                            "label": "Healing Potion x5",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 62,
+                                    "name": "Healing Potion",
+                                    "amount": 5
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Stamina Curative x5",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 68,
+                                    "name": "Stamina Curative",
+                                    "amount": 5
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Lockpick x5",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 7862,
+                                    "name": "Lockpick",
+                                    "amount": 5
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Pickaxe x5",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 7715,
+                                    "name": "Pickaxe",
+                                    "amount": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,212 @@
+{
+    "comment": [
+        "Event codes from the retail Dragon's Dogma Online game.",
+        "Codes are case-insensitive when entered by players.",
+        "Item IDs can be found in ItemId.cs or itemlist.csv"
+    ],
+    "event_codes": [
+        {
+            "code": "UPCT-YUAW-3K16-8255",
+            "name": "Silver Tickets and Trial Support Course",
+            "mail_body": "Thank you for your support! Please enjoy these rewards.",
+            "comment": "Dengeki Online promotion (Oct 2015)",
+            "rewards": {
+                "wallet": [
+                    { "wallet_type": "SilverTickets", "amount": 150 }
+                ],
+                "items": []
+            }
+        },
+        {
+            "code": "WF28-X961-TAXH-UW35",
+            "name": "Famitsu Reader Promotion",
+            "mail_body": "Thank you for reading Famitsu! Enjoy this exclusive weapon.",
+            "comment": "Famitsu.com Reader Promotion - Olfring Dagger [Nirvana]",
+            "rewards": {
+                "items": [
+                    { "item_id": 19522, "amount": 1, "comment": "OlfringDaggerBlack0 (Nirvana)" }
+                ]
+            }
+        },
+        {
+            "code": "XWNP-G7C1-40K4-F1H5",
+            "name": "DDON Now! Christmas Special",
+            "mail_body": "Happy Holidays from the DDON Team!",
+            "comment": "Christmas 2018 Stream Event",
+            "rewards": {
+                "items": [
+                    { "item_id": 7714, "amount": 99, "comment": "Lantern Tinder" }
+                ]
+            }
+        },
+        {
+            "code": "FY01-K63C-3TXL-WQFA",
+            "name": "Beginner's Supply Kit",
+            "mail_body": "Welcome to Dragon's Dogma Online! These supplies will help you on your journey.",
+            "comment": "Basic starter supplies (2015)",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 2, "comment": "Healing Potion" },
+                    { "item_id": 68, "amount": 2, "comment": "Stamina Curative" },
+                    { "item_id": 7862, "amount": 2, "comment": "Lockpick" },
+                    { "item_id": 7715, "amount": 2, "comment": "Pickaxe" },
+                    { "item_id": 7714, "amount": 2, "comment": "Lumber Knife" }
+                ]
+            }
+        },
+        {
+            "code": "KY23-9R8E-FL1N-5XG6",
+            "name": "Tokyo Game Show 2017 - Olfring Cane (Sea)",
+            "mail_body": "Thank you for visiting us at TGS 2017!",
+            "comment": "TGS 2017 Livestream - Priest weapon",
+            "rewards": {
+                "items": [
+                    { "item_id": 19517, "amount": 1, "comment": "OlfringCaneSea" }
+                ]
+            }
+        },
+        {
+            "code": "AKE2-Y31R-3EJ0-9WF0",
+            "name": "Season 3.1 Update Celebration - Olfring Bow (Radiance)",
+            "mail_body": "Thank you for playing Season 3.1!",
+            "comment": "Game Maniacs Season 3.1 promotion",
+            "rewards": {
+                "items": [
+                    { "item_id": 19544, "amount": 1, "comment": "OlfringBowRadiance" }
+                ]
+            }
+        },
+        {
+            "code": "KC09-CGKP-47FC-FF67",
+            "name": "Dragon's Dogma Revives Manga Promotion",
+            "mail_body": "Thank you for reading Dragon's Dogma Revives!",
+            "comment": "DD Revives manga chapter release (Oct 2017)",
+            "rewards": {
+                "items": [
+                    { "item_id": 63, "amount": 100, "comment": "Superior Healing Potion" },
+                    { "item_id": 69, "amount": 100, "comment": "Superior Gala Extract" },
+                    { "item_id": 8865, "amount": 10, "comment": "Panacea" }
+                ]
+            }
+        },
+        {
+            "code": "3PA3-08J7-XQ2T-5NU3",
+            "name": "Adventure Passport Gift",
+            "mail_body": "Enjoy your Adventure Passport!",
+            "comment": "Early promotion (Nov 2015)",
+            "rewards": {
+                "items": []
+            }
+        },
+        {
+            "code": "1P04-0C53-NYQ4-1FQ4",
+            "name": "Basic Consumables Pack 1",
+            "mail_body": "Here are some basic supplies for your adventure!",
+            "comment": "Basic consumables promotion",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
+                    { "item_id": 68, "amount": 5, "comment": "Stamina Curative" }
+                ]
+            }
+        },
+        {
+            "code": "1P04-F0NY-YR24-Y9HF",
+            "name": "Basic Consumables Pack 2",
+            "mail_body": "Here are some basic supplies for your adventure!",
+            "comment": "Basic consumables promotion",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
+                    { "item_id": 68, "amount": 5, "comment": "Stamina Curative" }
+                ]
+            }
+        },
+        {
+            "code": "1P04-HE33-WTU8-WNKC",
+            "name": "Basic Consumables Pack 3",
+            "mail_body": "Here are some basic supplies for your adventure!",
+            "comment": "Basic consumables promotion",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
+                    { "item_id": 68, "amount": 5, "comment": "Stamina Curative" }
+                ]
+            }
+        },
+        {
+            "code": "1P03-2GXJ-TWCG-RNE4",
+            "name": "Basic Consumables Pack 4",
+            "mail_body": "Here are some basic supplies for your adventure!",
+            "comment": "Basic consumables promotion",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
+                    { "item_id": 68, "amount": 5, "comment": "Stamina Curative" }
+                ]
+            }
+        },
+        {
+            "code": "RW01-HGGW-UTTR-0L29",
+            "name": "DDON x Overlord Collaboration Day 4",
+            "mail_body": "Thank you for participating in the Overlord collaboration event!",
+            "comment": "Overlord collab (Sept 2018) - Day 4",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                ]
+            }
+        },
+        {
+            "code": "RW02-06KR-QJWW-4YJ0",
+            "name": "DDON x Overlord Collaboration Day 3",
+            "mail_body": "Thank you for participating in the Overlord collaboration event!",
+            "comment": "Overlord collab (Sept 2018) - Day 3",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                ]
+            }
+        },
+        {
+            "code": "RW03-F11U-HFNT-F42F",
+            "name": "DDON x Overlord Collaboration Day 2",
+            "mail_body": "Thank you for participating in the Overlord collaboration event!",
+            "comment": "Overlord collab (Sept 2018) - Day 2",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                ]
+            }
+        },
+        {
+            "code": "RW04-6C04-8A2R-WLN4",
+            "name": "DDON x Overlord Collaboration Day 1",
+            "mail_body": "Thank you for participating in the Overlord collaboration event!",
+            "comment": "Overlord collab (Sept 2018) - Day 1",
+            "rewards": {
+                "items": [
+                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                ]
+            }
+        },
+        {
+            "code": "CU01-YN80-68UP-C3L4",
+            "name": "PlayStation Network Award - Day 1",
+            "mail_body": "Thank you for supporting DDON!",
+            "comment": "PS Award celebration (Dec 27, 2016) - Adventure Passport",
+            "rewards": {
+                "items": []
+            }
+        },
+        {
+            "code": "CU02-P1U4-JEEP-XX80",
+            "name": "PlayStation Network Award - Day 2",
+            "mail_body": "Thank you for supporting DDON!",
+            "comment": "PS Award celebration (Dec 28, 2016) - Storage Chest Passport",
+            "rewards": {
+                "items": []
+            }
+        }
+    ]
+}

@@ -9,10 +9,34 @@
     ],
     "valid_courses": [
         {
+            "course_id": 1,
+            "start_time": 1440993600,
+            "end_time": 4103413199,
+            "comment": "Adventure Passport - infinite revive, storage, warp discounts"
+        },
+        {
+            "course_id": 2,
+            "start_time": 1440993600,
+            "end_time": 4103413199,
+            "comment": "Reward Support Course - better drops, blood orbs"
+        },
+        {
+            "course_id": 3,
+            "start_time": 1440993600,
+            "end_time": 4103413199,
+            "comment": "Growth Support Course - XP bonuses"
+        },
+        {
+            "course_id": 4,
+            "start_time": 1440993600,
+            "end_time": 4103413199,
+            "comment": "Reliable Assist Course - damage reduction"
+        },
+        {
             "course_id": 17,
             "start_time": 1440993600,
             "end_time": 4103413199,
-            "comment": "Course 17 valid until the year 2100"
+            "comment": "Arrowgene Blessing - custom server course"
         }
     ],
     "courses": [

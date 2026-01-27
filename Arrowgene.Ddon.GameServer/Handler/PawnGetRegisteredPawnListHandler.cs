@@ -4,6 +4,7 @@ using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Logging;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Arrowgene.Ddon.GameServer.Handler
 {
@@ -25,11 +26,27 @@ namespace Arrowgene.Ddon.GameServer.Handler
                 registeredPawns = Server.Database.SelectRegisteredPawns(client.Character, request.SearchParam, connection);
             });
 
+            // Add official pawns to the search results if enabled
+            if (Server.GameSettings.GameServerSettings.EnableOfficialPawnsInSearch)
+            {
+                var officialPawns = Server.OfficialPawnManager.GetOfficialPawnsForSearch(request.SearchParam);
+                var maxOfficialPawns = (int)Server.GameSettings.GameServerSettings.OfficialPawnMaxResults;
+                registeredPawns.AddRange(officialPawns.Take(maxOfficialPawns));
+            }
+
             var mixin = Server.ScriptManager.MixinModule.Get<IRentalCostMixin>("rental_cost");
 
             foreach (var registeredPawn in registeredPawns)
             {
-                registeredPawn.RentalCost = mixin.GetRentalCost(client, registeredPawn, clanPawns.Contains(registeredPawn.PawnId));
+                // Official pawns have free rental cost
+                if (Server.OfficialPawnManager.IsOfficialPawn(registeredPawn.PawnId))
+                {
+                    registeredPawn.RentalCost = 0;
+                }
+                else
+                {
+                    registeredPawn.RentalCost = mixin.GetRentalCost(client, registeredPawn, clanPawns.Contains(registeredPawn.PawnId));
+                }
             }
 
             return new()

@@ -79,6 +79,8 @@ namespace Arrowgene.Ddon.GameServer.Characters
             {ItemId.SilverTicket, (WalletType.SilverTickets, 1) },
             {ItemId.CustomMadeServiceTicket, (WalletType.CustomMadeServiceTickets, 1) },
             {ItemId.GoldenGemstone, (WalletType.GoldenGemstones, 1) },
+            {ItemId.AdventurePassPoint, (WalletType.AdventurePassPoints, 1) },
+            {ItemId.BitterblackMazeResetTicket, (WalletType.BitterblackMazeResetTicket, 1) },
             // TODO: Find all items that add wallet points
         };
 
@@ -273,10 +275,15 @@ namespace Arrowgene.Ddon.GameServer.Characters
 
         public PacketQueue GatherItem(GameClient client, S2CItemUpdateCharacterItemNtc ntc, InstancedGatheringItem gatheringItem, uint pickedGatherItems, DbConnection? connectionIn = null)
         {
+            return GatherItem(client, ntc, gatheringItem, pickedGatherItems, toItemBag: true, connectionIn);
+        }
+
+        public PacketQueue GatherItem(GameClient client, S2CItemUpdateCharacterItemNtc ntc, InstancedGatheringItem gatheringItem, uint pickedGatherItems, bool toItemBag, DbConnection? connectionIn = null)
+        {
             var (queue, isSpecial) = HandleSpecialItem(client, ntc, gatheringItem.ItemId, pickedGatherItems, false, connectionIn);
             if (!isSpecial)
             {
-                List<CDataItemUpdateResult> results = AddItem(_Server, client.Character, true, (uint)gatheringItem.ItemId, pickedGatherItems, connectionIn: connectionIn);
+                List<CDataItemUpdateResult> results = AddItem(_Server, client.Character, toItemBag, (uint)gatheringItem.ItemId, pickedGatherItems, connectionIn: connectionIn);
                 ntc.UpdateItemList.AddRange(results);
 
                 uint totalRemoved = (uint)results.Select(result => result.UpdateItemNum).Sum();

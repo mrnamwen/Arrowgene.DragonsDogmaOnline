@@ -1,0 +1,189 @@
+[
+  {
+    "PawnId": 1001,
+    "Name": "Iris",
+    "Job": 1,
+    "Level": 50,
+    "HmType": 1,
+    "PawnType": 1,
+    "CraftRank": 30,
+    "HideEquipHead": false,
+    "HideEquipLantern": false,
+    "EditInfo": {
+      "Sex": 2,
+      "Voice": 1,
+      "VoicePitch": 30000,
+      "Personality": 1,
+      "SpeechFreq": 1,
+      "BodyType": 0,
+      "Hair": 10,
+      "Beard": 0,
+      "Makeup": 0,
+      "Scar": 0,
+      "ColorSkin": 0,
+      "ColorHair": 15,
+      "ColorREye": 10,
+      "ColorLEye": 10,
+      "Height": 45000,
+      "HeadSize": 40000
+    },
+    "Equipment": {
+      "Primary": 80,
+      "Head": 7051,
+      "Body": 7248,
+      "BodyClothing": 8100,
+      "Arm": 7350,
+      "Leg": 7450,
+      "LegWear": 8200,
+      "Lantern": 36
+    },
+    "VisualEquipment": {},
+    "JobItems": [],
+    "CustomSkills": [
+      { "SlotNo": 1, "SkillId": 4, "SkillLv": 6 },
+      { "SlotNo": 2, "SkillId": 8, "SkillLv": 6 },
+      { "SlotNo": 3, "SkillId": 11, "SkillLv": 6 },
+      { "SlotNo": 4, "SkillId": 14, "SkillLv": 6 }
+    ],
+    "Abilities": [
+      { "SlotNo": 1, "Job": 1, "AbilityId": 3, "AbilityLv": 6 },
+      { "SlotNo": 2, "Job": 1, "AbilityId": 5, "AbilityLv": 6 },
+      { "SlotNo": 3, "Job": 1, "AbilityId": 7, "AbilityLv": 6 }
+    ],
+    "PawnReactions": [
+      { "ReactionType": 1, "MotionNo": 1 },
+      { "ReactionType": 2, "MotionNo": 1 }
+    ],
+    "SpSkills": [],
+    "CraftSkills": [
+      { "Type": 1, "Level": 10 },
+      { "Type": 2, "Level": 10 },
+      { "Type": 3, "Level": 10 }
+    ]
+  },
+  {
+    "PawnId": 1002,
+    "Name": "Roland",
+    "Job": 3,
+    "Level": 50,
+    "HmType": 1,
+    "PawnType": 1,
+    "CraftRank": 30,
+    "HideEquipHead": false,
+    "HideEquipLantern": false,
+    "EditInfo": {
+      "Sex": 1,
+      "Voice": 2,
+      "VoicePitch": 30000,
+      "Personality": 2,
+      "SpeechFreq": 1,
+      "BodyType": 0,
+      "Hair": 5,
+      "Beard": 0,
+      "Makeup": 0,
+      "Scar": 0,
+      "ColorSkin": 2,
+      "ColorHair": 41,
+      "ColorREye": 18,
+      "ColorLEye": 18,
+      "Height": 50000,
+      "HeadSize": 40000
+    },
+    "Equipment": {
+      "Primary": 231,
+      "Secondary": 358,
+      "Head": 7056,
+      "Body": 7253,
+      "BodyClothing": 8100,
+      "Arm": 7355,
+      "Leg": 7455,
+      "LegWear": 8200,
+      "Lantern": 36
+    },
+    "VisualEquipment": {},
+    "JobItems": [],
+    "CustomSkills": [
+      { "SlotNo": 1, "SkillId": 4, "SkillLv": 6 },
+      { "SlotNo": 2, "SkillId": 8, "SkillLv": 6 },
+      { "SlotNo": 3, "SkillId": 11, "SkillLv": 6 },
+      { "SlotNo": 4, "SkillId": 14, "SkillLv": 6 }
+    ],
+    "Abilities": [
+      { "SlotNo": 1, "Job": 3, "AbilityId": 51, "AbilityLv": 6 },
+      { "SlotNo": 2, "Job": 3, "AbilityId": 53, "AbilityLv": 6 },
+      { "SlotNo": 3, "Job": 3, "AbilityId": 55, "AbilityLv": 6 }
+    ],
+    "PawnReactions": [
+      { "ReactionType": 1, "MotionNo": 2 },
+      { "ReactionType": 2, "MotionNo": 2 }
+    ],
+    "SpSkills": [],
+    "CraftSkills": [
+      { "Type": 1, "Level": 15 },
+      { "Type": 2, "Level": 15 },
+      { "Type": 3, "Level": 15 }
+    ]
+  },
+  {
+    "PawnId": 1003,
+    "Name": "Elara",
+    "Job": 6,
+    "Level": 50,
+    "HmType": 1,
+    "PawnType": 1,
+    "CraftRank": 30,
+    "HideEquipHead": false,
+    "HideEquipLantern": false,
+    "EditInfo": {
+      "Sex": 2,
+      "Voice": 3,
+      "VoicePitch": 35000,
+      "Personality": 3,
+      "SpeechFreq": 2,
+      "BodyType": 0,
+      "Hair": 15,
+      "Beard": 0,
+      "Makeup": 2,
+      "Scar": 0,
+      "ColorSkin": 1,
+      "ColorHair": 20,
+      "ColorREye": 5,
+      "ColorLEye": 5,
+      "Height": 43000,
+      "HeadSize": 40000
+    },
+    "Equipment": {
+      "Primary": 534,
+      "Head": 7061,
+      "Body": 7258,
+      "BodyClothing": 8100,
+      "Arm": 7360,
+      "Leg": 7460,
+      "LegWear": 8200,
+      "Lantern": 36
+    },
+    "VisualEquipment": {},
+    "JobItems": [],
+    "CustomSkills": [
+      { "SlotNo": 1, "SkillId": 4, "SkillLv": 6 },
+      { "SlotNo": 2, "SkillId": 8, "SkillLv": 6 },
+      { "SlotNo": 3, "SkillId": 11, "SkillLv": 6 },
+      { "SlotNo": 4, "SkillId": 14, "SkillLv": 6 }
+    ],
+    "Abilities": [
+      { "SlotNo": 1, "Job": 6, "AbilityId": 101, "AbilityLv": 6 },
+      { "SlotNo": 2, "Job": 6, "AbilityId": 103, "AbilityLv": 6 },
+      { "SlotNo": 3, "Job": 6, "AbilityId": 105, "AbilityLv": 6 }
+    ],
+    "PawnReactions": [
+      { "ReactionType": 1, "MotionNo": 3 },
+      { "ReactionType": 2, "MotionNo": 3 }
+    ],
+    "SpSkills": [],
+    "CraftSkills": [
+      { "Type": 1, "Level": 20 },
+      { "Type": 2, "Level": 20 },
+      { "Type": 3, "Level": 20 }
+    ]
+  }
+]

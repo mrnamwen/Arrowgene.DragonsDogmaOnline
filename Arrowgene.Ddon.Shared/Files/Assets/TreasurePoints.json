@@ -1,0 +1,49 @@
+{
+    "categories": [
+        {
+            "category_id": 1,
+            "category_name": "Trades of an Explorer - Hidell Plains",
+            "points": [
+                { "index": 1, "name": "Northern Watchtower", "discovered": false },
+                { "index": 2, "name": "Ruined Bridge", "discovered": false },
+                { "index": 3, "name": "Ancient Waystone", "discovered": false }
+            ]
+        },
+        {
+            "category_id": 2,
+            "category_name": "Trades of an Explorer - Breya Coast",
+            "points": [
+                { "index": 1, "name": "Lighthouse Ruins", "discovered": false },
+                { "index": 2, "name": "Sunken Ship Bow", "discovered": false },
+                { "index": 3, "name": "Coral Formation", "discovered": false }
+            ]
+        },
+        {
+            "category_id": 3,
+            "category_name": "Trades of an Explorer - Volden Mines",
+            "points": [
+                { "index": 1, "name": "Collapsed Shaft", "discovered": false },
+                { "index": 2, "name": "Ancient Mining Cart", "discovered": false },
+                { "index": 3, "name": "Underground Spring", "discovered": false }
+            ]
+        },
+        {
+            "category_id": 4,
+            "category_name": "Trades of an Explorer - Dowe Valley",
+            "points": [
+                { "index": 1, "name": "Dragonkin Marker", "discovered": false },
+                { "index": 2, "name": "Overlook Shrine", "discovered": false },
+                { "index": 3, "name": "Wind-Carved Pillar", "discovered": false }
+            ]
+        },
+        {
+            "category_id": 5,
+            "category_name": "Trades of an Explorer - Mysree Forest",
+            "points": [
+                { "index": 1, "name": "Elder Tree", "discovered": false },
+                { "index": 2, "name": "Fairy Circle", "discovered": false },
+                { "index": 3, "name": "Moss-Covered Ruins", "discovered": false }
+            ]
+        }
+    ]
+}

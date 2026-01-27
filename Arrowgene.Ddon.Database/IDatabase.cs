@@ -345,7 +345,14 @@ public interface IDatabase
     );
 
     bool DeleteSystemMailAttachment(ulong messageId);
-    
+
+    // Personal mail
+    long InsertPersonalMailMessage(PersonalMailMessage message);
+    List<PersonalMailMessage> SelectPersonalMailMessages(uint recipientCharacterId);
+    PersonalMailMessage? SelectPersonalMailMessage(ulong messageId);
+    bool UpdatePersonalMailMessageState(ulong messageId, MailState messageState);
+    bool DeletePersonalMailMessage(ulong messageId);
+
     // Play points
     bool ReplaceCharacterPlayPointData(
         uint id,
@@ -579,5 +586,49 @@ public interface IDatabase
     HashSet<uint> SelectDispelSeals(uint characterId, DbConnection? connectionIn = null);
     bool InsertDispelSeal(uint characterId, uint sealIndex, DbConnection? connectionIn = null);
     bool DeleteDispelSeal(uint characterId, uint sealIndex, DbConnection? connectionIn = null);
+
+    // Equipment Presets
+    bool InsertEquipPreset(EquipPreset preset, DbConnection? connectionIn = null);
+    bool UpdateEquipPreset(EquipPreset preset, DbConnection? connectionIn = null);
+    bool UpdateEquipPresetName(uint characterId, JobId job, byte presetNo, string presetName, DbConnection? connectionIn = null);
+    bool DeleteEquipPreset(uint characterId, JobId job, byte presetNo, DbConnection? connectionIn = null);
+    EquipPreset? SelectEquipPreset(uint characterId, JobId job, byte presetNo, DbConnection? connectionIn = null);
+    List<EquipPreset> SelectEquipPresets(uint characterId, JobId job, DbConnection? connectionIn = null);
+
+    // Mandragora
+    bool InsertMandragora(Mandragora mandragora, DbConnection? connectionIn = null);
+    bool UpdateMandragora(Mandragora mandragora, DbConnection? connectionIn = null);
+    bool DeleteMandragora(uint characterId, uint mandragoraId, DbConnection? connectionIn = null);
+    List<Mandragora> SelectMandragoras(uint characterId, DbConnection? connectionIn = null);
+    Mandragora? SelectMandragora(uint characterId, uint mandragoraId, DbConnection? connectionIn = null);
+
+    // Mandragora Species Discovery
+    bool InsertMandragoraSpeciesDiscovery(MandragoraSpeciesDiscovery discovery, DbConnection? connectionIn = null);
+    bool UpdateMandragoraSpeciesDiscovery(MandragoraSpeciesDiscovery discovery, DbConnection? connectionIn = null);
+    List<MandragoraSpeciesDiscovery> SelectMandragoraSpeciesDiscoveries(uint characterId, DbConnection? connectionIn = null);
+    List<MandragoraSpeciesDiscovery> SelectMandragoraSpeciesDiscoveriesByCategory(uint characterId, MandragoraSpeciesCategory category, DbConnection? connectionIn = null);
+
+    // Mandragora First Discovery (Server-Wide)
+    bool InsertOrIgnoreMandragoraFirstDiscovery(uint speciesIndex, uint characterId, string characterName, long discoveredDate, DbConnection? connectionIn = null);
+    string? SelectMandragoraFirstDiscoverer(uint speciesIndex, DbConnection? connectionIn = null);
+
+    // GP Purchase History
+    long InsertGpPurchaseHistory(GpPurchaseHistory purchase, DbConnection? connectionIn = null);
+    List<GpPurchaseHistory> SelectGpPurchaseHistory(uint characterId, DbConnection? connectionIn = null);
+    List<GpPurchaseHistory> SelectGpPurchaseHistoryByShopType(uint characterId, uint shopType, DbConnection? connectionIn = null);
+
+    // Gacha Pull History
+    long InsertGachaPullHistory(GachaPullHistory pull, DbConnection? connectionIn = null);
+    long InsertGachaPullResult(GachaPullResult result, DbConnection? connectionIn = null);
+    List<GachaPullHistory> SelectGachaPullHistory(uint characterId, DbConnection? connectionIn = null);
+    List<GachaPullHistory> SelectGachaPullHistoryByGachaId(uint characterId, uint gachaId, DbConnection? connectionIn = null);
+    List<GachaPullResult> SelectGachaPullResults(ulong pullId, DbConnection? connectionIn = null);
+
+    // Box Gacha State
+    bool InsertBoxGachaState(BoxGachaState state, DbConnection? connectionIn = null);
+    bool DeleteBoxGachaState(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
+    List<BoxGachaState> SelectBoxGachaState(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
+    HashSet<uint> SelectBoxGachaDrawnLineups(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
+    bool HasBoxGachaDrawnLineup(uint characterId, uint boxGachaId, uint lineupId, DbConnection? connectionIn = null);
 
 }

@@ -69,28 +69,40 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
             Server.Database.ExecuteInTransaction(connection =>
             {
-                // UPDATE INVENTORY
-                List<CDataItemUpdateResult> itemUpdateResults = Server.ItemManager.AddItem(Server, client.Character, sendToItemBag, good.ItemId, boughtAmount, connectionIn: connection);
+                // Check if this is a special item (wallet points, etc.) that should be handled specially
+                var (specialQueue, isSpecial) = Server.ItemManager.HandleSpecialItem(client, itemNtc, (ItemId)good.ItemId, boughtAmount, isOnUse: false, connectionIn: connection);
 
-                boughtAmount = (uint)itemUpdateResults.Select(result => result.UpdateItemNum).Sum();
-                if (boughtAmount > 0) 
+                List<CDataItemUpdateResult> itemUpdateResults;
+                if (isSpecial)
+                {
+                    // Special items (wallet currency) were handled - create empty result list
+                    itemUpdateResults = new List<CDataItemUpdateResult>();
+                    // Queue any special notifications
+                    specialQueue.Send();
+                }
+                else
+                {
+                    // Regular item - add to inventory
+                    itemUpdateResults = Server.ItemManager.AddItem(Server, client.Character, sendToItemBag, good.ItemId, boughtAmount, connectionIn: connection);
+                }
+
+                uint actualBoughtAmount = isSpecial ? boughtAmount : (uint)itemUpdateResults.Select(result => result.UpdateItemNum).Sum();
+                if (actualBoughtAmount > 0)
                 {
                     // Substract stock, substract wallet points, and send response with the stock, wallet points and inventory
-                    totalPrice = good.Price * boughtAmount;
+                    totalPrice = good.Price * actualBoughtAmount;
 
                     // UPDATE SHOP
                     if (good.Stock != byte.MaxValue)
                     {
                         // If stock isn't infinite (255), substract bought quantity from it
-                        good.Stock = (byte)Math.Max(0, good.Stock - boughtAmount);
+                        good.Stock = (byte)Math.Max(0, good.Stock - actualBoughtAmount);
                     }
 
-                    // UPDATE CHARACTER WALLET
-                    itemNtc.UpdateWalletList = new List<CDataUpdateWalletPoint>()
-                    {
-                        Server.WalletManager.RemoveFromWallet(client.Character, shop.WalletType, totalPrice, connection)
-                            ?? throw new ResponseErrorException(ErrorCode.ERROR_CODE_SHOP_LACK_MONEY)
-                    };
+                    // UPDATE CHARACTER WALLET (deduct purchase cost)
+                    var walletDeduction = Server.WalletManager.RemoveFromWallet(client.Character, shop.WalletType, totalPrice, connection)
+                        ?? throw new ResponseErrorException(ErrorCode.ERROR_CODE_SHOP_LACK_MONEY);
+                    itemNtc.UpdateWalletList.Add(walletDeduction);
                     itemNtc.UpdateItemList = itemUpdateResults;
                 }
             });

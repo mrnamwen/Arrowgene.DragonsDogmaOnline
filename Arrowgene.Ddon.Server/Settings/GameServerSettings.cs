@@ -1763,5 +1763,216 @@ namespace Arrowgene.Ddon.Server.Settings
             }
         }
         private const uint _BBMResetGGCost = 1;
+
+        /// <summary>
+        /// Enables the NPC Bazaar feature.
+        /// </summary>
+        [DefaultValue(_EnableNpcBazaar)]
+        public bool EnableNpcBazaar
+        {
+            set
+            {
+                SetSetting("EnableNpcBazaar", value);
+            }
+            get
+            {
+                return TryGetSetting("EnableNpcBazaar", _EnableNpcBazaar);
+            }
+        }
+        private const bool _EnableNpcBazaar = true;
+
+        /// <summary>
+        /// Enables automatic looting of items from defeated enemies.
+        /// When enabled, loot is automatically collected without player interaction.
+        /// </summary>
+        [DefaultValue(_EnableAutoloot)]
+        public bool EnableAutoloot
+        {
+            set
+            {
+                SetSetting("EnableAutoloot", value);
+            }
+            get
+            {
+                return TryGetSetting("EnableAutoloot", _EnableAutoloot);
+            }
+        }
+        private const bool _EnableAutoloot = true;
+
+        /// <summary>
+        /// When enabled, autolooted crafting materials (Category 2) are sent directly
+        /// to the player's storage box instead of their item bag. This is useful for
+        /// players with the QoL ticket that enables crafting from storage.
+        /// </summary>
+        [DefaultValue(_AutolootMaterialsToStorage)]
+        public bool AutolootMaterialsToStorage
+        {
+            set
+            {
+                SetSetting("AutolootMaterialsToStorage", value);
+            }
+            get
+            {
+                return TryGetSetting("AutolootMaterialsToStorage", _AutolootMaterialsToStorage);
+            }
+        }
+        private const bool _AutolootMaterialsToStorage = false;
+
+        /// <summary>
+        /// Enables automatic looting when opening treasure chests and gathering points.
+        /// When enabled, items are automatically collected without player interaction.
+        /// Respects AutolootMaterialsToStorage for crafting materials.
+        /// </summary>
+        [DefaultValue(_AutolootGatheringItems)]
+        public bool AutolootGatheringItems
+        {
+            set
+            {
+                SetSetting("AutolootGatheringItems", value);
+            }
+            get
+            {
+                return TryGetSetting("AutolootGatheringItems", _AutolootGatheringItems);
+            }
+        }
+        private const bool _AutolootGatheringItems = false;
+
+        /// <summary>
+        /// Chat message type used for storage autoloot notifications.
+        /// Options: System (3), ManagementGuideC (9 - gold), ManagementGuideN (10),
+        /// ManagementAlertC (11 - red), ManagementAlertN (12)
+        /// </summary>
+        [DefaultValue(_AutolootNotificationChatType)]
+        public byte AutolootNotificationChatType
+        {
+            set
+            {
+                SetSetting("AutolootNotificationChatType", value);
+            }
+            get
+            {
+                return TryGetSetting("AutolootNotificationChatType", _AutolootNotificationChatType);
+            }
+        }
+        private const byte _AutolootNotificationChatType = 9; // ManagementGuideC (gold)
+
+        /// <summary>
+        /// Multiplier for NPC Bazaar buy prices (player buys from NPC).
+        /// </summary>
+        [DefaultValue(_NpcBazaarBuyMultiplier)]
+        public double NpcBazaarBuyMultiplier
+        {
+            set
+            {
+                SetSetting("NpcBazaarBuyMultiplier", value);
+            }
+            get
+            {
+                return TryGetSetting("NpcBazaarBuyMultiplier", _NpcBazaarBuyMultiplier);
+            }
+        }
+        private const double _NpcBazaarBuyMultiplier = 2.0;
+
+        /// <summary>
+        /// Multiplier for NPC Bazaar sell prices (player sells to NPC).
+        /// </summary>
+        [DefaultValue(_NpcBazaarSellMultiplier)]
+        public double NpcBazaarSellMultiplier
+        {
+            set
+            {
+                SetSetting("NpcBazaarSellMultiplier", value);
+            }
+            get
+            {
+                return TryGetSetting("NpcBazaarSellMultiplier", _NpcBazaarSellMultiplier);
+            }
+        }
+        private const double _NpcBazaarSellMultiplier = 0.5;
+
+        /// <summary>
+        /// Default quantity of items in NPC Bazaar listings.
+        /// </summary>
+        [DefaultValue(_NpcBazaarItemQuantity)]
+        public uint NpcBazaarItemQuantity
+        {
+            set
+            {
+                SetSetting("NpcBazaarItemQuantity", value);
+            }
+            get
+            {
+                return TryGetSetting("NpcBazaarItemQuantity", _NpcBazaarItemQuantity);
+            }
+        }
+        private const uint _NpcBazaarItemQuantity = 99;
+
+        /// <summary>
+        /// Speed factor for Mandragora crafting (1.0 = normal, 2.0 = twice as fast).
+        /// </summary>
+        [DefaultValue(_MandragoraCraftSpeedFactor)]
+        public double MandragoraCraftSpeedFactor
+        {
+            set
+            {
+                SetSetting("MandragoraCraftSpeedFactor", value);
+            }
+            get
+            {
+                return TryGetSetting("MandragoraCraftSpeedFactor", _MandragoraCraftSpeedFactor);
+            }
+        }
+        private const double _MandragoraCraftSpeedFactor = 1.0;
+
+        /// <summary>
+        /// Cost in Golden Gemstones to instantly complete Mandragora cultivation.
+        /// </summary>
+        [DefaultValue(_MandragoraCultivationSkipGGCost)]
+        public uint MandragoraCultivationSkipGGCost
+        {
+            set
+            {
+                SetSetting("MandragoraCultivationSkipGGCost", value);
+            }
+            get
+            {
+                return TryGetSetting("MandragoraCultivationSkipGGCost", _MandragoraCultivationSkipGGCost);
+            }
+        }
+        private const uint _MandragoraCultivationSkipGGCost = 1;
+
+        /// <summary>
+        /// When enabled, official pawns from OfficialPawns.json will be included in pawn search results.
+        /// </summary>
+        [DefaultValue(_EnableOfficialPawnsInSearch)]
+        public bool EnableOfficialPawnsInSearch
+        {
+            set
+            {
+                SetSetting("EnableOfficialPawnsInSearch", value);
+            }
+            get
+            {
+                return TryGetSetting("EnableOfficialPawnsInSearch", _EnableOfficialPawnsInSearch);
+            }
+        }
+        private const bool _EnableOfficialPawnsInSearch = true;
+
+        /// <summary>
+        /// Maximum number of official pawns to include in search results.
+        /// </summary>
+        [DefaultValue(_OfficialPawnMaxResults)]
+        public uint OfficialPawnMaxResults
+        {
+            set
+            {
+                SetSetting("OfficialPawnMaxResults", value);
+            }
+            get
+            {
+                return TryGetSetting("OfficialPawnMaxResults", _OfficialPawnMaxResults);
+            }
+        }
+        private const uint _OfficialPawnMaxResults = 50;
     }
 }

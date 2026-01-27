@@ -1,0 +1,15 @@
+{
+    "comment": "Season Weapon definitions for Ultimate Synthesis Special Bonus. When a player possesses a previous season's strongest weapon at ★4 enhancement, they receive the Special Bonus during synthesis.",
+    "weapons": [
+        {
+            "comment": "Season 1 - Example placeholder weapon IDs (replace with actual game item IDs)",
+            "item_id": 0,
+            "season": 1
+        },
+        {
+            "comment": "Season 2 - Example placeholder weapon IDs (replace with actual game item IDs)",
+            "item_id": 0,
+            "season": 2
+        }
+    ]
+}

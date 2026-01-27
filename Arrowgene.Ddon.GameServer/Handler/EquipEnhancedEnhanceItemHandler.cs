@@ -5,11 +5,13 @@ using Arrowgene.Ddon.GameServer.Utils;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Server.Network;
 using Arrowgene.Ddon.Shared;
+using Arrowgene.Ddon.Shared.Asset;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Ddon.Shared.Model;
 using Arrowgene.Logging;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Arrowgene.Ddon.GameServer.Handler
@@ -28,8 +30,33 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
             var updateCharacterItemNtc = new S2CItemUpdateCharacterItemNtc();
 
-            var category = Server.AssetRepository.LimitBreakAsset.GetCategoryForIndex(request.CategoryIndex) ??
-                throw new ResponseErrorException(ErrorCode.ERROR_CODE_CRAFT_RECIPE_CATEGORY_UNKNOWN, $"Failed to locate the category listing '{request.CategoryIndex}' used in the limit break lottery");
+            // Determine whether this is LimitBreak or UltimateSynthesis based on CategoryIndex
+            bool isUltimateSynthesis = UltimateSynthesisAssetExtension.IsUltimateSynthesisIndex(request.CategoryIndex);
+            EquipEnhanceType enhanceType = isUltimateSynthesis ? EquipEnhanceType.UltimateSynthesis : EquipEnhanceType.LimitBreak;
+
+            // Get the appropriate category and stat lottery based on enhance type
+            HashSet<WalletType> premiumCurrencies;
+            List<LimitStatLottery> statLottery;
+
+            if (isUltimateSynthesis)
+            {
+                var ultimateCategory = Server.AssetRepository.UltimateSynthesisAsset.GetCategoryForIndex(request.CategoryIndex) ??
+                    throw new ResponseErrorException(ErrorCode.ERROR_CODE_CRAFT_RECIPE_CATEGORY_UNKNOWN, $"Failed to locate the category listing '{request.CategoryIndex}' used in the ultimate synthesis lottery");
+                premiumCurrencies = ultimateCategory.PremiumCurrencies;
+                // Convert UltimateSynthesisStatLottery to LimitStatLottery for unified processing
+                statLottery = ultimateCategory.StatLottery.Select(s => new LimitStatLottery
+                {
+                    MinGreatSuccessIndex = s.MinGreatSuccessIndex,
+                    Rolls = s.Rolls
+                }).ToList();
+            }
+            else
+            {
+                var limitBreakCategory = Server.AssetRepository.LimitBreakAsset.GetCategoryForIndex(request.CategoryIndex) ??
+                    throw new ResponseErrorException(ErrorCode.ERROR_CODE_CRAFT_RECIPE_CATEGORY_UNKNOWN, $"Failed to locate the category listing '{request.CategoryIndex}' used in the limit break lottery");
+                premiumCurrencies = limitBreakCategory.PremiumCurrencies;
+                statLottery = limitBreakCategory.StatLottery;
+            }
 
             var (storageType, itemProps) = client.Character.Storage.FindItemByUIdInStorage(ItemManager.EquipmentStorages, request.UpgradeItemUID);
             var (slotNo, item, amount) = itemProps;
@@ -46,21 +73,21 @@ namespace Arrowgene.Ddon.GameServer.Handler
                 {
                     updateCharacterItemNtc.UpdateWalletList.Add(Server.WalletManager.RemoveFromWallet(client.Character, walletCost.Type, walletCost.Value, connection));
 
-                    forceGreatSuccess |= category.PremiumCurrencies.Contains(walletCost.Type);
+                    forceGreatSuccess |= premiumCurrencies.Contains(walletCost.Type);
                 }
 
-                var statRolls = category.StatLottery.OrderBy(x => Random.Shared.Next()).First();
+                var statRolls = statLottery.OrderBy(x => Random.Shared.Next()).First();
                 var statRoll = forceGreatSuccess ?
                     statRolls.Rolls[Random.Shared.Next((int) statRolls.MinGreatSuccessIndex, statRolls.Rolls.Count)] :
                     statRolls.Rolls.GetWeightedRandomElement(Server.GameSettings.GameServerSettings.EquipmentLimitBreakBias);
 
-                var param = item.AddStatusParamList.Find(x => x.EnhanceType == EquipEnhanceType.LimitBreak);
+                var param = item.AddStatusParamList.Find(x => x.EnhanceType == enhanceType);
                 if (param is null)
                 {
                     param = new CDataAddStatusParam()
                     {
                         EnhanceId = statRoll,
-                        EnhanceType = EquipEnhanceType.LimitBreak
+                        EnhanceType = enhanceType
                     };
                     item.AddStatusParamList.Add(param);
                 }
@@ -70,7 +97,36 @@ namespace Arrowgene.Ddon.GameServer.Handler
                 }
 
                 Server.Database.UpsertEquipmentLimitBreakRecord(client.Character.CharacterId, item.UId, param, connection);
-                
+
+                // Special Bonus check for Ultimate Synthesis
+                if (isUltimateSynthesis && Server.AssetRepository.UltimateSynthesisAsset.SpecialBonus.Enabled)
+                {
+                    var specialBonusManager = new SpecialBonusManager(Server);
+                    var seasonWeaponAsset = Server.AssetRepository.SeasonWeaponAsset;
+
+                    // Get the current season for the item being upgraded
+                    uint currentSeason = seasonWeaponAsset.GetSeasonForWeapon((uint)item.ItemId);
+                    if (currentSeason > 1)
+                    {
+                        // Get eligible items from the previous season
+                        var previousSeasonWeapons = seasonWeaponAsset.GetWeaponsForSeason(currentSeason - 1);
+                        var eligibleItemIds = previousSeasonWeapons.Select(w => w.ItemId);
+
+                        if (specialBonusManager.IsEligibleForSpecialBonus(client.Character, eligibleItemIds))
+                        {
+                            var specialStatRoll = specialBonusManager.RollSpecialBonusStat(forceGreatSuccess);
+                            if (specialStatRoll.HasValue)
+                            {
+                                specialBonusManager.ApplyAndPersistSpecialBonus(
+                                    client.Character.CharacterId,
+                                    item,
+                                    specialStatRoll.Value,
+                                    connection);
+                            }
+                        }
+                    }
+                }
+
                 ushort relativeSlotNo = slotNo;
                 CharacterCommon characterCommon = client.Character;
                 if (storageType == StorageType.PawnEquipment)
@@ -83,7 +139,7 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
                 updateCharacterItemNtc.UpdateItemList.Add(Server.ItemManager.CreateItemUpdateResult(characterCommon, item, storageType, relativeSlotNo, 1, 1));
                 updateCharacterItemNtc.UpdateType = ItemNoticeType.GatherEquipItem;
-                
+
                 packets.Enqueue(client, updateCharacterItemNtc);
 
                 packets.Enqueue(client, new S2CEquipEnhancedEnhanceItemRes()

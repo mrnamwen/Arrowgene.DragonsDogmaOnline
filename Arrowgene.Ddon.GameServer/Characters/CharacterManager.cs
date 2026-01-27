@@ -102,7 +102,7 @@ namespace Arrowgene.Ddon.GameServer.Characters
         private HashSet<ContentsRelease> GetContentsReleased(Character character, DbConnection? connectionIn = null)
         {
             var contentsReleased = new HashSet<ContentsRelease>();
-            
+
             // Generate list of unlocked content
             foreach (var completedQuest in character.CompletedQuests.Values.Where(x => (x.QuestType == QuestType.Main) || (x.QuestType == QuestType.Tutorial)))
             {
@@ -111,7 +111,10 @@ namespace Arrowgene.Ddon.GameServer.Characters
                 {
                     continue;
                 }
+                // Collect quest-level content releases
                 contentsReleased.UnionWith(quest.ContentsRelease.Select(x => x.ReleaseId).ToHashSet());
+                // Also collect block-level content releases (for scripted quests that use AddResultCmdReleaseAnnounce)
+                contentsReleased.UnionWith(quest.GetAllContentsReleaseList());
             }
 
             // Find quests being resumed which have contents released mid quest
