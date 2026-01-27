@@ -645,4 +645,9 @@ public interface IDatabase
     int DeleteExpiredCharacterActiveCourses(long currentTime, DbConnection? connectionIn = null);
     bool DeleteCharacterActiveCourse(ulong id, DbConnection? connectionIn = null);
 
+    // GP Shop Purchase Count Tracking
+    uint SelectGpShopPurchaseCount(uint characterId, uint lineupId, DbConnection? connectionIn = null);
+    bool UpsertGpShopPurchaseCount(uint characterId, uint lineupId, uint purchaseCount, DbConnection? connectionIn = null);
+
 }
+

@@ -622,6 +622,10 @@ namespace Arrowgene.Ddon.Test.Database
         public bool UpdateCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null) { return true; }
         public int DeleteExpiredCharacterActiveCourses(long currentTime, DbConnection? connectionIn = null) { return 0; }
         public bool DeleteCharacterActiveCourse(ulong id, DbConnection? connectionIn = null) { return true; }
+
+        // GP Shop Purchase Count stubs
+        public uint SelectGpShopPurchaseCount(uint characterId, uint lineupId, DbConnection? connectionIn = null) { return 0; }
+        public bool UpsertGpShopPurchaseCount(uint characterId, uint lineupId, uint purchaseCount, DbConnection? connectionIn = null) { return true; }
     }
 
     class MockMigrationStrategy : IMigrationStrategy

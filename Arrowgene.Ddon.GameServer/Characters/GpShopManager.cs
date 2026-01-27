@@ -230,14 +230,13 @@ namespace Arrowgene.Ddon.GameServer.Characters
 
         private uint GetCharacterPurchaseCount(uint characterId, uint lineupId)
         {
-            // TODO: Implement database query for purchase count tracking
-            // For now, return 0 (no limit enforcement until DB is implemented)
-            return 0;
+            return _server.Database.SelectGpShopPurchaseCount(characterId, lineupId);
         }
 
-        private void IncrementCharacterPurchaseCount(uint characterId, uint lineupId, uint amount, object connection)
+        private void IncrementCharacterPurchaseCount(uint characterId, uint lineupId, uint amount, DbConnection connection)
         {
-            // TODO: Implement database update for purchase count tracking
+            uint currentCount = _server.Database.SelectGpShopPurchaseCount(characterId, lineupId, connection);
+            _server.Database.UpsertGpShopPurchaseCount(characterId, lineupId, currentCount + amount, connection);
         }
 
         private void RecordPurchaseHistory(uint characterId, uint lineupId, string itemName, uint price)

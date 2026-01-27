@@ -696,6 +696,10 @@ public abstract class SqlDb : IDatabase
     public abstract int DeleteExpiredCharacterActiveCourses(long currentTime, DbConnection? connectionIn = null);
     public abstract bool DeleteCharacterActiveCourse(ulong id, DbConnection? connectionIn = null);
 
+    // GP Shop Purchase Count Tracking
+    public abstract uint SelectGpShopPurchaseCount(uint characterId, uint lineupId, DbConnection? connectionIn = null);
+    public abstract bool UpsertGpShopPurchaseCount(uint characterId, uint lineupId, uint purchaseCount, DbConnection? connectionIn = null);
+
 
     protected virtual DbCommand Command(string query, DbConnection connection)
     {
