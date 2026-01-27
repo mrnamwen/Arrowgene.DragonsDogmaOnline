@@ -14,6 +14,13 @@ toc::[]
 
 '''
 
+== AI Disclosure
+This is a personal fork of @sebastian-heinz's (https://github.com/sebastian-heinz) amazing work on emulating the Dragon's Dogma Online server. This repo contains a variety of bleeding-edge improvement, balance changes, and custom code to achieve feature parity with retail and rebalance the game for solo or low-population player counts. There are several features here that, as far as I am aware, no other server have implemented.
+
+However, this was only possible thanks to **heavy use of AI**, namely in decoding the packet structures, analyzing the raw IDA dumps, and helping to trial-and-error a lot of the lower level functions. As a result, the code within is potentially unordered, badly scales, and under certain edge cases (and even non-edge cases) may disconnect you or crash the game.
+
+I am extensively working on improving the feature set, fixing bugs, and improving stability, but please understand that **there are no guarantees regarding the quality of my changes**. Additionally, due to the way I have approached development (namely deciding to not git track anything until I actually implemented half the features below), I cannot safely merge this into the main project and will not issue any PRs to implement these changes - they would need to be decoupled and reconstructed into something that isn't a +7000/-900 diff.
+
 == Disclaimer
 The project is intended for educational purpose only.
 
