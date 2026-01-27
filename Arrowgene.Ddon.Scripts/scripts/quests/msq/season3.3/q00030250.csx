@@ -73,16 +73,16 @@ public class ScriptedQuest : IQuest
         // Group 0: Enemies encountered in the cave
         AddEnemies(EnemyGroupId.Encounter + 0, Stage.CaveofRest, 1, QuestEnemyPlacementType.Manual, new()
         {
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedOgre, 97, 0, isBoss: true)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedBehemoth, 97, 0, isBoss: true)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.CaveGuardian),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWolf, 95, 1)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 95, 1)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.RelicProtector),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWolf, 95, 2)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 95, 2)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.RelicProtector),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWolf, 95, 3)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 95, 3)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.RelicProtector),
         });
@@ -90,16 +90,16 @@ public class ScriptedQuest : IQuest
         // Group 1: Additional enemies guarding the ring location
         AddEnemies(EnemyGroupId.Encounter + 1, Stage.CaveofRest, 2, QuestEnemyPlacementType.Manual, new()
         {
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedCyclops, 97, 0, isBoss: true)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGorecyclops, 97, 0, isBoss: true)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.RelicProtector)
                 .SetHpRate(200)
                 .SetAttackRate(120)
                 .SetDefenceRate(110),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedSaurian, 95, 1)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 95, 1)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.RelicProtector),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedSaurian, 95, 2)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 95, 2)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.RelicProtector),
         });

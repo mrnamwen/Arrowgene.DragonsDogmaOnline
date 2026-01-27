@@ -127,16 +127,16 @@ public class ScriptedQuest : IQuest
                 .SetNamedEnemyParams(NamedParamId.BlackSwordGuardian)
                 .SetHpRate(150)
                 .SetAttackRate(120),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedSaurian, 100, 1)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 100, 1)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.BlackSwordGuardian),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedSaurian, 100, 2)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedWarg, 100, 2)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.BlackSwordGuardian),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGoblin, 100, 3)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedPixie, 100, 3)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.BlackSwordGuardian),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGoblin, 100, 4)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedPixie, 100, 4)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.BlackSwordGuardian),
         });
@@ -154,15 +154,15 @@ public class ScriptedQuest : IQuest
         // Dark Crystal Guards
         AddEnemies(EnemyGroupId.Encounter + 2, Stage.KingalCanyon, 1, QuestEnemyPlacementType.Manual, new()
         {
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGoreChimera, 100, 0, isBoss: true)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGriffin, 100, 0, isBoss: true)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.DarkCrystalGuard)
                 .SetHpRate(180)
                 .SetAttackRate(130),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedColossus, 100, 1)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGorecyclops, 100, 1)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.DarkCrystalGuard),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedColossus, 100, 2)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGorecyclops, 100, 2)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.DarkCrystalGuard),
         });
@@ -213,13 +213,13 @@ public class ScriptedQuest : IQuest
                 .SetHpRate(250)
                 .SetAttackRate(150)
                 .SetMagicAttackRate(170),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGoreChimera, 100, 1)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGriffin, 100, 1)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.VortexDemon),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGoreChimera, 100, 2)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGriffin, 100, 2)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.VortexDemon),
-            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedColossus, 100, 3)
+            LibDdon.Enemy.CreateAuto(EnemyId.SeverelyInfectedGorecyclops, 100, 3)
                 .SetInfectionType(1)
                 .SetNamedEnemyParams(NamedParamId.VortexDemon),
         });
