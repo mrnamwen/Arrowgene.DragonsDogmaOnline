@@ -129,7 +129,7 @@ public class ScriptedQuest : IQuest
             .AddQuestFlag(QuestFlagType.MyQst, QuestFlagAction.Set, MyQstFlag.EnemyEncounter);
 
         // Step 8: Examine the vicinity of the altar
-        process0.AddCollectItemBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.MegadoDetachedPalace, 2, 0, 1)
+        process0.AddOmInteractEventBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.MegadoDetachedPalace, 2, 0, OmQuestType.MyQuest, OmInteractType.Release)
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.DetachedPalaceOMs)
             .AddQuestFlag(QuestFlagType.MyQst, QuestFlagAction.Set, MyQstFlag.AltarExamined);
 
@@ -137,7 +137,7 @@ public class ScriptedQuest : IQuest
         process0.AddNewTalkToNpcBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.MegadoDetachedPalace, 0, 0, NpcId.Meirova0, 26002);
 
         // Step 10: Activate the portcrystal located in the place after leaving the detached palace
-        process0.AddCollectItemBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.UrtecaMountains, 0, 0, 1)
+        process0.AddOmInteractEventBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.UrtecaMountains, 0, 0, OmQuestType.MyQuest, OmInteractType.Release)
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.Portcrystal);
 
         // Step 11: Return to the Lookout Castle and speak with Bertha

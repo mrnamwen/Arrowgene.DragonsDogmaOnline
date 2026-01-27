@@ -186,7 +186,7 @@ namespace Arrowgene.Ddon.GameServer.Characters
             }
         }
 
-        private static int COURSE_TIMER_TICK = 1 * 1000; // 1 second in ms
+        private static int COURSE_TIMER_TICK = 60 * 1000; // 60 seconds in ms
 
         public void EvaluateCourses()
         {

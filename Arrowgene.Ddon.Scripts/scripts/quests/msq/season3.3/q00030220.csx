@@ -137,7 +137,7 @@ public class ScriptedQuest : IQuest
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.NorthernBanditNpcs1);
 
         // Step 6: Activate the portcrystal
-        process0.AddCollectItemBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.NorthernBanditHideout, 0, 1)
+        process0.AddOmInteractEventBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.NorthernBanditHideout, 0, 1, OmQuestType.MyQuest, OmInteractType.Release)
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.UrtecaOMs);
 
         // Step 7: Head to confirm the search situation
@@ -149,11 +149,11 @@ public class ScriptedQuest : IQuest
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.UrtecaNpcs1);
 
         // Step 9: Search for clues to the whereabouts of the abducted prince (2 remaining)
-        process0.AddCollectItemBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.UrtecaMountains, 1, 1)
+        process0.AddOmInteractEventBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.UrtecaMountains, 1, 1, OmQuestType.MyQuest, OmInteractType.Release)
             .AddQuestFlag(QuestFlagType.MyQst, QuestFlagAction.Set, MyQstFlag.FirstClueFound);
 
         // Step 10: Search for clues to the whereabouts of the abducted prince (1 remaining)
-        process0.AddCollectItemBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.UrtecaMountains, 2, 1)
+        process0.AddOmInteractEventBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.UrtecaMountains, 2, 1, OmQuestType.MyQuest, OmInteractType.Release)
             .AddQuestFlag(QuestFlagType.MyQst, QuestFlagAction.Set, MyQstFlag.SecondClueFound)
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.UrtecaNpcs2);
 

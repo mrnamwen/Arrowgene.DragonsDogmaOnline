@@ -470,7 +470,7 @@ public class ScriptedQuest : IQuest
         process1.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.SpawnBlackDragonPhase1);
         // Monitor HP for phase transition (at 1% HP, trigger transition instead of death)
-        process1.AddNoOpBlock(QuestAnnounceType.None)
+        process1.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdEmHpLess(Stage.VortexofStagnation1, 1, 0, 1);
         process1.AddProcessEndBlock(false);
 
@@ -481,7 +481,7 @@ public class ScriptedQuest : IQuest
         var process2 = AddNewProcess(2);
         process2.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.SpawnBlackDragonPhase2);
-        process2.AddNoOpBlock(QuestAnnounceType.None)
+        process2.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.BlackDragonPhase2Complete);
         process2.AddRemoveGroupBlock(QuestAnnounceType.None, [
             EnemyGroupId.Encounter + 6,
@@ -499,7 +499,7 @@ public class ScriptedQuest : IQuest
         process3.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.DragonAbilitiesActive);
         // Dragon Abilities remain active until battle complete
-        process3.AddNoOpBlock(QuestAnnounceType.None)
+        process3.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.BlackDragonPhase2Complete);
         process3.AddProcessEndBlock(false);
 

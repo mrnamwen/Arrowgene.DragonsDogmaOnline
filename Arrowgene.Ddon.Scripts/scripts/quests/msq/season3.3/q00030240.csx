@@ -119,7 +119,7 @@ public class ScriptedQuest : IQuest
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.FirefallCampsiteNpcs)
             .AddQuestFlag(QuestFlagType.QstLayout, QuestFlagAction.Set, QstLayoutFlag.FirefallCampsiteOMs);
 
-        process0.AddOmInteractBlock(QuestAnnounceType.Update, Stage.FirefallMountainCampsite, 1);
+        process0.AddOmInteractEventBlock(QuestAnnounceType.Update, Stage.FirefallMountainCampsite, 1, 0, OmQuestType.MyQuest, OmInteractType.Release);
 
         // Step 8: Speak with Gurdolin
         process0.AddNewTalkToNpcBlock(QuestAnnounceType.CheckpointAndUpdate, Stage.FirefallMountainCampsite, 0, 0, NpcId.Gurdolin0, 24030);

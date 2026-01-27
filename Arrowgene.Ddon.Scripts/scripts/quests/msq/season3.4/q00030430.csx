@@ -397,7 +397,7 @@ public class ScriptedQuest : IQuest
         var process1 = AddNewProcess(1);
         process1.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.SpawnBlackKnightIllusion);
-        process1.AddNoOpBlock(QuestAnnounceType.None)
+        process1.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.BlackKnightIllusionComplete);
         process1.AddRemoveGroupBlock(QuestAnnounceType.None, [
             EnemyGroupId.Encounter + 7
@@ -410,7 +410,7 @@ public class ScriptedQuest : IQuest
         var process2 = AddNewProcess(2);
         process2.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.EndErteDeenanEncounter);
-        process2.AddNoOpBlock(QuestAnnounceType.None)
+        process2.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.EndTempleEncounter);
         process2.AddRemoveGroupBlock(QuestAnnounceType.None, [
             EnemyGroupId.Encounter + 1,

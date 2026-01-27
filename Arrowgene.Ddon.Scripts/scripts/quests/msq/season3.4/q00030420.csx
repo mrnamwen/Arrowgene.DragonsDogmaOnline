@@ -355,7 +355,7 @@ public class ScriptedQuest : IQuest
         var process1 = AddNewProcess(1);
         process1.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.DestroyedBlackSwordFeryana);
-        process1.AddNoOpBlock(QuestAnnounceType.None)
+        process1.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.SpawnBlackSwordDacreim);
         process1.AddProcessEndBlock(false);
 
@@ -365,7 +365,7 @@ public class ScriptedQuest : IQuest
         var process2 = AddNewProcess(2);
         process2.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.DestroyedBlackSwordDacreim);
-        process2.AddNoOpBlock(QuestAnnounceType.None)
+        process2.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.SpawnBlackSwordEvilDragonRoost);
         process2.AddProcessEndBlock(false);
 
@@ -375,7 +375,7 @@ public class ScriptedQuest : IQuest
         var process3 = AddNewProcess(3);
         process3.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.DestroyedBlackSwordEvilDragonRoost);
-        process3.AddNoOpBlock(QuestAnnounceType.None)
+        process3.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.SpawnMegadoDemons);
         process3.AddProcessEndBlock(false);
 
@@ -385,7 +385,7 @@ public class ScriptedQuest : IQuest
         var process4 = AddNewProcess(4);
         process4.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.SpawnVortexDemons);
-        process4.AddNoOpBlock(QuestAnnounceType.None)
+        process4.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.DefeatedVortexDemons);
         process4.AddRemoveGroupBlock(QuestAnnounceType.None, [
             EnemyGroupId.VortexDemonsEncounter

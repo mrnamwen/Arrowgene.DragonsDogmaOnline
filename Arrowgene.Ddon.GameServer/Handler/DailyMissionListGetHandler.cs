@@ -15,7 +15,19 @@ namespace Arrowgene.Ddon.GameServer.Handler
         public override S2CDailyMissionListGetRes Handle(GameClient client, C2SDailyMissionListGetReq request)
         {
             var res = new S2CDailyMissionListGetRes();
-            res.MissionList = Server.RewardMissionManager.GetMissionInfoList(client);
+            // TODO: Fix daily missions causing client disconnect.
+            // The CDataDailyMissionInfo serialization order doesn't match the original game.
+            // Based on packet dump analysis (Dump_119), the correct structure appears to be:
+            // 1. MissionId, Category, Type, TargetCount, CurrentCount (5 x uint32)
+            // 2. Unknown fields (4 x uint32)
+            // 3. RewardList (comes BEFORE SortId/strings, not after)
+            // 4. SortId and more unknown fields (4 x uint32)
+            // 5. Title, IconUrl, ImageUrl (MtString)
+            // 6. IsComplete, IsReceived flags
+            // 7. StartTime, EndTime (uint32, not uint64)
+            // 8. Additional unknown fields
+            // See GameFullDump.cs Dump_119 for reference packet data.
+            // res.MissionList = Server.RewardMissionManager.GetMissionInfoList(client);
             return res;
         }
     }

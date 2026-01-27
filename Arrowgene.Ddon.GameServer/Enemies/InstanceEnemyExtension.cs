@@ -131,6 +131,50 @@ namespace Arrowgene.Ddon.GameServer.Enemies
         }
 
         /// <summary>
+        /// Sets the magic defense rate for this enemy (separate from physical).
+        /// </summary>
+        public static InstancedEnemy SetMagicDefenseRate(this InstancedEnemy enemy, uint magicDefenseRate)
+        {
+            var currentParams = enemy.NamedEnemyParams;
+            var newParams = new NamedParam
+            {
+                Id = currentParams.Id,
+                Type = currentParams.Type,
+                HpRate = currentParams.HpRate,
+                Experience = currentParams.Experience,
+                AttackBasePhys = currentParams.AttackBasePhys,
+                AttackWepPhys = currentParams.AttackWepPhys,
+                DefenceBasePhys = currentParams.DefenceBasePhys,
+                DefenceWepPhys = currentParams.DefenceWepPhys,
+                AttackBaseMagic = currentParams.AttackBaseMagic,
+                AttackWepMagic = currentParams.AttackWepMagic,
+                DefenceBaseMagic = magicDefenseRate,
+                DefenceWepMagic = magicDefenseRate,
+                Power = currentParams.Power,
+                GuardDefenceBase = currentParams.GuardDefenceBase,
+                GuardDefenceWep = currentParams.GuardDefenceWep,
+                ShrinkEnduranceMain = currentParams.ShrinkEnduranceMain,
+                BlowEnduranceMain = currentParams.BlowEnduranceMain,
+                DownEnduranceMain = currentParams.DownEnduranceMain,
+                ShakeEnduranceMain = currentParams.ShakeEnduranceMain,
+                HpSub = currentParams.HpSub,
+                ShrinkEnduranceSub = currentParams.ShrinkEnduranceSub,
+                BlowEnduranceSub = currentParams.BlowEnduranceSub,
+                OcdEndurance = currentParams.OcdEndurance,
+                AilmentDamage = currentParams.AilmentDamage,
+            };
+            return enemy.SetNamedEnemyParams(newParams);
+        }
+
+        /// <summary>
+        /// Sets the magic defense rate (British spelling alias).
+        /// </summary>
+        public static InstancedEnemy SetMagicDefenceRate(this InstancedEnemy enemy, uint magicDefenceRate)
+        {
+            return enemy.SetMagicDefenseRate(magicDefenceRate);
+        }
+
+        /// <summary>
         /// Sets the defense rate for this enemy (both physical and magical).
         /// </summary>
         /// <param name="defenseRate">Defense rate as percentage (100 = normal, 130 = 30% tougher)</param>

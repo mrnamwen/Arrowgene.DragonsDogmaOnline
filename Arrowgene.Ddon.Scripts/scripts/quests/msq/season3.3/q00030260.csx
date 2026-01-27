@@ -307,7 +307,7 @@ public class ScriptedQuest : IQuest
         process1.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.SpawnEvilDragonPhase1);
         // Monitor HP for phase transition (at 1% HP, trigger transition instead of death)
-        process1.AddNoOpBlock(QuestAnnounceType.None)
+        process1.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdEmHpLess(Stage.EvilDragonsRoost1, 1, 0, 1);
         process1.AddProcessEndBlock(false);
 
@@ -318,7 +318,7 @@ public class ScriptedQuest : IQuest
         var process2 = AddNewProcess(2);
         process2.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.SpawnEvilDragonPhase2);
-        process2.AddNoOpBlock(QuestAnnounceType.None)
+        process2.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.EvilDragonPhase2Complete);
         process2.AddRemoveGroupBlock(QuestAnnounceType.None, [
             EnemyGroupId.Encounter + 3,
@@ -332,7 +332,7 @@ public class ScriptedQuest : IQuest
         var process3 = AddNewProcess(3);
         process3.AddMyQstFlagsBlock(QuestAnnounceType.None)
             .AddMyQstCheckFlag(MyQstFlag.EndFirstEncounter);
-        process3.AddNoOpBlock(QuestAnnounceType.None)
+        process3.AddRawBlock(QuestAnnounceType.None)
             .AddCheckCmdMyQstFlagOn(MyQstFlag.EndThirdEncounter);
         process3.AddProcessEndBlock(false);
     }
