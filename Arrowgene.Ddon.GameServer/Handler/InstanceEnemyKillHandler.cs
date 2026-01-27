@@ -5,6 +5,7 @@ using Arrowgene.Ddon.GameServer.Quests;
 using Arrowgene.Ddon.GameServer.Scripting.Interfaces;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Server.Network;
+using Arrowgene.Ddon.Shared.Asset;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Ddon.Shared.Model;
@@ -139,6 +140,12 @@ namespace Arrowgene.Ddon.GameServer.Handler
                         {
                             LayoutId = boss.StageLayoutId.ToCDataStageLayoutId(),
                         }, queuedPackets);
+
+                        // Update reward mission progress for dungeon clear
+                        foreach (var memberClient in client.Party.Clients)
+                        {
+                            queuedPackets.AddRange(Server.RewardMissionManager.UpdateMissionProgress(memberClient, DailyMissionType.ClearDungeon, 1, connectionIn));
+                        }
                     }
 
                     if (isAreaBoss && client.GameMode == GameMode.Normal)
@@ -322,6 +329,7 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
                             queuedPackets.AddRange(Server.AchievementManager.HandleKillEnemy(memberClient, enemyKilled, connectionIn: connectionIn));
                             queuedPackets.AddRange(Server.JobMasterManager.HandleEnemyKill(memberClient, enemyKilled, connectionIn));
+                            queuedPackets.AddRange(Server.RewardMissionManager.UpdateMissionProgress(memberClient, DailyMissionType.KillEnemy, 1, connectionIn));
                         }
                         else if (member is PawnPartyMember pawnMember)
                         {

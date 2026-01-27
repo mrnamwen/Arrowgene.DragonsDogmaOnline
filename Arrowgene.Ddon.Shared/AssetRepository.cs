@@ -79,6 +79,7 @@ namespace Arrowgene.Ddon.Shared
         public const string UltimateSynthesisKey = "UltimateSynthesis.json";
         public const string SeasonWeaponsKey = "SeasonWeapons.json";
         public const string EventCodesKey = "EventCodes.json";
+        public const string DailyMissionsKey = "DailyMissions.json";
 
         public const string QuestAssestKey = "quests";
         public const string EpitaphAssestKey = "epitaph";
@@ -154,6 +155,7 @@ namespace Arrowgene.Ddon.Shared
             UltimateSynthesisAsset = new();
             SeasonWeaponAsset = new();
             EventCodeAsset = new();
+            DailyMissionAsset = new();
         }
 
         public Dictionary<ErrorCode, ClientErrorCode> ClientErrorCodes { get; private set; }
@@ -215,6 +217,7 @@ namespace Arrowgene.Ddon.Shared
         public UltimateSynthesisAsset UltimateSynthesisAsset { get; private set; }
         public SeasonWeaponAsset SeasonWeaponAsset { get; private set; }
         public EventCodeAsset EventCodeAsset { get; private set; }
+        public DailyMissionAsset DailyMissionAsset { get; private set; }
 
         public void Initialize()
         {
@@ -275,6 +278,7 @@ namespace Arrowgene.Ddon.Shared
             RegisterAsset(value => PawnExpeditionRewardsAsset = value, PawnExpeditionRewardsKey, new PawnExpeditionRewardsAssetDeserializer());
             RegisterAsset(value => OfficialPawnsAsset = value, OfficialPawnsKey, new OfficialPawnDeserializer());
             RegisterAsset(value => EventCodeAsset = value, EventCodesKey, new EventCodeAssetDeserializer());
+            RegisterAsset(value => DailyMissionAsset = value, DailyMissionsKey, new DailyMissionAssetDeserializer());
 
             // This must be set before calling QuestAssetDeserializer and EpitaphTrialAssetDeserializer
             var commonEnemyDeserializer = new AssetCommonDeserializer(this.NamedParamAsset);

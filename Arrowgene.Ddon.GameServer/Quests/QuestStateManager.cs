@@ -3,6 +3,7 @@ using Arrowgene.Ddon.GameServer.Party;
 using Arrowgene.Ddon.GameServer.Quests.LightQuests;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Server.Network;
+using Arrowgene.Ddon.Shared.Asset;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Ddon.Shared.Model;
@@ -928,6 +929,9 @@ namespace Arrowgene.Ddon.GameServer.Quests
                 // Check for Exp, Rift and Gold Rewards
                 var ntcs = SendWalletRewards(Server, memberClient, quest, connectionIn);
                 packets.AddRange(ntcs);
+
+                // Update daily mission progress for quest completion
+                packets.AddRange(Server.RewardMissionManager.UpdateMissionProgress(memberClient, DailyMissionType.ClearQuest, 1, connectionIn));
             }
 
             return packets;
@@ -1119,6 +1123,9 @@ namespace Arrowgene.Ddon.GameServer.Quests
 
             // Check for any content released by completing the quest
             packets.AddRange(RewardReleasedContent(Member.Client, quest, connectionIn));
+
+            // Update daily mission progress for quest completion
+            packets.AddRange(Server.RewardMissionManager.UpdateMissionProgress(Member.Client, DailyMissionType.ClearQuest, 1, connectionIn));
 
             return packets;
         }

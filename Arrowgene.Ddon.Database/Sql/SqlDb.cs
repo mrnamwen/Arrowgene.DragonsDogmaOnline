@@ -700,6 +700,21 @@ public abstract class SqlDb : IDatabase
     public abstract uint SelectGpShopPurchaseCount(uint characterId, uint lineupId, DbConnection? connectionIn = null);
     public abstract bool UpsertGpShopPurchaseCount(uint characterId, uint lineupId, uint purchaseCount, DbConnection? connectionIn = null);
 
+    // Reward Mission Progress
+    public abstract List<RewardMissionProgress> SelectRewardMissionProgress(uint characterId, DbConnection? connectionIn = null);
+    public abstract RewardMissionProgress? SelectRewardMissionProgressByMissionId(uint characterId, uint missionId, DbConnection? connectionIn = null);
+    public abstract bool UpsertRewardMissionProgress(uint characterId, RewardMissionProgress progress, DbConnection? connectionIn = null);
+    public abstract bool DeleteRewardMissionProgress(uint characterId, DbConnection? connectionIn = null);
+
+    // Reward Mission State
+    public abstract RewardMissionState SelectRewardMissionState(uint characterId, DbConnection? connectionIn = null);
+    public abstract bool UpsertRewardMissionState(uint characterId, RewardMissionState state, DbConnection? connectionIn = null);
+
+    // Reward Mission Milestones
+    public abstract List<RewardMissionMilestone> SelectRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null);
+    public abstract bool UpsertRewardMissionMilestone(uint characterId, RewardMissionMilestone milestone, DbConnection? connectionIn = null);
+    public abstract bool DeleteRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null);
+
 
     protected virtual DbCommand Command(string query, DbConnection connection)
     {

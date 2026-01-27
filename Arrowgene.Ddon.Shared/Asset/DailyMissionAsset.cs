@@ -8,9 +8,11 @@ namespace Arrowgene.Ddon.Shared.Asset
         public DailyMissionAsset()
         {
             Missions = new List<DailyMission>();
+            MilestoneRewards = new List<MilestoneReward>();
         }
 
         public List<DailyMission> Missions { get; set; }
+        public List<MilestoneReward> MilestoneRewards { get; set; }
     }
 
     public class DailyMission
@@ -54,5 +56,28 @@ namespace Arrowgene.Ddon.Shared.Asset
         GatherItem = 2,
         ClearQuest = 3,
         ClearDungeon = 4
+    }
+
+    public class MilestoneReward
+    {
+        public MilestoneReward()
+        {
+            Rewards = new List<DailyMissionReward>();
+        }
+
+        /// <summary>
+        /// Number of daily missions completed to unlock this milestone reward
+        /// </summary>
+        public uint RequiredMissionCount { get; set; }
+
+        /// <summary>
+        /// Category of missions that count towards this milestone (Daily/Weekly)
+        /// </summary>
+        public DailyMissionCategory Category { get; set; }
+
+        /// <summary>
+        /// Rewards granted when this milestone is reached
+        /// </summary>
+        public List<DailyMissionReward> Rewards { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using Arrowgene.Ddon.GameServer.Quests;
 using Arrowgene.Ddon.GameServer.Quests.Work;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Server.Network;
+using Arrowgene.Ddon.Shared.Asset;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Ddon.Shared.Model.Quest;
@@ -190,6 +191,7 @@ namespace Arrowgene.Ddon.GameServer.Handler
                 }
 
                 packets.AddRange(Server.AchievementManager.HandleClearQuest(client, quest, connectionIn));
+                packets.AddRange(Server.RewardMissionManager.UpdateMissionProgress(client, DailyMissionType.ClearQuest, 1, connectionIn));
             }
             else
             {
@@ -198,6 +200,7 @@ namespace Arrowgene.Ddon.GameServer.Handler
                 foreach(var memberClient in client.Party.Clients)
                 {
                     packets.AddRange(Server.AchievementManager.HandleClearQuest(memberClient, quest, connectionIn));
+                    packets.AddRange(Server.RewardMissionManager.UpdateMissionProgress(memberClient, DailyMissionType.ClearQuest, 1, connectionIn));
                 }
             }
 

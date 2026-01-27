@@ -626,6 +626,17 @@ namespace Arrowgene.Ddon.Test.Database
         // GP Shop Purchase Count stubs
         public uint SelectGpShopPurchaseCount(uint characterId, uint lineupId, DbConnection? connectionIn = null) { return 0; }
         public bool UpsertGpShopPurchaseCount(uint characterId, uint lineupId, uint purchaseCount, DbConnection? connectionIn = null) { return true; }
+
+        // Reward Mission stubs
+        public List<RewardMissionProgress> SelectRewardMissionProgress(uint characterId, DbConnection? connectionIn = null) { return new List<RewardMissionProgress>(); }
+        public RewardMissionProgress? SelectRewardMissionProgressByMissionId(uint characterId, uint missionId, DbConnection? connectionIn = null) { return null; }
+        public bool UpsertRewardMissionProgress(uint characterId, RewardMissionProgress progress, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteRewardMissionProgress(uint characterId, DbConnection? connectionIn = null) { return true; }
+        public RewardMissionState SelectRewardMissionState(uint characterId, DbConnection? connectionIn = null) { return new RewardMissionState(); }
+        public bool UpsertRewardMissionState(uint characterId, RewardMissionState state, DbConnection? connectionIn = null) { return true; }
+        public List<RewardMissionMilestone> SelectRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null) { return new List<RewardMissionMilestone>(); }
+        public bool UpsertRewardMissionMilestone(uint characterId, RewardMissionMilestone milestone, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null) { return true; }
     }
 
     class MockMigrationStrategy : IMigrationStrategy

@@ -3,6 +3,7 @@ using Arrowgene.Ddon.GameServer.Characters;
 using Arrowgene.Ddon.GameServer.GatheringItems.Generators;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Server.Network;
+using Arrowgene.Ddon.Shared.Asset;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Ddon.Shared.Model;
@@ -36,18 +37,26 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
             Server.Database.ExecuteInTransaction(connection =>
             {
+                uint totalItemsGathered = 0;
                 foreach (CDataGatheringItemGetRequest gatheringItemRequest in request.GatheringItemGetRequestList)
                 {
                     InstancedGatheringItem gatheredItem = itemList.ElementAtOrDefault((int)gatheringItemRequest.SlotNo)
                         ?? throw new ResponseErrorException(ErrorCode.ERROR_CODE_INSTANCE_AREA_INVALID_GATHERING_ITEM_POS_ID,
                         $"Invalid gathering item index at {stageId}.{posId}");
-                    
+
                     packetQueue.AddRange(Server.ItemManager.GatherItem(client, ntc, gatheredItem, gatheringItemRequest.Num, connection));
+                    totalItemsGathered += gatheringItemRequest.Num;
 
                     if (HandleOneOffGatherItem(client, stageId, posId, gatheredItem, connection, out var oneOffQueue))
                     {
                         packetQueue.AddRange(oneOffQueue);
                     }
+                }
+
+                // Update reward mission progress for gathering
+                if (totalItemsGathered > 0)
+                {
+                    packetQueue.AddRange(Server.RewardMissionManager.UpdateMissionProgress(client, DailyMissionType.GatherItem, totalItemsGathered, connection));
                 }
             });
 

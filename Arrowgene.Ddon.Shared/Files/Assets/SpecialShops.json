@@ -31150,6 +31150,66 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "label": "Test Items",
+                    "comment": "Test items for development and verification of the Reward Mission system",
+                    "appraisals": [
+                        {
+                            "label": "Reward Medal x1",
+                            "comment": "Test item - gives a Reward Medal for free",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 2
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Gold x1000",
+                            "comment": "Test item - gives Gold for testing",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 7789,
+                                    "name": "Gold",
+                                    "amount": 1000
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Rift Crystal x100",
+                            "comment": "Test item - gives Rift Crystals for testing",
+                            "base_items": [
+                                {
+                                    "item_id": 24727,
+                                    "name": "Reward Medal",
+                                    "amount": 1
+                                }
+                            ],
+                            "pool": [
+                                {
+                                    "item_id": 8890,
+                                    "name": "Rift Crystal",
+                                    "amount": 100
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

@@ -690,6 +690,7 @@ namespace Arrowgene.Ddon.Shared.Entity
             Create(new C2SCraftTimeSaveReq.Serializer());
 
             Create(new C2SDailyMissionListGetReq.Serializer());
+            Create(new C2SDailyMissionRewardReceiveReq.Serializer());
 
             Create(new C2SDispelExchangeDispelItemReq.Serializer());
             Create(new C2SDispelGetDispelItemListReq.Serializer());
@@ -1318,6 +1319,7 @@ namespace Arrowgene.Ddon.Shared.Entity
             Create(new S2CCraft_30_21_16_NTC.Serializer());
 
             Create(new S2CDailyMissionListGetRes.Serializer());
+            Create(new S2CDailyMissionRewardReceiveRes.Serializer());
 
             Create(new S2CDispelExchangeDispelItemRes.Serializer());
             Create(new S2CDispelGetDispelItemListRes.Serializer());

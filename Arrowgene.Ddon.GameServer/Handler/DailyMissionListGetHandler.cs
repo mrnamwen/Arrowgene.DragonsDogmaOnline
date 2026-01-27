@@ -14,9 +14,9 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
         public override S2CDailyMissionListGetRes Handle(GameClient client, C2SDailyMissionListGetReq request)
         {
-            // TODO: Implement daily missions from asset
-            // For now, return empty list to prevent client crash
-            return new S2CDailyMissionListGetRes();
+            var res = new S2CDailyMissionListGetRes();
+            res.MissionList = Server.RewardMissionManager.GetMissionInfoList(client);
+            return res;
         }
     }
 }

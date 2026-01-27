@@ -649,5 +649,20 @@ public interface IDatabase
     uint SelectGpShopPurchaseCount(uint characterId, uint lineupId, DbConnection? connectionIn = null);
     bool UpsertGpShopPurchaseCount(uint characterId, uint lineupId, uint purchaseCount, DbConnection? connectionIn = null);
 
+    // Reward Mission Progress
+    List<RewardMissionProgress> SelectRewardMissionProgress(uint characterId, DbConnection? connectionIn = null);
+    RewardMissionProgress? SelectRewardMissionProgressByMissionId(uint characterId, uint missionId, DbConnection? connectionIn = null);
+    bool UpsertRewardMissionProgress(uint characterId, RewardMissionProgress progress, DbConnection? connectionIn = null);
+    bool DeleteRewardMissionProgress(uint characterId, DbConnection? connectionIn = null);
+
+    // Reward Mission State
+    RewardMissionState SelectRewardMissionState(uint characterId, DbConnection? connectionIn = null);
+    bool UpsertRewardMissionState(uint characterId, RewardMissionState state, DbConnection? connectionIn = null);
+
+    // Reward Mission Milestones
+    List<RewardMissionMilestone> SelectRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null);
+    bool UpsertRewardMissionMilestone(uint characterId, RewardMissionMilestone milestone, DbConnection? connectionIn = null);
+    bool DeleteRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null);
+
 }
 

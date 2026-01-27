@@ -54,6 +54,39 @@ namespace Arrowgene.Ddon.Shared.AssetReader
 
             Logger.Info($"Loaded {asset.Missions.Count} daily missions");
 
+            // Parse milestone rewards if present
+            if (document.RootElement.TryGetProperty("milestone_rewards", out var milestonesElement))
+            {
+                foreach (var milestoneElement in milestonesElement.EnumerateArray())
+                {
+                    var milestone = new MilestoneReward
+                    {
+                        RequiredMissionCount = milestoneElement.GetProperty("required_mission_count").GetUInt32(),
+                        Category = milestoneElement.TryGetProperty("category", out var category)
+                            ? (DailyMissionCategory)category.GetUInt32()
+                            : DailyMissionCategory.Daily
+                    };
+
+                    if (milestoneElement.TryGetProperty("rewards", out var rewardsElement))
+                    {
+                        foreach (var rewardElement in rewardsElement.EnumerateArray())
+                        {
+                            var reward = new DailyMissionReward
+                            {
+                                ItemId = rewardElement.TryGetProperty("item_id", out var itemId) ? itemId.GetUInt32() : 0,
+                                Num = rewardElement.TryGetProperty("num", out var num) ? num.GetUInt32() : 0,
+                                WalletType = rewardElement.TryGetProperty("wallet_type", out var walletType) ? (WalletType)walletType.GetByte() : WalletType.None,
+                                WalletAmount = rewardElement.TryGetProperty("wallet_amount", out var walletAmount) ? walletAmount.GetUInt32() : 0
+                            };
+                            milestone.Rewards.Add(reward);
+                        }
+                    }
+
+                    asset.MilestoneRewards.Add(milestone);
+                }
+                Logger.Info($"Loaded {asset.MilestoneRewards.Count} milestone rewards");
+            }
+
             return asset;
         }
     }

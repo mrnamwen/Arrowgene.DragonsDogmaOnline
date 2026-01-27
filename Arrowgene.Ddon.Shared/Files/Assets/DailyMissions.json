@@ -96,5 +96,67 @@
         }
       ]
     }
+  ],
+  "milestone_rewards": [
+    {
+      "required_mission_count": 1,
+      "category": 1,
+      "rewards": [
+        {
+          "wallet_type": 0,
+          "wallet_amount": 0,
+          "item_id": 24727,
+          "num": 1
+        }
+      ]
+    },
+    {
+      "required_mission_count": 2,
+      "category": 1,
+      "rewards": [
+        {
+          "wallet_type": 0,
+          "wallet_amount": 0,
+          "item_id": 24727,
+          "num": 1
+        }
+      ]
+    },
+    {
+      "required_mission_count": 3,
+      "category": 1,
+      "rewards": [
+        {
+          "wallet_type": 0,
+          "wallet_amount": 0,
+          "item_id": 24727,
+          "num": 2
+        }
+      ]
+    },
+    {
+      "required_mission_count": 1,
+      "category": 2,
+      "rewards": [
+        {
+          "wallet_type": 0,
+          "wallet_amount": 0,
+          "item_id": 24727,
+          "num": 3
+        }
+      ]
+    },
+    {
+      "required_mission_count": 2,
+      "category": 2,
+      "rewards": [
+        {
+          "wallet_type": 0,
+          "wallet_amount": 0,
+          "item_id": 24727,
+          "num": 5
+        }
+      ]
+    }
   ]
 }

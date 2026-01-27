@@ -101,6 +101,7 @@ namespace Arrowgene.Ddon.GameServer
             MandragoraManager = new MandragoraManager(this);
             GpShopManager = new GpShopManager(this);
             OfficialPawnManager = new OfficialPawnManager(this);
+            RewardMissionManager = new RewardMissionManager(this);
 
             S2CStageGetStageListRes stageListPacket =
                 EntitySerializer.Get<S2CStageGetStageListRes>().Read(GameDump.data_Dump_19);
@@ -153,6 +154,7 @@ namespace Arrowgene.Ddon.GameServer
         public MandragoraManager MandragoraManager { get; }
         public GpShopManager GpShopManager { get; }
         public OfficialPawnManager OfficialPawnManager { get; }
+        public RewardMissionManager RewardMissionManager { get; }
 
         public List<CDataStageInfo> StageList { get; }
 
@@ -375,6 +377,7 @@ namespace Arrowgene.Ddon.GameServer
             AddHandler(new CraftStartDetachElementHandler(this));
 
             AddHandler(new DailyMissionListGetHandler(this));
+            AddHandler(new DailyMissionRewardReceiveHandler(this));
             AddHandler(new DispelGetDispelItemSettingsHandler(this));
             AddHandler(new DispelGetDispelItemListHandler(this));
             AddHandler(new DispelExchangeDispelItemHandler(this));
