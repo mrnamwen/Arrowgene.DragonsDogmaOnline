@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using Arrowgene.Ddon.Database.Model;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Shared.Asset;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
@@ -12,6 +14,15 @@ namespace Arrowgene.Ddon.GameServer.Characters
     public class GpShopManager
     {
         private static readonly ServerLogger Logger = LogProvider.Logger<ServerLogger>(typeof(GpShopManager));
+
+        // Storage expansion items: ItemId -> (StorageType, ExpansionAmount)
+        private static readonly Dictionary<uint, (StorageType StorageType, ushort ExpansionAmount)> StorageExpansionItems = new()
+        {
+            { (uint)ItemId.ItemBagConsumableExpansion, (StorageType.ItemBagConsumable, 20) },
+            { (uint)ItemId.ItemBagMaterialExpansion, (StorageType.ItemBagMaterial, 40) },
+            { (uint)ItemId.ItemBagEquipmentExpansion, (StorageType.ItemBagEquipment, 40) },
+            { (uint)ItemId.ItemBagJobExpansion, (StorageType.ItemBagJob, 20) },
+        };
 
         private readonly DdonGameServer _server;
 
@@ -118,7 +129,6 @@ namespace Arrowgene.Ddon.GameServer.Characters
             }
 
             uint totalPrice = item.Price * quantity;
-            uint totalItems = item.ItemNum * quantity;
 
             // Deduct GP
             var walletUpdate = _server.WalletManager.RemoveFromWallet(client.Character, WalletType.GoldenGemstones, totalPrice);
@@ -129,32 +139,91 @@ namespace Arrowgene.Ddon.GameServer.Characters
             }
             ntc.UpdateWalletList.Add(walletUpdate);
 
-            // Add items to inventory
-            _server.Database.ExecuteInTransaction(connection =>
+            // Check if this is a course ticket purchase
+            if (item.CourseId > 0)
             {
-                if (_server.ItemManager.IsItemWalletPoint(item.ItemId))
+                // Course ticket purchase - add to available courses instead of inventory
+                _server.Database.ExecuteInTransaction(connection =>
                 {
-                    (WalletType walletType, uint amount) = _server.ItemManager.ItemToWalletPoint(item.ItemId);
-                    var result = _server.WalletManager.AddToWallet(client.Character, walletType, amount * totalItems, connectionIn: connection);
-                    ntc.UpdateWalletList.Add(result);
-                }
-                else
-                {
-                    var itemUpdates = _server.ItemManager.AddItem(_server, client.Character, true, item.ItemId, totalItems, connectionIn: connection);
-                    ntc.UpdateItemList.AddRange(itemUpdates);
-                }
+                    for (uint i = 0; i < quantity; i++)
+                    {
+                        var availableCourse = new CharacterAvailableCourse
+                        {
+                            CharacterId = client.Character.CharacterId,
+                            CourseId = item.CourseId,
+                            CourseName = item.Name,
+                            DurationSec = item.DurationSeconds,
+                            LineupId = item.LineupId,
+                            BackIconId = item.BackIconId,
+                            FrameIconId = item.FrameIconId,
+                            PurchaseTime = DateTime.UtcNow
+                        };
+                        _server.Database.InsertCharacterAvailableCourse(availableCourse, connection);
+                    }
 
-                // Track purchase for purchase limit
-                if (item.PurchaseLimit > 0)
+                    // Track purchase for purchase limit
+                    if (item.PurchaseLimit > 0)
+                    {
+                        IncrementCharacterPurchaseCount(client.Character.CharacterId, lineupId, quantity, connection);
+                    }
+                });
+
+                Logger.Info($"Player {client.Character.CharacterId} purchased {quantity}x course ticket '{item.Name}' (CourseId: {item.CourseId}, LineupId: {lineupId}) for {totalPrice} GP.");
+            }
+            else if (IsStorageExpansionItem(item.ItemId))
+            {
+                // Storage expansion item purchase - expand the character's storage
+                _server.Database.ExecuteInTransaction(connection =>
                 {
-                    IncrementCharacterPurchaseCount(client.Character.CharacterId, lineupId, quantity, connection);
-                }
-            });
+                    for (uint i = 0; i < quantity; i++)
+                    {
+                        if (ProcessStorageExpansion(client, item.ItemId, connection, out var extendNtc))
+                        {
+                            // Send storage slot extension notification to client
+                            client.Send(extendNtc);
+                        }
+                    }
+
+                    // Track purchase for purchase limit
+                    if (item.PurchaseLimit > 0)
+                    {
+                        IncrementCharacterPurchaseCount(client.Character.CharacterId, lineupId, quantity, connection);
+                    }
+                });
+
+                Logger.Info($"Player {client.Character.CharacterId} purchased storage expansion '{item.Name}' (LineupId: {lineupId}) for {totalPrice} GP.");
+            }
+            else
+            {
+                // Regular item purchase - add to inventory
+                uint totalItems = item.ItemNum * quantity;
+
+                _server.Database.ExecuteInTransaction(connection =>
+                {
+                    if (_server.ItemManager.IsItemWalletPoint(item.ItemId))
+                    {
+                        (WalletType walletType, uint amount) = _server.ItemManager.ItemToWalletPoint(item.ItemId);
+                        var result = _server.WalletManager.AddToWallet(client.Character, walletType, amount * totalItems, connectionIn: connection);
+                        ntc.UpdateWalletList.Add(result);
+                    }
+                    else
+                    {
+                        var itemUpdates = _server.ItemManager.AddItem(_server, client.Character, true, item.ItemId, totalItems, connectionIn: connection);
+                        ntc.UpdateItemList.AddRange(itemUpdates);
+                    }
+
+                    // Track purchase for purchase limit
+                    if (item.PurchaseLimit > 0)
+                    {
+                        IncrementCharacterPurchaseCount(client.Character.CharacterId, lineupId, quantity, connection);
+                    }
+                });
+
+                Logger.Info($"Player {client.Character.CharacterId} purchased {quantity}x '{item.Name}' (LineupId: {lineupId}) for {totalPrice} GP.");
+            }
 
             // Record purchase history
             RecordPurchaseHistory(client.Character.CharacterId, lineupId, item.Name, totalPrice);
-
-            Logger.Info($"Player {client.Character.CharacterId} purchased {quantity}x '{item.Name}' (LineupId: {lineupId}) for {totalPrice} GP.");
 
             return true;
         }
@@ -175,6 +244,63 @@ namespace Arrowgene.Ddon.GameServer.Characters
         {
             // TODO: Implement purchase history recording in database
             // This would use the gp_shop_purchase_history table
+        }
+
+        /// <summary>
+        /// Checks if the given item ID is a storage expansion item.
+        /// </summary>
+        public static bool IsStorageExpansionItem(uint itemId)
+        {
+            return StorageExpansionItems.ContainsKey(itemId);
+        }
+
+        /// <summary>
+        /// Expands a character's storage by the specified amount.
+        /// </summary>
+        /// <param name="client">The game client</param>
+        /// <param name="storageType">The storage type to expand</param>
+        /// <param name="expansionAmount">Number of slots to add</param>
+        /// <param name="connection">Database connection for transaction</param>
+        /// <returns>The slot extension notification packet</returns>
+        public S2CItemExtendItemSlotNtc ExpandStorage(GameClient client, StorageType storageType, ushort expansionAmount, DbConnection connection)
+        {
+            var storage = client.Character.Storage.GetStorage(storageType);
+            ushort currentMax = storage.MaxSlots();
+            ushort newMax = (ushort)(currentMax + expansionAmount);
+
+            // Expand the in-memory storage by adding null slots
+            for (int i = 0; i < expansionAmount; i++)
+            {
+                storage.Items.Add(null);
+            }
+
+            // Persist the new storage size to database
+            _server.Database.UpdateStorage(client.Character.ContentCharacterId, storageType, storage, connection);
+
+            Logger.Info($"Player {client.Character.CharacterId} expanded {storageType} from {currentMax} to {newMax} slots.");
+
+            return new S2CItemExtendItemSlotNtc
+            {
+                Category = (byte)storageType,
+                AddNum = expansionAmount,
+                TotalNum = newMax
+            };
+        }
+
+        /// <summary>
+        /// Processes a storage expansion item purchase.
+        /// </summary>
+        public bool ProcessStorageExpansion(GameClient client, uint itemId, DbConnection connection, out S2CItemExtendItemSlotNtc extendNtc)
+        {
+            extendNtc = null;
+
+            if (!StorageExpansionItems.TryGetValue(itemId, out var expansionInfo))
+            {
+                return false;
+            }
+
+            extendNtc = ExpandStorage(client, expansionInfo.StorageType, expansionInfo.ExpansionAmount, connection);
+            return true;
         }
     }
 }

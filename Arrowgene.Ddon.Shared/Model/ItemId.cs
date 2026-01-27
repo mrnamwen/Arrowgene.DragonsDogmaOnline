@@ -21509,6 +21509,12 @@ namespace Arrowgene.Ddon.Shared.Model
         _1207JpObtain10 = 13357,
         _1207JpObtained06 = 13353,
         _1207JpObtained07 = 13354,
+
+        // Storage Expansion Items (Server Custom)
+        ItemBagConsumableExpansion = 90001,
+        ItemBagMaterialExpansion = 90002,
+        ItemBagEquipmentExpansion = 90003,
+        ItemBagJobExpansion = 90004,
     }
 
     public static class ItemIdExtension
