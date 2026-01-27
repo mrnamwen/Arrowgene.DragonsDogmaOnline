@@ -1,5 +1,4 @@
 #nullable enable
-using System;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
 using Arrowgene.Logging;
@@ -18,10 +17,19 @@ public class GpCourseUseFromAvailableHandler : GameRequestPacketHandler<C2SGpCou
     {
         var res = new S2CGpCourseUseFromAvailableRes();
 
-        // TODO: remove requested available course ID from available courses
+        // Activate the course from the available list
+        ulong endTime = Server.GpCourseManager.ActivateCourse(client, request.AvailableId);
 
-        // TODO: get period from requested available course ID 
-        res.FinishDateTime = (ulong)DateTimeOffset.UtcNow.AddMonths(12).ToUnixTimeSeconds();
+        if (endTime == 0)
+        {
+            Logger.Error($"Failed to activate course with available ID {request.AvailableId} for character {client.Character.CharacterId}");
+            res.Error = 1; // Indicate failure
+        }
+        else
+        {
+            res.FinishDateTime = endTime;
+            Logger.Info($"Character {client.Character.CharacterId} activated course (available ID: {request.AvailableId}), expires at {endTime}");
+        }
 
         return res;
     }

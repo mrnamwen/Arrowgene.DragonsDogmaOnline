@@ -631,4 +631,18 @@ public interface IDatabase
     HashSet<uint> SelectBoxGachaDrawnLineups(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
     bool HasBoxGachaDrawnLineup(uint characterId, uint boxGachaId, uint lineupId, DbConnection? connectionIn = null);
 
+    // Character Available Courses (purchased but not activated)
+    long InsertCharacterAvailableCourse(CharacterAvailableCourse course, DbConnection? connectionIn = null);
+    List<CharacterAvailableCourse> SelectCharacterAvailableCourses(uint characterId, DbConnection? connectionIn = null);
+    CharacterAvailableCourse? SelectCharacterAvailableCourseById(ulong id, DbConnection? connectionIn = null);
+    bool DeleteCharacterAvailableCourse(ulong id, DbConnection? connectionIn = null);
+
+    // Character Active Courses (currently active with expiry)
+    long InsertCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null);
+    List<CharacterActiveCourse> SelectCharacterActiveCourses(uint characterId, DbConnection? connectionIn = null);
+    List<CharacterActiveCourse> SelectCharacterActiveCoursesByCourseId(uint characterId, uint courseId, DbConnection? connectionIn = null);
+    bool UpdateCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null);
+    int DeleteExpiredCharacterActiveCourses(long currentTime, DbConnection? connectionIn = null);
+    bool DeleteCharacterActiveCourse(ulong id, DbConnection? connectionIn = null);
+
 }

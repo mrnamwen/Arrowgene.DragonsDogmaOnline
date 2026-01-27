@@ -682,6 +682,20 @@ public abstract class SqlDb : IDatabase
     public abstract HashSet<uint> SelectBoxGachaDrawnLineups(uint characterId, uint boxGachaId, DbConnection? connectionIn = null);
     public abstract bool HasBoxGachaDrawnLineup(uint characterId, uint boxGachaId, uint lineupId, DbConnection? connectionIn = null);
 
+    // Character Available Courses (purchased but not activated)
+    public abstract long InsertCharacterAvailableCourse(CharacterAvailableCourse course, DbConnection? connectionIn = null);
+    public abstract List<CharacterAvailableCourse> SelectCharacterAvailableCourses(uint characterId, DbConnection? connectionIn = null);
+    public abstract CharacterAvailableCourse? SelectCharacterAvailableCourseById(ulong id, DbConnection? connectionIn = null);
+    public abstract bool DeleteCharacterAvailableCourse(ulong id, DbConnection? connectionIn = null);
+
+    // Character Active Courses (currently active with expiry)
+    public abstract long InsertCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null);
+    public abstract List<CharacterActiveCourse> SelectCharacterActiveCourses(uint characterId, DbConnection? connectionIn = null);
+    public abstract List<CharacterActiveCourse> SelectCharacterActiveCoursesByCourseId(uint characterId, uint courseId, DbConnection? connectionIn = null);
+    public abstract bool UpdateCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null);
+    public abstract int DeleteExpiredCharacterActiveCourses(long currentTime, DbConnection? connectionIn = null);
+    public abstract bool DeleteCharacterActiveCourse(ulong id, DbConnection? connectionIn = null);
+
 
     protected virtual DbCommand Command(string query, DbConnection connection)
     {

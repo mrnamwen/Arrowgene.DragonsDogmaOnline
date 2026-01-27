@@ -48,7 +48,12 @@ namespace Arrowgene.Ddon.Shared.AssetReader
                         EndTime = item.EndTime,
                         CategoryId = item.CategoryId,
                         IconId = item.IconId,
-                        SortOrder = item.SortOrder
+                        SortOrder = item.SortOrder,
+                        // Course ticket fields (default to 0 for regular items)
+                        CourseId = item.CourseId,
+                        DurationSeconds = item.DurationSeconds,
+                        BackIconId = item.BackIconId,
+                        FrameIconId = item.FrameIconId
                     };
 
                     asset.LineupItems[item.LineupId] = lineupItem;
@@ -79,6 +84,11 @@ namespace Arrowgene.Ddon.Shared.AssetReader
             public uint CategoryId { get; set; }
             public uint IconId { get; set; }
             public byte SortOrder { get; set; }
+            // Course ticket fields (0 = regular item, >0 = course ticket)
+            public uint CourseId { get; set; }
+            public uint DurationSeconds { get; set; }
+            public uint BackIconId { get; set; }
+            public uint FrameIconId { get; set; }
         }
     }
 }

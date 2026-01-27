@@ -1,8 +1,6 @@
 #nullable enable
-using System;
 using Arrowgene.Ddon.Server;
 using Arrowgene.Ddon.Shared.Entity.PacketStructure;
-using Arrowgene.Ddon.Shared.Entity.Structure;
 using Arrowgene.Logging;
 
 namespace Arrowgene.Ddon.GameServer.Handler;
@@ -19,17 +17,11 @@ public class GpCourseGetValidListHandler : GameRequestPacketHandler<C2SGpCourseG
     {
         var res = new S2CGpCourseGetValidListRes();
 
-        // TODO: track active courses in DB
-        var offset = DateTimeOffset.UtcNow;
-        res.Items.Add(new CDataGPCourseValid
-        {
-            Id = 1,
-            CourseId = 1,
-            NameA = "Adventure Passport (active)",
-            NameB = "",
-            StartTime = (ulong)offset.ToUnixTimeSeconds(),
-            EndTime = (ulong)offset.AddMonths(12).ToUnixTimeSeconds()
-        });
+        // Get all valid (currently active) courses for this character
+        // This combines server-wide courses and character's personal active courses
+        res.Items = Server.GpCourseManager.GetValidCoursesForCharacter(client.Character.CharacterId);
+
+        Logger.Debug($"Returning {res.Items.Count} valid courses for character {client.Character.CharacterId}");
 
         return res;
     }

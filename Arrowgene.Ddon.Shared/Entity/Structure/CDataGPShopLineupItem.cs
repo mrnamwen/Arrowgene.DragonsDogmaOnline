@@ -19,6 +19,12 @@ namespace Arrowgene.Ddon.Shared.Entity.Structure
         public uint IconId { get; set; }
         public byte SortOrder { get; set; }
 
+        // Course ticket fields (for purchasable courses)
+        public uint CourseId { get; set; }         // 0 = regular item, >0 = course ticket
+        public uint DurationSeconds { get; set; }  // Duration in seconds when activated
+        public uint BackIconId { get; set; }
+        public uint FrameIconId { get; set; }
+
         public CDataGPShopLineupItem()
         {
             Name = string.Empty;

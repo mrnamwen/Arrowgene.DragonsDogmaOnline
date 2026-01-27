@@ -610,6 +610,18 @@ namespace Arrowgene.Ddon.Test.Database
         public List<BoxGachaState> SelectBoxGachaState(uint characterId, uint gachaId, DbConnection? connectionIn = null) { return new List<BoxGachaState>(); }
         public HashSet<uint> SelectBoxGachaDrawnLineups(uint characterId, uint gachaId, DbConnection? connectionIn = null) { return new HashSet<uint>(); }
         public bool HasBoxGachaDrawnLineup(uint characterId, uint gachaId, uint lineupNo, DbConnection? connectionIn = null) { return false; }
+
+        // Character Course stubs
+        public long InsertCharacterAvailableCourse(CharacterAvailableCourse course, DbConnection? connectionIn = null) { return 1; }
+        public List<CharacterAvailableCourse> SelectCharacterAvailableCourses(uint characterId, DbConnection? connectionIn = null) { return new List<CharacterAvailableCourse>(); }
+        public CharacterAvailableCourse? SelectCharacterAvailableCourseById(ulong id, DbConnection? connectionIn = null) { return null; }
+        public bool DeleteCharacterAvailableCourse(ulong id, DbConnection? connectionIn = null) { return true; }
+        public long InsertCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null) { return 1; }
+        public List<CharacterActiveCourse> SelectCharacterActiveCourses(uint characterId, DbConnection? connectionIn = null) { return new List<CharacterActiveCourse>(); }
+        public List<CharacterActiveCourse> SelectCharacterActiveCoursesByCourseId(uint characterId, uint courseId, DbConnection? connectionIn = null) { return new List<CharacterActiveCourse>(); }
+        public bool UpdateCharacterActiveCourse(CharacterActiveCourse course, DbConnection? connectionIn = null) { return true; }
+        public int DeleteExpiredCharacterActiveCourses(long currentTime, DbConnection? connectionIn = null) { return 0; }
+        public bool DeleteCharacterActiveCourse(ulong id, DbConnection? connectionIn = null) { return true; }
     }
 
     class MockMigrationStrategy : IMigrationStrategy
