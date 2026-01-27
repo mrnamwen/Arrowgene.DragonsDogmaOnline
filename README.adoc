@@ -120,7 +120,7 @@ Launch the client with the following args:
 `"DDO.exe" "addr=localhost port=52100 token=00000000000000000000 DL=http://127.0.0.1:52099/win/ LVer=03.04.003.20181115.0 RVer=3040008"`
 
 == Progress
-See the https://github.com/mrnamwen/Arrowgene.DragonsDogmaOnline/wiki/What-Works%3F[wiki].
+See xref:./docs/WHAT_WORKS.md[What Works?] for detailed feature implementation status.
 
 == Guidelines
 === Git 
