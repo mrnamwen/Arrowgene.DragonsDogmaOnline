@@ -67,16 +67,16 @@ public class ScriptedQuest : IQuest
         {
             LibDdon.Enemy.CreateAuto(EnemyId.Golem, 92, 0, isBoss: true)
                 .SetNamedEnemyParams(NamedParamId.AncientGuardian),
-            LibDdon.Enemy.CreateAuto(EnemyId.SkeletonMage, 92, 1)
+            LibDdon.Enemy.CreateAuto(EnemyId.SkeletonMage0, 92, 1)
                 .SetNamedEnemyParams(NamedParamId.AncientGuardian),
-            LibDdon.Enemy.CreateAuto(EnemyId.SkeletonMage, 92, 2)
+            LibDdon.Enemy.CreateAuto(EnemyId.SkeletonMage0, 92, 2)
                 .SetNamedEnemyParams(NamedParamId.AncientGuardian),
         });
 
         // Sage Tower Ruins encounter - searching for Dragon Force on Bloodbane Isle
         AddEnemies(EnemyGroupId.SageTowerRuinsEncounter, Stage.SageTowerRuins, 0, QuestEnemyPlacementType.Manual, new()
         {
-            LibDdon.Enemy.CreateAuto(EnemyId.Lich, 92, 0, isBoss: true)
+            LibDdon.Enemy.CreateAuto(EnemyId.Wight0, 92, 0, isBoss: true)
                 .SetNamedEnemyParams(NamedParamId.AncientGuardian),
             LibDdon.Enemy.CreateAuto(EnemyId.UndeadMale, 92, 1)
                 .SetNamedEnemyParams(NamedParamId.AncientGuardian),
