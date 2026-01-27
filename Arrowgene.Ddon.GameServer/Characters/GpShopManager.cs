@@ -21,7 +21,6 @@ namespace Arrowgene.Ddon.GameServer.Characters
             { (uint)ItemId.ItemBagConsumableExpansion, (StorageType.ItemBagConsumable, 20) },
             { (uint)ItemId.ItemBagMaterialExpansion, (StorageType.ItemBagMaterial, 40) },
             { (uint)ItemId.ItemBagEquipmentExpansion, (StorageType.ItemBagEquipment, 40) },
-            { (uint)ItemId.ItemBagJobExpansion, (StorageType.ItemBagJob, 20) },
         };
 
         private readonly DdonGameServer _server;

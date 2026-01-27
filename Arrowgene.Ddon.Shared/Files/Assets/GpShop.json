@@ -1448,18 +1448,6 @@
       "PurchaseLimit": 2,
       "CategoryId": 14,
       "IconId": 15
-    },
-    {
-      "LineupId": 2004,
-      "ItemId": 90004,
-      "Name": "Job Items Bag Expansion",
-      "Description": "Permanently increases your Job Items Bag capacity by 20 slots. Can be purchased up to 2 times per character (20 -> 40 -> 60).",
-      "Price": 100,
-      "BasePrice": 100,
-      "ItemNum": 1,
-      "PurchaseLimit": 2,
-      "CategoryId": 14,
-      "IconId": 15
     }
   ]
 }

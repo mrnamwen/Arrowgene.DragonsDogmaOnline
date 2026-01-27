@@ -21514,7 +21514,6 @@ namespace Arrowgene.Ddon.Shared.Model
         ItemBagConsumableExpansion = 90001,
         ItemBagMaterialExpansion = 90002,
         ItemBagEquipmentExpansion = 90003,
-        ItemBagJobExpansion = 90004,
     }
 
     public static class ItemIdExtension
