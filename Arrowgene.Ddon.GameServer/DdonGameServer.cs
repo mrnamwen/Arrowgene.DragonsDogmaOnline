@@ -102,6 +102,7 @@ namespace Arrowgene.Ddon.GameServer
             GpShopManager = new GpShopManager(this);
             OfficialPawnManager = new OfficialPawnManager(this);
             RewardMissionManager = new RewardMissionManager(this);
+            InfinityDeliveryManager = new InfinityDeliveryManager(this);
 
             S2CStageGetStageListRes stageListPacket =
                 EntitySerializer.Get<S2CStageGetStageListRes>().Read(GameDump.data_Dump_19);
@@ -155,6 +156,7 @@ namespace Arrowgene.Ddon.GameServer
         public GpShopManager GpShopManager { get; }
         public OfficialPawnManager OfficialPawnManager { get; }
         public RewardMissionManager RewardMissionManager { get; }
+        public InfinityDeliveryManager InfinityDeliveryManager { get; }
 
         public List<CDataStageInfo> StageList { get; }
 

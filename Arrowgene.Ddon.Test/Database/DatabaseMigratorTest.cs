@@ -637,6 +637,18 @@ namespace Arrowgene.Ddon.Test.Database
         public List<RewardMissionMilestone> SelectRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null) { return new List<RewardMissionMilestone>(); }
         public bool UpsertRewardMissionMilestone(uint characterId, RewardMissionMilestone milestone, DbConnection? connectionIn = null) { return true; }
         public bool DeleteRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null) { return true; }
+
+        // Infinity Delivery stubs
+        public List<(uint CategoryId, uint TotalPoints, uint ItemsDelivered, DateTime PeriodStart)> SelectInfinityDeliveryProgress(uint characterId, DbConnection? connectionIn = null) { return new List<(uint, uint, uint, DateTime)>(); }
+        public (uint CategoryId, uint TotalPoints, uint ItemsDelivered, DateTime PeriodStart)? SelectInfinityDeliveryProgressByCategory(uint characterId, uint categoryId, DbConnection? connectionIn = null) { return null; }
+        public bool UpsertInfinityDeliveryProgress(uint characterId, uint categoryId, uint totalPoints, uint itemsDelivered, DateTime periodStart, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteInfinityDeliveryProgress(uint characterId, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteInfinityDeliveryProgressByCategory(uint characterId, uint categoryId, DbConnection? connectionIn = null) { return true; }
+        public List<(uint BorderId, DateTime ClaimedAt, DateTime PeriodStart)> SelectInfinityDeliveryBorderClaims(uint characterId, DbConnection? connectionIn = null) { return new List<(uint, DateTime, DateTime)>(); }
+        public List<(uint BorderId, DateTime ClaimedAt, DateTime PeriodStart)> SelectInfinityDeliveryBorderClaimsByPeriod(uint characterId, DateTime periodStart, DbConnection? connectionIn = null) { return new List<(uint, DateTime, DateTime)>(); }
+        public bool InsertInfinityDeliveryBorderClaim(uint characterId, uint borderId, DateTime claimedAt, DateTime periodStart, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteInfinityDeliveryBorderClaims(uint characterId, DbConnection? connectionIn = null) { return true; }
+        public bool DeleteInfinityDeliveryBorderClaimsByPeriod(uint characterId, DateTime periodStart, DbConnection? connectionIn = null) { return true; }
     }
 
     class MockMigrationStrategy : IMigrationStrategy

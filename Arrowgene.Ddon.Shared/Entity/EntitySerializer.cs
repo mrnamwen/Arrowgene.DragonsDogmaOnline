@@ -242,6 +242,10 @@ namespace Arrowgene.Ddon.Shared.Entity
             Create(new CDataHistoryElement.Serializer());
 
             Create(new CDataInformationParagraph.Serializer());
+            Create(new CDataInfinityDeliveryBorder.Serializer());
+            Create(new CDataInfinityDeliveryCategory.Serializer());
+            Create(new CDataInfinityDeliveryItem.Serializer());
+            Create(new CDataInfinityDeliveryStatus.Serializer());
             Create(new CDataItemEmbodyCostParam.Serializer());
             Create(new CDataItemEmbodyItem.Serializer());
             Create(new CDataItemEquipElement.Serializer());
@@ -691,6 +695,13 @@ namespace Arrowgene.Ddon.Shared.Entity
 
             Create(new C2SDailyMissionListGetReq.Serializer());
             Create(new C2SDailyMissionRewardReceiveReq.Serializer());
+
+            Create(new C2SInfinityDeliveryDeliverItemReq.Serializer());
+            Create(new C2SInfinityDeliveryGetCategoryListReq.Serializer());
+            Create(new C2SInfinityDeliveryGetCurrentEventReq.Serializer());
+            Create(new C2SInfinityDeliveryGetEventStatusReq.Serializer());
+            Create(new C2SInfinityDeliveryGetNumBorderInfoReq.Serializer());
+            Create(new C2SInfinityDeliveryReceiveBorderRewardReq.Serializer());
 
             Create(new C2SDispelExchangeDispelItemReq.Serializer());
             Create(new C2SDispelGetDispelItemListReq.Serializer());
@@ -1320,6 +1331,13 @@ namespace Arrowgene.Ddon.Shared.Entity
 
             Create(new S2CDailyMissionListGetRes.Serializer());
             Create(new S2CDailyMissionRewardReceiveRes.Serializer());
+
+            Create(new S2CInfinityDeliveryDeliverItemRes.Serializer());
+            Create(new S2CInfinityDeliveryGetCategoryListRes.Serializer());
+            Create(new S2CInfinityDeliveryGetCurrentEventRes.Serializer());
+            Create(new S2CInfinityDeliveryGetEventStatusRes.Serializer());
+            Create(new S2CInfinityDeliveryGetNumBorderInfoRes.Serializer());
+            Create(new S2CInfinityDeliveryReceiveBorderRewardRes.Serializer());
 
             Create(new S2CDispelExchangeDispelItemRes.Serializer());
             Create(new S2CDispelGetDispelItemListRes.Serializer());

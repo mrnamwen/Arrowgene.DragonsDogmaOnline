@@ -715,6 +715,20 @@ public abstract class SqlDb : IDatabase
     public abstract bool UpsertRewardMissionMilestone(uint characterId, RewardMissionMilestone milestone, DbConnection? connectionIn = null);
     public abstract bool DeleteRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null);
 
+    // Infinity Delivery Progress
+    public abstract List<(uint CategoryId, uint TotalPoints, uint ItemsDelivered, DateTime PeriodStart)> SelectInfinityDeliveryProgress(uint characterId, DbConnection? connectionIn = null);
+    public abstract (uint CategoryId, uint TotalPoints, uint ItemsDelivered, DateTime PeriodStart)? SelectInfinityDeliveryProgressByCategory(uint characterId, uint categoryId, DbConnection? connectionIn = null);
+    public abstract bool UpsertInfinityDeliveryProgress(uint characterId, uint categoryId, uint totalPoints, uint itemsDelivered, DateTime periodStart, DbConnection? connectionIn = null);
+    public abstract bool DeleteInfinityDeliveryProgress(uint characterId, DbConnection? connectionIn = null);
+    public abstract bool DeleteInfinityDeliveryProgressByCategory(uint characterId, uint categoryId, DbConnection? connectionIn = null);
+
+    // Infinity Delivery Border Claims
+    public abstract List<(uint BorderId, DateTime ClaimedAt, DateTime PeriodStart)> SelectInfinityDeliveryBorderClaims(uint characterId, DbConnection? connectionIn = null);
+    public abstract List<(uint BorderId, DateTime ClaimedAt, DateTime PeriodStart)> SelectInfinityDeliveryBorderClaimsByPeriod(uint characterId, DateTime periodStart, DbConnection? connectionIn = null);
+    public abstract bool InsertInfinityDeliveryBorderClaim(uint characterId, uint borderId, DateTime claimedAt, DateTime periodStart, DbConnection? connectionIn = null);
+    public abstract bool DeleteInfinityDeliveryBorderClaims(uint characterId, DbConnection? connectionIn = null);
+    public abstract bool DeleteInfinityDeliveryBorderClaimsByPeriod(uint characterId, DateTime periodStart, DbConnection? connectionIn = null);
+
 
     protected virtual DbCommand Command(string query, DbConnection connection)
     {

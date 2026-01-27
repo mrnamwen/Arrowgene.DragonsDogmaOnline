@@ -1,0 +1,68 @@
+{
+  "enabled": true,
+  "event_id": 1,
+  "reset_day": "Monday",
+  "reset_hour": 5,
+  "categories": [
+    {
+      "category_id": 1,
+      "name": "Materials",
+      "items": [
+        { "item_id": 55, "point_value": 10 },
+        { "item_id": 56, "point_value": 10 },
+        { "item_id": 57, "point_value": 15 },
+        { "item_id": 58, "point_value": 15 },
+        { "item_id": 59, "point_value": 20 }
+      ]
+    },
+    {
+      "category_id": 2,
+      "name": "Consumables",
+      "items": [
+        { "item_id": 68, "point_value": 5 },
+        { "item_id": 69, "point_value": 5 },
+        { "item_id": 70, "point_value": 8 }
+      ]
+    }
+  ],
+  "borders": [
+    {
+      "border_id": 1,
+      "required_points": 100,
+      "rewards": [
+        { "wallet_type": 1, "wallet_amount": 5000 }
+      ]
+    },
+    {
+      "border_id": 2,
+      "required_points": 250,
+      "rewards": [
+        { "wallet_type": 2, "wallet_amount": 1000 }
+      ]
+    },
+    {
+      "border_id": 3,
+      "required_points": 500,
+      "rewards": [
+        { "wallet_type": 1, "wallet_amount": 10000 },
+        { "item_id": 24727, "num": 5 }
+      ]
+    },
+    {
+      "border_id": 4,
+      "required_points": 1000,
+      "rewards": [
+        { "wallet_type": 1, "wallet_amount": 25000 },
+        { "wallet_type": 2, "wallet_amount": 5000 }
+      ]
+    },
+    {
+      "border_id": 5,
+      "required_points": 2000,
+      "rewards": [
+        { "wallet_type": 1, "wallet_amount": 50000 },
+        { "item_id": 24727, "num": 10 }
+      ]
+    }
+  ]
+}

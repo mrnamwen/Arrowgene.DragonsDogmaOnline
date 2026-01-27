@@ -664,5 +664,19 @@ public interface IDatabase
     bool UpsertRewardMissionMilestone(uint characterId, RewardMissionMilestone milestone, DbConnection? connectionIn = null);
     bool DeleteRewardMissionMilestones(uint characterId, DbConnection? connectionIn = null);
 
+    // Infinity Delivery Progress
+    List<(uint CategoryId, uint TotalPoints, uint ItemsDelivered, DateTime PeriodStart)> SelectInfinityDeliveryProgress(uint characterId, DbConnection? connectionIn = null);
+    (uint CategoryId, uint TotalPoints, uint ItemsDelivered, DateTime PeriodStart)? SelectInfinityDeliveryProgressByCategory(uint characterId, uint categoryId, DbConnection? connectionIn = null);
+    bool UpsertInfinityDeliveryProgress(uint characterId, uint categoryId, uint totalPoints, uint itemsDelivered, DateTime periodStart, DbConnection? connectionIn = null);
+    bool DeleteInfinityDeliveryProgress(uint characterId, DbConnection? connectionIn = null);
+    bool DeleteInfinityDeliveryProgressByCategory(uint characterId, uint categoryId, DbConnection? connectionIn = null);
+
+    // Infinity Delivery Border Claims
+    List<(uint BorderId, DateTime ClaimedAt, DateTime PeriodStart)> SelectInfinityDeliveryBorderClaims(uint characterId, DbConnection? connectionIn = null);
+    List<(uint BorderId, DateTime ClaimedAt, DateTime PeriodStart)> SelectInfinityDeliveryBorderClaimsByPeriod(uint characterId, DateTime periodStart, DbConnection? connectionIn = null);
+    bool InsertInfinityDeliveryBorderClaim(uint characterId, uint borderId, DateTime claimedAt, DateTime periodStart, DbConnection? connectionIn = null);
+    bool DeleteInfinityDeliveryBorderClaims(uint characterId, DbConnection? connectionIn = null);
+    bool DeleteInfinityDeliveryBorderClaimsByPeriod(uint characterId, DateTime periodStart, DbConnection? connectionIn = null);
+
 }
 

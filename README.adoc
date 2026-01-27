@@ -66,9 +66,18 @@ This fork includes significant enhancements and new features over the upstream r
 * Mail text retrieval
 * Send notifications
 
-==== Daily Missions
-* Daily mission listing and tracking
-* Mission rewards system
+==== Reward Mission System (リワードミッション)
+* Full daily mission system with 6 mission types: login, gather items, defeat enemies, clear quests, craft items, pawn expeditions
+* Milestone rewards for completing multiple missions (3, 5, 8 missions)
+* 5 AM JST daily reset with automatic progress tracking
+* Configurable mission definitions and rewards via JSON assets
+
+==== Large Delivery Events (大口納品イベント / Infinity Delivery)
+* Solo-friendly material delivery system (no competitive rankings)
+* Deliver items to NPCs (Seneka) at White Dragon Temple to earn points
+* Point thresholds (borders) unlock rewards: Gold, Rift Points, Blood Orbs, items
+* Weekly reset on Monday 5 AM JST
+* Configurable categories, items, point values, and border rewards
 
 ==== Additional Features
 * Event code redemption system
@@ -90,15 +99,21 @@ New migrations for enhanced persistence:
 * Equip Presets (Migration 57)
 * Clan Scout (Migration 58)
 * Shop History (Migration 59)
+* GP Spend History (Migration 60)
+* Gacha State (Migration 61)
+* Reward Mission Progress (Migration 62)
+* Infinity Delivery Progress (Migration 63)
 
 === New Managers
 * `GachaManager` - Gacha system logic
 * `GpShopManager` - GP shop transactions
+* `InfinityDeliveryManager` - Large delivery event system
 * `MandragoraManager` - Mandragora crafting
 * `NpcBazaarManager` - NPC bazaar operations
 * `OfficialPawnManager` - Official pawn handling
 * `PawnExpeditionManager` - Expedition system
 * `QuickPartyManager` - Quick party matching
+* `RewardMissionManager` - Daily mission tracking and rewards
 * `SpecialBonusManager` - Special bonus handling
 
 === New Asset Files
@@ -108,11 +123,13 @@ Configurable JSON assets for game content:
 * `EventCodes.json` - Redeemable event codes
 * `Gacha.json` - Gacha prize pools and rates
 * `GpShop.json` - GP shop item listings
+* `InfinityDelivery.json` - Large delivery event categories and borders
 * `Mandragora.json` - Mandragora recipes
 * `NpcBazaar.json` - NPC bazaar inventory
 * `OfficialPawns.json` - Official pawn definitions
 * `PawnExpeditionRewards.json` - Expedition reward tables
 * `QuestBonuses.json` - Quest bonus configurations
+* `RewardMissions.json` - Reward mission definitions and milestones
 * `SeasonWeapons.json` - Season weapon definitions
 * `TreasurePoints.json` - Treasure point locations
 * `UltimateSynthesis.json` - Ultimate synthesis recipes
