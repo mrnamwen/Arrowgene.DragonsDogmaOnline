@@ -527,6 +527,9 @@ namespace Arrowgene.Ddon.GameServer
             AddHandler(new MailMailGetListDataHandler(this));
             AddHandler(new MailMailGetListFootHandler(this));
             AddHandler(new MailMailGetListHeadHandler(this));
+            AddHandler(new MailMailGetTextHandler(this));
+            AddHandler(new MailMailDeleteHandler(this));
+            AddHandler(new MailMailSendHandler(this));
             AddHandler(new MailSystemMailGetListDataHandler(this));
             AddHandler(new MailSystemMailGetListFootHandler(this));
             AddHandler(new MailSystemMailGetListHeadHandler(this));
