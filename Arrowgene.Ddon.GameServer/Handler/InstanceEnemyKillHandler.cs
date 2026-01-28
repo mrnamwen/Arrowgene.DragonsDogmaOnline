@@ -195,13 +195,16 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
                                     if (Server.ItemManager.CanAddItem(partyMemberClient.Character, destinationStorageType, (uint)dropItem.ItemId, dropItem.ItemNum))
                                     {
+                                        // Capture item count before GatherItem modifies it
+                                        uint itemCount = dropItem.ItemNum;
+
                                         // Auto-loot the item to inventory or storage
-                                        queuedPackets.AddRange(Server.ItemManager.GatherItem(partyMemberClient, autolootNtc, dropItem, dropItem.ItemNum, toItemBag, connectionIn));
+                                        queuedPackets.AddRange(Server.ItemManager.GatherItem(partyMemberClient, autolootNtc, dropItem, itemCount, toItemBag, connectionIn));
 
                                         // Track items sent to storage for notification
                                         if (!toItemBag)
                                         {
-                                            storageItems.Add((clientItemInfo.Name, dropItem.ItemNum));
+                                            storageItems.Add((clientItemInfo.Name, itemCount));
                                         }
                                     }
                                     else

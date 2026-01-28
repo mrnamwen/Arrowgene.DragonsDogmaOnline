@@ -24,12 +24,15 @@ namespace Arrowgene.Ddon.GameServer.Handler
             List<CDataGPShopDisplayType> items = new List<CDataGPShopDisplayType>
             {
                 new() { ID = 1, Name = "Selection", InGameUrlID = 11 },
+                new() { ID = 2, Name = "Free Starter Items", InGameUrlID = 11 },
                 new() { ID = 3, Name = "Passport", InGameUrlID = 11 },
                 new() { ID = 6, Name = "Gold & Currency", InGameUrlID = 11 },
                 new() { ID = 8, Name = "Services", InGameUrlID = 11 },
                 new() { ID = 10, Name = "Dungeon Tickets", InGameUrlID = 11 },
                 new() { ID = 12, Name = "Training Sets", InGameUrlID = 11 },
                 new() { ID = 13, Name = "Bundles", InGameUrlID = 11 },
+                new() { ID = 14, Name = "Storage Expansion", InGameUrlID = 11 },
+                new() { ID = 15, Name = "Event & Collab Items", InGameUrlID = 11 },
             };
             res.Items = items;
 

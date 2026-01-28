@@ -159,6 +159,9 @@ namespace Arrowgene.Ddon.Shared.Entity
             Create(new CDataCycleContentsNewsDetail.Serializer());
             Create(new CDataCycleContentsRank.Serializer());
             Create(new CDataCycleContentsUnk.Serializer());
+            Create(new CDataDailyMissionInfo.Serializer());
+            Create(new CDataDailyMissionReward.Serializer());
+            Create(new CDataDailyMissionSecondEntry.Serializer());
 
             Create(new CDataDeliveredItem.Serializer());
             Create(new CDataDeliveredItemRecord.Serializer());
@@ -693,6 +696,7 @@ namespace Arrowgene.Ddon.Shared.Entity
             Create(new C2SCraftStartQualityUpReq.Serializer());
             Create(new C2SCraftTimeSaveReq.Serializer());
 
+            Create(new C2SDailyMissionEventListGetReq.Serializer());
             Create(new C2SDailyMissionListGetReq.Serializer());
             Create(new C2SDailyMissionRewardReceiveReq.Serializer());
 
@@ -1329,6 +1333,7 @@ namespace Arrowgene.Ddon.Shared.Entity
             Create(new S2CCraftTimeSaveRes.Serializer());
             Create(new S2CCraft_30_21_16_NTC.Serializer());
 
+            Create(new S2CDailyMissionEventListGetRes.Serializer());
             Create(new S2CDailyMissionListGetRes.Serializer());
             Create(new S2CDailyMissionRewardReceiveRes.Serializer());
 

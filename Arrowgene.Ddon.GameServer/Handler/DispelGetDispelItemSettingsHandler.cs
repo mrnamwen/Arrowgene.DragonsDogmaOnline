@@ -20,9 +20,10 @@ namespace Arrowgene.Ddon.GameServer.Handler
 
         public override S2CDispelGetDispelItemSettingsRes Handle(GameClient client, C2SDispelGetDispelItemSettingsReq request)
         {
-            Logger.Info($"SpecialShopType={request.ShopType}");
-
-            var res = new S2CDispelGetDispelItemSettingsRes();
+            var res = new S2CDispelGetDispelItemSettingsRes()
+            {
+                Unk1 = true
+            };
 
             var specialShops = Server.AssetRepository.SpecialShopAsset.SpecialShops;
             if (specialShops.ContainsKey(request.ShopType))
@@ -35,6 +36,11 @@ namespace Arrowgene.Ddon.GameServer.Handler
                         CategoryName = category.Label
                     });
                 }
+                Logger.Info($"SpecialShopType={request.ShopType}, Categories={res.CategoryList.Count}");
+            }
+            else
+            {
+                Logger.Error($"SpecialShopType={request.ShopType} not found. Available: [{string.Join(", ", specialShops.Keys)}]");
             }
 
             return res;

@@ -2,7 +2,8 @@
     "comment": [
         "Event codes from the retail Dragon's Dogma Online game.",
         "Codes are case-insensitive when entered by players.",
-        "Item IDs can be found in ItemId.cs or itemlist.csv"
+        "Item IDs can be found in ItemId.cs or itemlist.csv",
+        "Sources: julien-schu.tumblr.com, h1g.jp/dd-on, famitsu.com"
     ],
     "event_codes": [
         {
@@ -24,7 +25,7 @@
             "comment": "Famitsu.com Reader Promotion - Olfring Dagger [Nirvana]",
             "rewards": {
                 "items": [
-                    { "item_id": 19522, "amount": 1, "comment": "OlfringDaggerBlack0 (Nirvana)" }
+                    { "item_id": 19522, "amount": 1, "comment": "Olfring Dagger (Nirvana)" }
                 ]
             }
         },
@@ -50,18 +51,18 @@
                     { "item_id": 68, "amount": 2, "comment": "Stamina Curative" },
                     { "item_id": 7862, "amount": 2, "comment": "Lockpick" },
                     { "item_id": 7715, "amount": 2, "comment": "Pickaxe" },
-                    { "item_id": 7714, "amount": 2, "comment": "Lumber Knife" }
+                    { "item_id": 7714, "amount": 2, "comment": "Lantern Tinder" }
                 ]
             }
         },
         {
             "code": "KY23-9R8E-FL1N-5XG6",
             "name": "Tokyo Game Show 2017 - Olfring Cane (Sea)",
-            "mail_body": "Thank you for visiting us at TGS 2017!",
+            "mail_body": "Thank you for watching the TGS 2017 livestream!",
             "comment": "TGS 2017 Livestream - Priest weapon",
             "rewards": {
                 "items": [
-                    { "item_id": 19517, "amount": 1, "comment": "OlfringCaneSea" }
+                    { "item_id": 19517, "amount": 1, "comment": "Olfring Cane (Sea)" }
                 ]
             }
         },
@@ -72,7 +73,7 @@
             "comment": "Game Maniacs Season 3.1 promotion",
             "rewards": {
                 "items": [
-                    { "item_id": 19544, "amount": 1, "comment": "OlfringBowRadiance" }
+                    { "item_id": 19544, "amount": 1, "comment": "Olfring Bow (Radiance)" }
                 ]
             }
         },
@@ -80,7 +81,7 @@
             "code": "KC09-CGKP-47FC-FF67",
             "name": "Dragon's Dogma Revives Manga Promotion",
             "mail_body": "Thank you for reading Dragon's Dogma Revives!",
-            "comment": "DD Revives manga chapter release (Oct 2017)",
+            "comment": "DD Revives manga chapter release (Sept 2017)",
             "rewards": {
                 "items": [
                     { "item_id": 63, "amount": 100, "comment": "Superior Healing Potion" },
@@ -93,7 +94,7 @@
             "code": "3PA3-08J7-XQ2T-5NU3",
             "name": "Adventure Passport Gift",
             "mail_body": "Enjoy your Adventure Passport!",
-            "comment": "Early promotion (Nov 2015)",
+            "comment": "Early promotion (Nov 2015) - 3 days Adventure Passport",
             "rewards": {
                 "items": []
             }
@@ -102,7 +103,7 @@
             "code": "1P04-0C53-NYQ4-1FQ4",
             "name": "Basic Consumables Pack 1",
             "mail_body": "Here are some basic supplies for your adventure!",
-            "comment": "Basic consumables promotion",
+            "comment": "Basic consumables promotion (March 2018)",
             "rewards": {
                 "items": [
                     { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
@@ -114,7 +115,7 @@
             "code": "1P04-F0NY-YR24-Y9HF",
             "name": "Basic Consumables Pack 2",
             "mail_body": "Here are some basic supplies for your adventure!",
-            "comment": "Basic consumables promotion",
+            "comment": "Basic consumables promotion (March 2018)",
             "rewards": {
                 "items": [
                     { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
@@ -126,7 +127,7 @@
             "code": "1P04-HE33-WTU8-WNKC",
             "name": "Basic Consumables Pack 3",
             "mail_body": "Here are some basic supplies for your adventure!",
-            "comment": "Basic consumables promotion",
+            "comment": "Basic consumables promotion (March 2018)",
             "rewards": {
                 "items": [
                     { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
@@ -138,7 +139,7 @@
             "code": "1P03-2GXJ-TWCG-RNE4",
             "name": "Basic Consumables Pack 4",
             "mail_body": "Here are some basic supplies for your adventure!",
-            "comment": "Basic consumables promotion",
+            "comment": "Basic consumables promotion (March 2018)",
             "rewards": {
                 "items": [
                     { "item_id": 62, "amount": 5, "comment": "Healing Potion" },
@@ -149,51 +150,52 @@
         {
             "code": "RW01-HGGW-UTTR-0L29",
             "name": "DDON x Overlord Collaboration Day 4",
-            "mail_body": "Thank you for participating in the Overlord collaboration event!",
-            "comment": "Overlord collab (Sept 2018) - Day 4",
+            "mail_body": "Thank you for participating in the Overlord collaboration event! Ainz Ooal Gown bestows upon you his power.",
+            "comment": "Overlord collab (Sept 2018) - Day 4 - Staff of Ainz Ooal Gown",
             "rewards": {
                 "items": [
-                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                    { "item_id": 21187, "amount": 1, "comment": "Ainz Ooal Gown (Staff)" }
                 ]
             }
         },
         {
             "code": "RW02-06KR-QJWW-4YJ0",
             "name": "DDON x Overlord Collaboration Day 3",
-            "mail_body": "Thank you for participating in the Overlord collaboration event!",
-            "comment": "Overlord collab (Sept 2018) - Day 3",
+            "mail_body": "Thank you for participating in the Overlord collaboration event! A gift from the Great Tomb of Nazarick.",
+            "comment": "Overlord collab (Sept 2018) - Day 3 - Albedo's Dress",
             "rewards": {
                 "items": [
-                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                    { "item_id": 21190, "amount": 1, "comment": "Albedo's Dress" }
                 ]
             }
         },
         {
             "code": "RW03-F11U-HFNT-F42F",
             "name": "DDON x Overlord Collaboration Day 2",
-            "mail_body": "Thank you for participating in the Overlord collaboration event!",
-            "comment": "Overlord collab (Sept 2018) - Day 2",
+            "mail_body": "Thank you for participating in the Overlord collaboration event! A memento from Nazarick.",
+            "comment": "Overlord collab (Sept 2018) - Day 2 - Overlord Tapestry",
             "rewards": {
                 "items": [
-                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                    { "item_id": 21193, "amount": 1, "comment": "Tapestry - Overlord" }
                 ]
             }
         },
         {
             "code": "RW04-6C04-8A2R-WLN4",
             "name": "DDON x Overlord Collaboration Day 1",
-            "mail_body": "Thank you for participating in the Overlord collaboration event!",
-            "comment": "Overlord collab (Sept 2018) - Day 1",
+            "mail_body": "Thank you for participating in the Overlord collaboration event! Welcome to the Great Tomb of Nazarick.",
+            "comment": "Overlord collab (Sept 2018) - Day 1 - Overlord III Tapestries",
             "rewards": {
                 "items": [
-                    { "item_id": 62, "amount": 10, "comment": "Healing Potion (placeholder)" }
+                    { "item_id": 23378, "amount": 1, "comment": "Tapestry - Overlord III (B)" },
+                    { "item_id": 23379, "amount": 1, "comment": "Tapestry - Overlord III (A)" }
                 ]
             }
         },
         {
             "code": "CU01-YN80-68UP-C3L4",
             "name": "PlayStation Network Award - Day 1",
-            "mail_body": "Thank you for supporting DDON!",
+            "mail_body": "Thank you for supporting DDON! Enjoy this Adventure Passport.",
             "comment": "PS Award celebration (Dec 27, 2016) - Adventure Passport",
             "rewards": {
                 "items": []
@@ -202,10 +204,99 @@
         {
             "code": "CU02-P1U4-JEEP-XX80",
             "name": "PlayStation Network Award - Day 2",
-            "mail_body": "Thank you for supporting DDON!",
-            "comment": "PS Award celebration (Dec 28, 2016) - Storage Chest Passport",
+            "mail_body": "Thank you for supporting DDON! Enjoy this Storage Chest Passport.",
+            "comment": "PS Award celebration (Dec 28, 2016) - Storage Chest Passport (3 days)",
             "rewards": {
                 "items": []
+            }
+        },
+        {
+            "code": "BERSERK-GUTS-2017",
+            "name": "DDON x Berserk Collaboration - Guts Equipment",
+            "mail_body": "The Black Swordsman's power is now yours. Struggle, endure, contend!",
+            "comment": "Berserk Golden Age Arc movie collaboration",
+            "rewards": {
+                "items": [
+                    { "item_id": 21670, "amount": 1, "comment": "Guts' Greatsword" },
+                    { "item_id": 21673, "amount": 1, "comment": "Guts' Equipment" }
+                ]
+            }
+        },
+        {
+            "code": "BERSERK-CASCA-2017",
+            "name": "DDON x Berserk Collaboration - Casca Equipment",
+            "mail_body": "The warrior maiden's armor is now yours.",
+            "comment": "Berserk Golden Age Arc movie collaboration",
+            "rewards": {
+                "items": [
+                    { "item_id": 21676, "amount": 1, "comment": "Casca's Equipment" }
+                ]
+            }
+        },
+        {
+            "code": "OVERLORD-AINZ-PLUS",
+            "name": "Overlord III Collaboration - Ainz Ooal Gown+",
+            "mail_body": "The Supreme One grants you enhanced power from the Great Tomb of Nazarick.",
+            "comment": "Overlord III collab - Enhanced Staff",
+            "rewards": {
+                "items": [
+                    { "item_id": 23544, "amount": 1, "comment": "Ainz Ooal Gown+ (Enhanced Staff)" }
+                ]
+            }
+        },
+        {
+            "code": "OVERLORD-ALBEDO-PLUS",
+            "name": "Overlord III Collaboration - Albedo's Dress+",
+            "mail_body": "The Guardian Overseer's enhanced regalia is now yours.",
+            "comment": "Overlord III collab - Enhanced Dress",
+            "rewards": {
+                "items": [
+                    { "item_id": 23538, "amount": 1, "comment": "Albedo's Dress+ (Enhanced)" }
+                ]
+            }
+        },
+        {
+            "code": "NPC-OUTFIT-FABIO",
+            "name": "Fabio's Outfit",
+            "mail_body": "Dress like the ever-enthusiastic Fabio!",
+            "comment": "NPC Outfit - Fabio",
+            "rewards": {
+                "items": [
+                    { "item_id": 9490, "amount": 1, "comment": "Outfit: Fabio" }
+                ]
+            }
+        },
+        {
+            "code": "NPC-OUTFIT-IRIS",
+            "name": "Iris's Outfit",
+            "mail_body": "Wear the attire of the White Dragon Temple's Iris.",
+            "comment": "NPC Outfit - Iris",
+            "rewards": {
+                "items": [
+                    { "item_id": 7542, "amount": 1, "comment": "Outfit: Iris" }
+                ]
+            }
+        },
+        {
+            "code": "NPC-OUTFIT-KLAUS",
+            "name": "Klaus's Outfit",
+            "mail_body": "Don the armor of the legendary Klaus.",
+            "comment": "NPC Outfit - Klaus",
+            "rewards": {
+                "items": [
+                    { "item_id": 7540, "amount": 1, "comment": "Outfit: Klaus" }
+                ]
+            }
+        },
+        {
+            "code": "NPC-OUTFIT-LISE",
+            "name": "Lise's Outfit",
+            "mail_body": "Wear the attire of the capable Lise.",
+            "comment": "NPC Outfit - Lise",
+            "rewards": {
+                "items": [
+                    { "item_id": 9510, "amount": 1, "comment": "Outfit: Lise" }
+                ]
             }
         }
     ]

@@ -20,7 +20,7 @@ namespace Arrowgene.Ddon.Shared.Entity.Structure
             {
                 WriteUInt32(buffer, obj.ItemId);
                 WriteUInt32(buffer, obj.Num);
-                WriteByte(buffer, (byte)obj.WalletType);
+                WriteUInt32(buffer, (uint)obj.WalletType);
                 WriteUInt32(buffer, obj.WalletAmount);
             }
 
@@ -29,7 +29,7 @@ namespace Arrowgene.Ddon.Shared.Entity.Structure
                 CDataDailyMissionReward obj = new CDataDailyMissionReward();
                 obj.ItemId = ReadUInt32(buffer);
                 obj.Num = ReadUInt32(buffer);
-                obj.WalletType = (WalletType)ReadByte(buffer);
+                obj.WalletType = (WalletType)ReadUInt32(buffer);
                 obj.WalletAmount = ReadUInt32(buffer);
                 return obj;
             }

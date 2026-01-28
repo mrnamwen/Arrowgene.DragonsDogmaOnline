@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="5d42b886-664b-4b32-8b4b-0a4fbafc06d2" name="@ddonline 2026-01-27 23:38:01" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-01-27T23:38:01.2641947+00:00" queuing="2026-01-27T23:38:01.2641948+00:00" start="2026-01-27T23:38:00.3033484+00:00" finish="2026-01-27T23:38:01.2715744+00:00" />
+  <TestSettings name="default" id="665e0108-5c95-4343-8a55-69175b61723b">
+    <Deployment runDeploymentRoot="_ddonline_2026-01-27_23_38_01" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2b9968f6-7a6c-4fc4-a027-5167dde7eb3c" testId="43be2c0a-e54c-bd1b-9d0c-612ddf1f4726" testName="Arrowgene.Ddon.Test.Shared.Entity.Structure.CDataDailyMissionInfoFullTraceTest.TraceAllMissions" computerName="ddonline" duration="00:00:00.0325737" startTime="2026-01-27T23:38:01.0811857+00:00" endTime="2026-01-27T23:38:01.1246006+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b9968f6-7a6c-4fc4-a027-5167dde7eb3c">
+      <Output>
+        <StdOut>List count: 15
+Total data size: 8975 bytes
+Mission 1: MissionId=9, start=0x4, end=0x137, size=307
+Mission 2: MissionId=1, start=0x137, end=0x26A, size=307
+Mission 3: MissionId=10, start=0x26A, end=0x39D, size=307
+Mission 4: MissionId=2, start=0x39D, end=0x4D0, size=307
+Mission 5: MissionId=11, start=0x4D0, end=0x603, size=307
+Mission 6: MissionId=3, start=0x603, end=0x736, size=307
+Mission 7: MissionId=4, start=0x736, end=0x869, size=307
+Mission 8: MissionId=7, start=0x869, end=0x99C, size=307
+Mission 9: MissionId=8, start=0x99C, end=0xACF, size=307
+Mission 10: MissionId=12, start=0xACF, end=0xC02, size=307
+Mission 11: MissionId=19, start=0xC02, end=0xD35, size=307
+Mission 12: MissionId=20, start=0xD35, end=0xE68, size=307
+Mission 13: MissionId=21, start=0xE68, end=0xF9B, size=307
+Mission 14: MissionId=16, start=0xF9B, end=0x10CE, size=307
+Mission 15: MissionId=17, start=0x10CE, end=0x1201, size=307
+
+After all missions: 0x1201
+Remaining bytes: 4366
+
+Data after missions (first 64 bytes):
+  0x1201: 0x00
+  0x1202: 0x00
+  0x1203: 0x00
+  0x1204: 0x0E
+  0x1205: 0x00
+  0x1206: 0x00
+  0x1207: 0x00
+  0x1208: 0x16
+  0x1209: 0x00
+  0x120A: 0x00
+  0x120B: 0x00
+  0x120C: 0x07
+  0x120D: 0x00
+  0x120E: 0x00
+  0x120F: 0x00
+  0x1210: 0x01
+  0x1211: 0x00
+  0x1212: 0x00
+  0x1213: 0x00
+  0x1214: 0x16
+  0x1215: 0x00
+  0x1216: 0x00
+  0x1217: 0x03
+  0x1218: 0xE7
+  0x1219: 0x00
+  0x121A: 0x00
+  0x121B: 0x00
+  0x121C: 0x00
+  0x121D: 0x00
+  0x121E: 0x00
+  0x121F: 0x00
+  0x1220: 0x00
+  0x1221: 0x00
+  0x1222: 0x00
+  0x1223: 0x00
+  0x1224: 0x00
+  0x1225: 0x00
+  0x1226: 0x00
+  0x1227: 0x00
+  0x1228: 0x00
+  0x1229: 0x00
+  0x122A: 0x00
+  0x122B: 0x00
+  0x122C: 0x00
+  0x122D: 0x00
+  0x122E: 0x00
+  0x122F: 0x00
+  0x1230: 0x01
+  0x1231: 0x00
+  0x1232: 0x00
+  0x1233: 0x00
+  0x1234: 0x04
+  0x1235: 0x00
+  0x1236: 0x00
+  0x1237: 0x00
+  0x1238: 0x01
+  0x1239: 0x00
+  0x123A: 0x00
+  0x123B: 0x00
+  0x123C: 0x00
+  0x123D: 0x00
+  0x123E: 0x00
+  0x123F: 0x00
+  0x1240: 0x00</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Arrowgene.Ddon.Test.Shared.Entity.Structure.CDataDailyMissionInfoFullTraceTest.TraceAllMissions" storage="/root/arrowgene.dragonsdogmaonline/arrowgene.ddon.test/bin/debug/net10.0/arrowgene.ddon.test.dll" id="43be2c0a-e54c-bd1b-9d0c-612ddf1f4726">
+      <Execution id="2b9968f6-7a6c-4fc4-a027-5167dde7eb3c" />
+      <TestMethod codeBase="/root/Arrowgene.DragonsDogmaOnline/Arrowgene.Ddon.Test/bin/Debug/net10.0/Arrowgene.Ddon.Test.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Arrowgene.Ddon.Test.Shared.Entity.Structure.CDataDailyMissionInfoFullTraceTest" name="TraceAllMissions" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="43be2c0a-e54c-bd1b-9d0c-612ddf1f4726" executionId="2b9968f6-7a6c-4fc4-a027-5167dde7eb3c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.0.2+dd36e86129 (64-bit .NET 10.0.2)
+[xUnit.net 00:00:00.10]   Discovering: Arrowgene.Ddon.Test
+[xUnit.net 00:00:00.17]   Discovered:  Arrowgene.Ddon.Test
+[xUnit.net 00:00:00.21]   Starting:    Arrowgene.Ddon.Test
+[xUnit.net 00:00:00.30]   Finished:    Arrowgene.Ddon.Test
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
